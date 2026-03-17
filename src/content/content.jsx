@@ -22,6 +22,23 @@ import team1 from "../assets/imgs/team/img1.webp";
 import team2 from "../assets/imgs/team/img2.webp";
 import imgBgTeam from "../assets/imgs/team/bgImgTeam.webp";
 
+import logo1Instituicao from "../assets/imgs/team/instituicoesLogo/logo1.webp";
+import logo2Instituicao from "../assets/imgs/team/instituicoesLogo/logo2.webp";
+import logo3Instituicao from "../assets/imgs/team/instituicoesLogo/logo3.webp";
+import logo4Instituicao from "../assets/imgs/team/instituicoesLogo/logo4.webp";
+import logo5Instituicao from "../assets/imgs/team/instituicoesLogo/logo5.webp";
+import logo6Instituicao from "../assets/imgs/team/instituicoesLogo/logo6.webp";
+import logo7Instituicao from "../assets/imgs/team/instituicoesLogo/logo7.webp";
+import logo8Instituicao from "../assets/imgs/team/instituicoesLogo/logo8.webp";
+
+import logo1Cliente from "../assets/imgs/team/clientesLogo/logo1.webp";
+import logo2Cliente from "../assets/imgs/team/clientesLogo/logo2.webp";
+import logo3Cliente from "../assets/imgs/team/clientesLogo/logo3.webp";
+import logo4Cliente from "../assets/imgs/team/clientesLogo/logo4.webp";
+
+import logo1Parceiro from "../assets/imgs/team/parceirosLogo/logo1.webp";
+import logo2Parceiro from "../assets/imgs/team/parceirosLogo/logo2.webp";
+
 //Imports Icons
 import {
   Baby,
@@ -517,10 +534,73 @@ const content = {
           linkedIn: "https://www.linkedin.com/in/tarcisio-cunha/",
         },
       },
-      sectionTitle: <>A_Definir</>,
-      titleClientes: <>A_Definir</>,
-      titleParceiros: <>A_Definir</>,
-      titleInstituicoes: <>A_Definir</>,
+
+      instituicoesAtendidas: {
+        card1: {
+          img: logo1Instituicao,
+          alt: "LogoMarca parceira",
+        },
+        card2: {
+          img: logo2Instituicao,
+          alt: "LogoMarca parceira",
+        },
+        card3: {
+          img: logo3Instituicao,
+          alt: "LogoMarca parceira",
+        },
+        card4: {
+          img: logo4Instituicao,
+          alt: "LogoMarca parceira",
+        },
+        card5: {
+          img: logo5Instituicao,
+          alt: "LogoMarca parceira",
+        },
+        card6: {
+          img: logo6Instituicao,
+          alt: "LogoMarca parceira",
+        },
+        card7: {
+          img: logo7Instituicao,
+          alt: "LogoMarca parceira",
+        },
+        card8: {
+          img: logo8Instituicao,
+          alt: "LogoMarca parceira",
+        },
+      },
+      parceirosLogo: {
+        card1: {
+          img: logo1Parceiro,
+          alt: "LogoMarca parceira",
+        },
+        card2: {
+          img: logo2Parceiro,
+          alt: "LogoMarca parceira",
+        },
+      },
+      clientesLogo: {
+        card1: {
+          img: logo1Cliente,
+          alt: "LogoMarca parceira",
+        },
+        card2: {
+          img: logo2Cliente,
+          alt: "LogoMarca parceira",
+        },
+        card3: {
+          img: logo3Cliente,
+          alt: "LogoMarca parceira",
+        },
+        card4: {
+          img: logo4Cliente,
+          alt: "LogoMarca parceira",
+        },
+      },
+      sectionTitle: <>Colaboração que gera resultados</>,
+      titleClientes: <>Nossos Clientes</>,
+      titleParceiros: <>Nossos Parceiros</>,
+      titleInstituicoes: <>Instituições Atendidas</>,
     },
     contato: {
       minitag: <>Fale com a nossa equipe</>,
