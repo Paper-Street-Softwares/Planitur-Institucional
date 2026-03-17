@@ -22,6 +22,7 @@ export default function TeamMember({
   rota,
   modal = "true",
   buttonRota,
+  home,
 }) {
   return (
     <div className="flex flex-col items-center text-center font-secondFont mx-auto p-4 h-full bg-primaryDark/5 rounded-md max-w-[400px]">
@@ -87,9 +88,15 @@ export default function TeamMember({
           </div>
         </MotionDivDownToUp>
       </section>
-      <p className="font-secondFont line-clamp-3 mt-4 text-corOutrosTextosPreto opacity-90">
-        {description}
-      </p>
+      {home ? (
+        <p className="font-secondFont line-clamp-3 mt-4 text-corOutrosTextosPreto opacity-90">
+          {description}
+        </p>
+      ) : (
+        <p className="font-secondFont mt-4 text-left text-corOutrosTextosPreto opacity-80">
+          {description}
+        </p>
+      )}
       {buttonRota && (
         <a
           rel="noopener noreferrer"

@@ -62,6 +62,7 @@ function ConteudoTeam({ colorMode, parceirosSection }) {
                   linkedIn={content.texts.team.cards.card1.linkedIn}
                   description={content.texts.team.cards.card1.description}
                   onOpenModal={openDescription}
+                  modal={false}
                 />
               </MotionDivDownToUp>
 
@@ -73,6 +74,7 @@ function ConteudoTeam({ colorMode, parceirosSection }) {
                   linkedIn={content.texts.team.cards.card2.linkedIn}
                   description={content.texts.team.cards.card2.description}
                   onOpenModal={openDescription}
+                  modal={false}
                 />
               </MotionDivDownToUp>
             </div>

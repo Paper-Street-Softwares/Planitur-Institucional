@@ -31,6 +31,7 @@ function TeamHome({ colorMode }) {
                   linkedIn={item.linkedIn}
                   description={item.description}
                   buttonRota={true}
+                  home={true}
                 />
               </MotionDivDownToUp>
             ))}

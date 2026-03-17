@@ -12,7 +12,7 @@ function Features1({ colorMode }) {
   });
 
   return (
-    <div id="tecnicocursivo">
+    <div id={content.texts.features.cards.card1.rota}>
       <section className="relative min-h-[200px] h-[47vh] max-h-[405px] flex flex-col items-center justify-center overflow-hidden w-full">
         <div className="absolute inset-0 z-0">
           <img

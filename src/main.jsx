@@ -23,6 +23,7 @@ import Features2 from "./pages/Rotas/features/Features2.jsx";
 import Features3 from "./pages/Rotas/features/Features3.jsx";
 import RouteContato from "./pages/Rotas/contato/RouteContato.jsx";
 import RouteTeam from "./pages/Rotas/team/RouteTeam.jsx";
+import content from "./content/content.jsx";
 
 const mode = "LP";
 
@@ -48,12 +49,16 @@ function MainApp() {
           >
             <Route index element={<Features1 />} />
             <Route
-              path="direitodefamilia"
+              path={content.texts.features.cards.card1.rota}
               element={<Features1 colorMode={colorMode} />}
             />
             <Route
-              path="direitobancario"
+              path={content.texts.features.cards.card2.rota}
               element={<Features2 colorMode={colorMode} />}
+            />
+             <Route
+              path={content.texts.features.cards.card3.rota}
+              element={<Features3 colorMode={colorMode} />}
             />
           </Route>
         </Routes>

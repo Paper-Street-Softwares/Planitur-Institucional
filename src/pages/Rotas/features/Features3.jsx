@@ -8,7 +8,7 @@ import MotionDivDownToUp from "../../../components/animation/MotionDivDownToUp";
 
 function Features3({ colorMode }) {
   return (
-    <div id="pesquisaeproducaodeconhecimento">
+    <div id={content.texts.features.cards.card3.rota}>
       <section className="relative min-h-[400px] h-[47vh] max-h-[405px]   flex flex-col items-center justify-center overflow-hidden w-full">
         <div className="absolute inset-0 z-0">
           <img

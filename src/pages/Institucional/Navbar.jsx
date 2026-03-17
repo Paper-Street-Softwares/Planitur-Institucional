@@ -127,8 +127,7 @@ function Navbar() {
               onMouseLeave={handleClose}
             >
               <button type="button" className={linkClass()}>
-                NOSSO ESCRITÓRIO{" "}
-                <ChevronDown size={16} className="inline ml-1" />
+                A PLANITUR <ChevronDown size={16} className="inline ml-1" />
                 {underline("office")}
               </button>
 
