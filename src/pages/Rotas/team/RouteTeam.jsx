@@ -8,7 +8,14 @@ function RouteTeam({ colorMode }) {
     <div>
       <Navbar />
       <ConteudoTeam colorMode={colorMode} parceiros={false} />
-      <Footer phone={true} sociais={false} adress={true} expedient={true} />
+      <Footer
+        phone={true}
+        phone2={true}
+        phone3={true}
+        sociais={false}
+        adress={true}
+        expedient={true}
+      />
     </div>
   );
 }

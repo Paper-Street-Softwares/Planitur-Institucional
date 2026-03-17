@@ -77,7 +77,8 @@ export default function TeamMember({
             {linkedIn && (
               <a
                 href={linkedIn}
-                rel="noreferrer"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="mt-4 bg-primaryDark/20 flex justify-center items-center w-8 h-8 rounded-md cursor-pointer hover:scale-90 duration-500 transition-all"
               >
                 <Linkedin size={18} className="text-primaryDark" />

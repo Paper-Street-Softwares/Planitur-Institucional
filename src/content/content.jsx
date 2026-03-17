@@ -10,10 +10,10 @@ import imgApresentation from "../assets/imgs/apresentation/imgApresentation.webp
 //Imports Features
 import imgFeatures1 from "../assets/imgs/features/rotas/features1.webp";
 import imgFeatures2 from "../assets/imgs/features/rotas/features2.webp";
+import imgFeatures3 from "../assets/imgs/features/rotas/features3.webp";
 
 //Imports About
 import aboutImg from "../assets/imgs/about/aboutImg.webp";
-import aboutImgMobile from "../assets/imgs/about/aboutImgMobile.webp";
 import aboutImgBg from "../assets/imgs/about/rotaAbout/bgAbout.webp";
 import aboutSocialImg from "../assets/imgs/about/aboutSocial.webp";
 
@@ -50,24 +50,24 @@ import {
 const currentYear = new Date().getFullYear();
 
 export const infos = {
-  name: "Castro Advocacia",
+  name: "Planitur Consultoria e Planejamento Turístico",
   email: "contato", // Email desejado pelo cliente
   emailSecundario: "A_Definir", // Email desejado pelo cliente
-  domain: "castroassociados.adv.br", // Sem "www"
+  domain: "www.planiturconsultoria.com", // Sem "www"
   phone: {
-    ddd: "66",
-    firstPart: "99248", // Apenas os 5 primeiros números (incluindo o 9)
-    secondPart: "3413", // Apenas os 4 últimos números
+    ddd: "51",
+    firstPart: "98225", // Apenas os 5 primeiros números (incluindo o 9)
+    secondPart: "1864", // Apenas os 4 últimos números
   },
   phoneSecundario: {
-    ddd: "A_Definir",
-    firstPart: "A_Definir", // Apenas os 5 primeiros números (incluindo o 9)
-    secondPart: "A_Definir", // Apenas os 4 últimos números
+    ddd: "21",
+    firstPart: "98385", // Apenas os 5 primeiros números (incluindo o 9)
+    secondPart: "6516", // Apenas os 4 últimos números
   },
   phoneTerciario: {
-    ddd: "A_Definir",
-    firstPart: "A_Definir", // Apenas os 5 primeiros números (incluindo o 9)
-    secondPart: "A_Definir", // Apenas os 4 últimos números
+    ddd: "51",
+    firstPart: "98225", // Apenas os 5 primeiros números (incluindo o 9)
+    secondPart: "1864", // Apenas os 4 últimos números
   },
   endereco: (
     <div>
@@ -93,7 +93,7 @@ export const infos = {
     </div>
   ),
   obs: <span className="italic">A_Definir </span>,
-  instagramProfile: "", // Sem o @
+  instagramProfile: "planiturconsultoria", // Sem o @
   instagramProfileSecundario: "",
   facebookProfile: "",
   linkeDinProfile: "",
@@ -127,18 +127,19 @@ const content = {
       ctaButtonTextResponsive: "Contato",
     },
     hero: {
-      miniTag: <>CASTRO ADVOCACIA</>,
-      FirstPart: <span>Excelência jurídica na </span>,
+      miniTag: <>PLANITUR CONSULTORIA</>,
+      FirstPart: <span>Turismo que conecta</span>,
       Destaque: (
         <span className="destaque relative italic font-light">
-          defesa de direitos
+          pessoas, território e natureza
         </span>
       ),
       SecondPart: <span></span>,
       subtitle: (
         <p>
-          Soluções jurídicas seguras para proteger direitos, orientar decisões e
-          enfrentar desafios legais.
+          Transformamos realidades por meio do turismo, com projetos e
+          consultorias sob medida que integram saberes locais e conhecimento
+          técnico para gerar soluções viáveis.
         </p>
       ),
       heroBg: bgHero,
@@ -156,12 +157,15 @@ const content = {
       ctaButtonTextSecondary: <>A_Definir</>,
     },
     features: {
-      miniTag: <>NOSSAS ESPECIALIDADES</>,
-      FirstPart: <span>Áreas de atuação jurídica</span>,
+      miniTag: <>Turismo que transforma</>,
+      FirstPart: <span>Transformamos territórios em oportunidades</span>,
       Destaque: <span className="italic font-light">A_Definir</span>,
       SecondPart: <span></span>,
       subtitle: (
-        <>Soluções jurídicas estratégicas para proteger seus direitos.</>
+        <>
+          Soluções estratégicas, formação e conhecimento para fortalecer seu
+          turismo.
+        </>
       ),
       alt: "Imagem ilustrativa da Features",
       cards: {
@@ -172,101 +176,50 @@ const content = {
             </>
           ),
           minitag: <>Área de Atuação</>,
-          title: <>Direito de Família</>,
+          title: <>Técnico-Consultivo</>,
           subtitle: (
             <>
-              Atuação jurídica em questões familiares como divórcio, pensão
-              alimentícia, guarda de filhos e regulamentação de convivência,
-              sempre buscando soluções seguras e equilibradas para todas as
-              partes envolvidas.
+              Apresentam soluções estratégicas que apoiam a tomada de decisão,
+              estruturam iniciativas e fortalecem territórios de forma
+              consistente e sustentável. Mais do que entregar diagnósticos, esse
+              eixo atua como um guia para organizações e gestores que precisam
+              enxergar com clareza onde estão, quais caminhos podem seguir e
+              como avançar com segurança em cenários cada vez mais complexos.
             </>
           ),
           imgFeatures1: imgFeatures1,
           description: (
             <div>
-              O Direito de Família disciplina as relações jurídicas decorrentes
-              dos vínculos familiares, abrangendo questões relacionadas ao
-              casamento, à união estável, à filiação, à guarda de filhos, à
-              prestação de alimentos e à transmissão patrimonial.
+              Apresentam soluções estratégicas que apoiam a tomada de decisão,
+              estruturam iniciativas e fortalecem territórios de forma
+              consistente e sustentável. Mais do que entregar diagnósticos, esse
+              eixo atua como um guia para organizações e gestores que precisam
+              enxergar com clareza onde estão, quais caminhos podem seguir e
+              como avançar com segurança em cenários cada vez mais complexos.
               <br />
               <br />
-              Situações dessa natureza costumam envolver decisões relevantes
-              tanto no âmbito jurídico quanto pessoal. Por essa razão, é
-              fundamental contar com orientação adequada para garantir a
-              proteção dos direitos das partes envolvidas e a condução segura de
-              cada procedimento.
+              Os produtos gerados incluem diagnósticos técnicos aprofundados,
+              estudos analíticos, estruturação de políticas públicas e
+              planejamento estratégico e territorial. Cada entrega é pensada
+              para transformar informações em direcionamento prático, ajudando
+              instituições a saírem da incerteza e partirem para ações
+              organizadas, eficientes e com maior potencial de impacto real.
               <br />
               <br />
-              Nossa atuação contempla diferentes demandas relacionadas às
-              relações familiares e sucessórias, sempre com análise cuidadosa de
-              cada caso e busca por soluções jurídicas equilibradas. Sempre que
-              possível, priorizamos caminhos consensuais, que costumam
-              proporcionar maior celeridade e menor desgaste às partes.
+              Essas soluções buscam compreender profundamente os contextos
+              locais, indo além da superfície. Ao identificar desafios, gargalos
+              e também potencialidades muitas vezes invisíveis, criam uma base
+              sólida para decisões mais inteligentes. Isso permite que gestores
+              deixem de agir no improviso e passem a atuar com estratégia,
+              priorização e visão de longo prazo.
               <br />
-              <br />
-              <span className="font-bold">• Divórcio</span>
-              <br />
-              Atuação em processos de divórcio consensual ou litigioso, com
-              orientação jurídica quanto às questões patrimoniais e familiares
-              decorrentes da dissolução do casamento, incluindo partilha de
-              bens, definição de guarda de filhos e fixação de pensão
-              alimentícia.
-              <br />
-              <br />
-              <span className="font-bold">• Dissolução de União Estável</span>
-              <br />
-              Assessoria jurídica na formalização e dissolução de união estável,
-              com análise dos efeitos patrimoniais da relação e orientação
-              quanto à partilha de bens, eventual prestação de alimentos e
-              demais questões decorrentes da separação.
-              <br />
-              <br />
-              <span className="font-bold">• Pensão Alimentícia</span>
-              <br />
-              Atuação em demandas relacionadas à fixação, revisão ou exoneração
-              de pensão alimentícia, sempre considerando os critérios legais de
-              necessidade de quem recebe e possibilidade de quem presta os
-              alimentos.
-              <br />
-              <br />
-              <span className="font-bold">
-                • Guarda de Filhos e Regulamentação de Convivência
-              </span>
-              <br />
-              Atuação na definição de modalidades de guarda e na regulamentação
-              da convivência familiar, buscando soluções que preservem o melhor
-              interesse da criança ou do adolescente.
-              <br />
-              <br />
-              <span className="font-bold">• Reconhecimento de Paternidade</span>
-              <br />
-              Atuação em procedimentos de investigação ou reconhecimento de
-              paternidade, bem como na regularização de registros civis e demais
-              medidas necessárias para assegurar os direitos decorrentes da
-              filiação.
-              <br />
-              <br />
-              <span className="font-bold">• Inventário</span>
-              <br />
-              Assessoria jurídica na condução de inventários judiciais ou
-              extrajudiciais, com acompanhamento das etapas necessárias à
-              apuração do patrimônio e à regular transferência dos bens aos
-              herdeiros.
-              <br />
-              <br />
-              <span className="font-bold">• Partilha de Bens</span>
-              <br />
-              Atuação na divisão de patrimônio em decorrência de divórcio,
-              dissolução de união estável ou sucessão, com análise das
-              particularidades do regime de bens e da composição patrimonial.
-              <br />
-              <br />
-              <span className="font-bold">• Planejamento Sucessório</span>
-              <br />
-              Orientação jurídica voltada à organização prévia da sucessão
-              patrimonial, com o objetivo de proporcionar segurança jurídica,
-              facilitar a transmissão de bens e prevenir conflitos familiares
-              futuros.
+              <br />A partir de metodologias consolidadas e análises orientadas
+              por dados, contribuem diretamente para o aprimoramento da gestão e
+              da tomada de decisão. O resultado é a organização mais clara de
+              iniciativas, o alinhamento institucional e a construção de
+              caminhos viáveis para o desenvolvimento econômico, social e
+              institucional dos territórios — com consistência, eficiência e
+              propósito.
             </div>
           ),
           rota: "/features/direitodefamilia",
@@ -279,83 +232,109 @@ const content = {
             </>
           ),
           minitag: <>Área de Atuação</>,
-          title: <>Direito Bancário</>,
+          title: <>Formativo e Educacional</>,
           subtitle: (
             <>
-              Assessoria jurídica voltada à defesa do consumidor em casos de
-              abusos bancários, cobranças indevidas, contratos irregulares e
-              outras práticas que possam prejudicar o cliente.
+              Promovem o desenvolvimento de competências e a qualificação de
+              pessoas, empresários, gestores, equipes, instituições e
+              comunidades, com foco em gerar transformação real. Mais do que
+              transmitir conteúdo, essas iniciativas formativas buscam preparar
+              indivíduos e organizações para lidar com desafios concretos, tomar
+              decisões com mais segurança e atuar de forma mais estratégica em
+              seus contextos.
             </>
           ),
           imgFeatures2: imgFeatures2,
           description: (
             <div>
-              O Direito Bancário regula as relações jurídicas entre clientes e
-              instituições financeiras, estabelecendo regras aplicáveis às
-              operações de crédito, contratos bancários e demais serviços
-              financeiros. Essas relações devem observar limites legais
-              destinados a garantir transparência, equilíbrio contratual e
-              proteção contra práticas abusivas.
+              Promovem o desenvolvimento de competências e a qualificação de
+              pessoas, empresários, gestores, equipes, instituições e
+              comunidades, com foco em gerar transformação real. Mais do que
+              transmitir conteúdo, essas iniciativas formativas buscam preparar
+              indivíduos e organizações para lidar com desafios concretos, tomar
+              decisões com mais segurança e atuar de forma mais estratégica em
+              seus contextos.
               <br />
               <br />
-              Na prática, consumidores e empresas podem se deparar com situações
-              como cobranças indevidas, juros excessivos, tarifas irregulares ou
-              contratos com cláusulas pouco claras. Nesses casos, a análise
-              jurídica adequada é essencial para identificar eventuais
-              irregularidades e avaliar as medidas cabíveis.
+              As ações incluem cursos, oficinas e processos formativos
+              estruturados para fortalecer habilidades técnicas, gerenciais e
+              estratégicas. Cada iniciativa é desenhada para desenvolver não
+              apenas o conhecimento, mas também a capacidade de aplicação
+              prática, estimulando a autonomia, a inovação e a adaptação diante
+              de um cenário em constante mudança.
               <br />
               <br />
-              Nossa atuação em Direito Bancário envolve a análise detalhada de
-              contratos e operações financeiras, buscando identificar
-              abusividades e orientar o cliente quanto às alternativas jurídicas
-              disponíveis para a defesa de seus direitos.
+              Com base em metodologias participativas e conteúdos alinhados às
+              demandas do mercado e da sociedade, os processos formativos criam
+              ambientes de aprendizado dinâmicos e colaborativos. Neles, o
+              conhecimento não é apenas transmitido, mas construído
+              coletivamente por meio da troca de experiências, da vivência
+              prática e da conexão entre diferentes realidades.
               <br />
               <br />
-              <span className="font-bold">
-                • Revisão de Contratos Bancários
-              </span>
+              Como resultado, essas iniciativas contribuem diretamente para o
+              aprimoramento profissional dos participantes, o fortalecimento das
+              instituições e a construção de organizações mais preparadas e
+              resilientes. Ao mesmo tempo, impulsionam o desenvolvimento
+              sustentável dos territórios, formando agentes capazes de gerar
+              impacto positivo, consistente e duradouro.
+            </div>
+          ),
+          rota: "/features/direitobancario",
+        },
+
+        card3: {
+          icon: (
+            <>
+              <Building width={18} />
+            </>
+          ),
+          minitag: <>Área de Atuação</>,
+          title: <>Pesquisa e Produção de Conhecimento</>,
+          subtitle: (
+            <>
+              A investigação aplicada atua como um suporte estratégico para
+              qualificar decisões, políticas e projetos, transformando dados e
+              informações em direcionamentos claros e acionáveis. Mais do que
+              produzir estudos, esse eixo tem como objetivo gerar conhecimento
+              útil, capaz de reduzir incertezas e orientar escolhas mais seguras
+              em contextos complexos.
+            </>
+          ),
+          imgFeatures3: imgFeatures3,
+          description: (
+            <div>
+              A investigação aplicada atua como um suporte estratégico para
+              qualificar decisões, políticas e projetos, transformando dados e
+              informações em direcionamentos claros e acionáveis. Mais do que
+              produzir estudos, esse eixo tem como objetivo gerar conhecimento
+              útil, capaz de reduzir incertezas e orientar escolhas mais seguras
+              em contextos complexos.
               <br />
-              Análise jurídica de contratos firmados com instituições
-              financeiras para identificar cláusulas abusivas, cobranças
-              indevidas ou irregularidades relacionadas a juros, encargos e
-              condições contratuais.
+              <br />
+              As entregas incluem o desenvolvimento de estudos, sistematizações,
+              indicadores e produção técnica, sempre com foco em apoiar a gestão
+              e o planejamento. Cada produto é estruturado para ir além da
+              análise teórica, trazendo interpretações práticas que auxiliam
+              gestores e instituições a entenderem melhor seus cenários e a
+              definirem prioridades com maior precisão.
               <br />
               <br />
-              <span className="font-bold">• Cobranças Indevidas</span>
-              <br />
-              Atuação em casos que envolvem cobranças bancárias irregulares,
-              tarifas indevidas ou valores cobrados de forma incorreta em
-              contratos e operações financeiras.
-              <br />
-              <br />
-              <span className="font-bold">• Juros Abusivos</span>
-              <br />
-              Análise de contratos de crédito e financiamentos para verificar a
-              existência de taxas de juros excessivas ou encargos financeiros
-              incompatíveis com os limites legais e jurisprudenciais.
+              A partir de metodologias de pesquisa, análise de dados e produção
+              de evidências, são elaborados diagnósticos, relatórios técnicos e
+              instrumentos de monitoramento que permitem acompanhar resultados e
+              ajustar estratégias ao longo do tempo. Isso possibilita uma gestão
+              mais orientada por dados, com maior capacidade de avaliação e
+              resposta diante de mudanças e desafios.
               <br />
               <br />
-              <span className="font-bold">• Empréstimos e Financiamentos</span>
-              <br />
-              Assessoria jurídica em conflitos relacionados a contratos de
-              empréstimos pessoais, financiamentos bancários e outras
-              modalidades de crédito oferecidas por instituições financeiras.
-              <br />
-              <br />
-              <span className="font-bold">
-                • Cartão de Crédito e Dívidas Bancárias
-              </span>
-              <br />
-              Atuação em questões envolvendo cobranças relacionadas a cartões de
-              crédito, renegociação de dívidas e análise da legalidade de
-              encargos aplicados pelas instituições financeiras.
-              <br />
-              <br />
-              <span className="font-bold">• Crédito Consignado</span>
-              <br />
-              Assessoria em casos envolvendo contratos de crédito consignado,
-              especialmente em situações de descontos indevidos, contratação
-              irregular ou questionamento das condições contratuais.
+              Como resultado, a investigação aplicada amplia a compreensão sobre
+              realidades específicas, revela tendências relevantes e fortalece a
+              base de conhecimento necessária para decisões mais consistentes.
+              Dessa forma, contribui diretamente para a formulação de políticas
+              e iniciativas mais eficazes, alinhadas às demandas sociais e
+              institucionais e com maior potencial de gerar impacto positivo e
+              sustentável.
             </div>
           ),
           rota: "/features/direitobancario",
@@ -363,29 +342,33 @@ const content = {
       },
     },
     apresentation: {
-      minitag: <>CASTRO ADVOGADOS</>,
-      title: <>Advocacia estratégica para proteger o que é seu</>,
+      minitag: <>Sobre a Planitur</>,
+      title: <>Planejamento estratégico para destinos turísticos</>,
       subtitle: (
         <>
-          Atuação jurídica com estratégia, clareza e compromisso com resultados
-          reais.
+          Transformamos conhecimento em soluções para fortalecer territórios e o
+          turismo sustentável
         </>
       ),
       paragraph: (
         <>
-          O escritório atua de forma focada no Direito de Família, lidando
-          diariamente com questões que envolvem relações familiares, separações
-          e reorganização da vida jurídica após o fim de um relacionamento. Essa
-          especialização permite conduzir cada caso com conhecimento técnico e
-          sensibilidade diante das particularidades que esse tipo de situação
-          exige.
+          A premissa de que o turismo, quando bem planejado, pode transformar
+          realidades é o que nos move. Partimos da força dos territórios, das
+          pessoas e dos saberes locais para construir soluções colaborativas e
+          sustentáveis.
           <br />
           <br />
-          <span className="font-bold">• Experiência em divórcios online</span>
+          Acreditamos que cada lugar carrega potencialidades únicas, capazes de
+          gerar desenvolvimento, fortalecer identidades e criar oportunidades
+          para quem vive no território. Por isso, trabalhamos valorizando o
+          conhecimento local, estimulando a participação das comunidades e
+          promovendo iniciativas que respeitam a cultura, o ambiente e a
+          dinâmica de cada região.
           <br />
-          Com experiência na condução de divórcios realizados de forma digital,
-          o processo pode ser iniciado e acompanhado sem necessidade de
-          deslocamentos ou burocracias desnecessárias.
+          <br />
+          Assim, o turismo se torna não apenas uma atividade econômica, mas um
+          caminho para impulsionar o desenvolvimento territorial de forma
+          responsável, integrada e duradoura.
         </>
       ),
       img: imgApresentation,
@@ -396,7 +379,7 @@ const content = {
       title: <>A_Definir</>,
       subtitle: <>A_Definir</>,
       embedsrc:
-        "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d30856.096061213342!2d-39.07041971410164!3d-14.824584190866375!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x739a08722864ed7%3A0x60b912958a8c020d!2sHernani%20S%C3%A1%2C%20Ilh%C3%A9us%20-%20BA%2C%2045656-542!5e0!3m2!1spt-BR!2sbr!4v1773493236376!5m2!1spt-BR!2sbr",
+        "https://www.google.com/maps/d/embed?mid=1Dww8t0DOx1bY-AyFUx5MU6tw5TsxcCA&ehbc=2E312F",
     },
     form: {
       minitag: <>A_Definir</>,
@@ -406,57 +389,48 @@ const content = {
     about: {
       imagem: {
         img: aboutImg,
-        imgMobile: aboutImgMobile,
         alt: "Imagem ilustrativa da Seção Sobre",
       },
-      miniTag: <>Castro Advogados Associados</>,
-      FirstPart: <span>Por que escolher nosso escritório?</span>,
+      miniTag: <>QUEM É A PLANITUR CONSULTORIA</>,
+      FirstPart: <span>Especialistas em Turismo Sustentável</span>,
       Destaque: <span className="italic font-light">A_Definir</span>,
       SecondPart: <span></span>,
       subtitle: (
         <>
-          Fundado em 2019 pela Dra. Geovana Castro da Costa — OAB/MT 27.016/O e
-          atualmente funcionando sob a gestão da Dra. Thanielly Castro Ramos —
-          OAB/MT 27.913/O, nosso compromisso é tornar esse momento mais leve,
-          rápido e seguro para você.
+          Conheça quem que transforma políticas, projetos e experiências em
+          turismo
         </>
       ),
       paragraph: (
         <div>
-          <span className="font-bold">
-            • Atuação especializada em Direito de Família
-          </span>
-          <br />
-          O escritório atua de forma focada no Direito de Família, lidando
-          diariamente com questões que envolvem relações familiares, separações
-          e reorganização da vida jurídica após o fim de um relacionamento. Essa
-          especialização permite conduzir cada caso com conhecimento técnico e
-          sensibilidade diante das particularidades que esse tipo de situação
-          exige.
+          A PLANITUR é uma empresa socioambiental especializada na gestão e no
+          desenvolvimento de projetos em turismo, recreação, uso público em
+          áreas protegidas e desenvolvimento territorial. Atuamos em todo o
+          Brasil conectando pessoas, territórios e natureza para fortalecer
+          destinos e iniciativas que valorizem modos de vida em equilíbrio com a
+          conservação do meio ambiente, com foco em impacto positivo e
+          resultados duradouros.
           <br />
           <br />
-          <span className="font-bold">• Experiência em divórcios online</span>
-          <br />
-          Com experiência na condução de divórcios realizados de forma digital,
-          o processo pode ser iniciado e acompanhado sem necessidade de
-          deslocamentos ou burocracias desnecessárias. A estrutura digital
-          permite que todo o procedimento seja conduzido com segurança jurídica
-          e praticidade para as partes envolvidas.
+          Nosso propósito é fazer do turismo uma ferramenta de transformação
+          socioambiental, capaz de conservar a natureza, valorizar culturas
+          locais, fortalecer identidades e ampliar oportunidades para
+          comunidades e territórios. Acreditamos no turismo como um meio de
+          cuidado com os lugares e com as pessoas que os habitam.
           <br />
           <br />
-          <span className="font-bold">• Atendimento ágil e personalizado</span>
-          <br />
-          Cada caso é analisado de forma individual, respeitando as necessidades
-          e circunstâncias de cada cliente. O atendimento é conduzido com
-          agilidade e atenção, buscando oferecer orientações claras e respostas
-          rápidas ao longo de todo o processo.
+          Entregamos soluções que unem rigor técnico, sensibilidade territorial
+          e diálogo com os atores locais, orientadas por processos
+          participativos e pela construção de legados que permanecem além dos
+          projetos.
           <br />
           <br />
-          <span className="font-bold">• Transparência em todas as etapas</span>
-          <br />A condução do processo ocorre com total transparência, mantendo
-          o cliente informado sobre cada etapa, prazos e procedimentos
-          envolvidos. Essa clareza permite que todas as decisões sejam tomadas
-          com segurança e compreensão sobre o andamento do caso.
+          Atuamos com consultoria, assessoria, planejamento, curadoria,
+          pesquisa, instrutoria e capacitações, além do desenvolvimento e
+          implementação de projetos voltados ao turismo responsável e
+          sustentável. Também apoiamos instituições na estruturação de propostas
+          e captação de recursos, transformando boas ideias em projetos viáveis
+          e financiáveis.
         </div>
       ),
       imagemBg: aboutImgBg,
@@ -468,9 +442,14 @@ const content = {
           alt: `Foto do Instagram de ${infos.name}`,
           altDefault: "Imagem ilustrativa da Seção de Redes Sociais",
         },
-        miniTag: <>A_Definir</>,
-        title: <>A_Definir</>,
-        subtitle: <>A_Definir</>,
+        miniTag: <>Redes sociais</>,
+        title: <>Conecte-se conosco</>,
+        subtitle: (
+          <>
+            Acompanhe novidades, dicas e projetos que fortalecem o turismo em
+            nossos canais
+          </>
+        ),
         paragraph: <p></p>,
         labelInstagram: "Siga-nos no Instagram",
         labelFacebook: "Siga-nos no Facebook",
@@ -481,86 +460,54 @@ const content = {
       },
     },
     team: {
-      miniTag: <>Nossa Equipe</>,
-      title: <>Profissionais dedicados à defesa dos seus direitos</>,
+      miniTag: <>Nosso Time</>,
+      title: <>Especialistas em planejamento turístico</>,
       subtitle: (
         <>
-          Profissionais para oferecer orientação jurídica e estratégica na
-          defesa dos direitos de nossos clientes.
+          Profissionais dedicados a criar experiências únicas, com estratégia,
+          conhecimento de mercado e atenção a cada detalhe da sua jornada.
         </>
       ),
       imgFundo: imgBgTeam,
       cards: {
         card1: {
           img: team1,
-          name: <>Dra. Geovana Castro da Costa</>,
-          role: <>OAB/MT 27.016/O</>,
+          name: <>Angelice Motter</>,
+          role: <>Líder Administrativo e Coordenadora de Projetos</>,
           rota: "/team",
           description: (
             <>
-              Dra. Geovana Castro da Costa é advogada dedicada à atuação
-              jurídica responsável e estratégica, sempre com o compromisso de
-              oferecer aos seus clientes orientação clara e segura em cada etapa
-              de suas demandas.
-              <br />
-              <br />
-              Ao longo de sua trajetória profissional, tem desenvolvido uma
-              atuação pautada pela análise cuidadosa de cada caso, compreendendo
-              que por trás de toda questão jurídica existem pessoas, histórias e
-              decisões importantes a serem tomadas. Por isso, acredita que o
-              exercício da advocacia vai além da condução de processos — envolve
-              escuta, atenção e a construção de soluções jurídicas adequadas
-              para cada situação.
-              <br />
-              <br />
-              Sua prática profissional é guiada pelos princípios da ética, da
-              responsabilidade e do comprometimento com a defesa dos direitos de
-              seus clientes. Cada caso é tratado com dedicação, buscando sempre
-              estratégias jurídicas eficientes e soluções que tragam mais
-              segurança e tranquilidade para aqueles que confiam em seu
-              trabalho.
-              <br />
-              <br />
-              Com postura profissional, atendimento próximo e foco em resultados
-              jurídicos consistentes, Dra. Geovana Castro da Costa atua com o
-              propósito de oferecer suporte jurídico confiável e de qualidade.
+              Mestre em Turismo e Hotelaria (2025), pós-graduada em Ecoturismo e
+              Interpretação da Natureza (2025) e graduada em Turismo pela
+              Universidade Federal do Rio Grande (2022). Sua trajetória
+              acadêmica e profissional concentra-se nos temas de planejamento e
+              gestão do turismo, políticas públicas, governança,
+              sustentabilidade e turismo de natureza.
             </>
           ),
-          linkedIn: "",
+          linkedIn:
+            "https://www.linkedin.com/in/angelice-raquel-motter-manzino-a261b2217/",
         },
         card2: {
           img: team2,
-          name: <>Dra. Thanielly Castro Ramos</>,
-          role: <>OAB/MT 27.913/O</>,
+          name: <>Tarcísio Cunha</>,
+          role: <>Líder de Projetos</>,
           rota: "/team",
           description: (
             <>
-              Dra. Thanielly Castro Ramos é advogada comprometida com a
-              construção de soluções jurídicas responsáveis e eficazes, sempre
-              buscando oferecer aos seus clientes um atendimento baseado na
-              confiança, na transparência e na dedicação.
-              <br />
-              <br />
-              Sua atuação profissional é marcada pela atenção aos detalhes e
-              pela análise cuidadosa de cada situação apresentada. Entende que
-              cada caso possui particularidades que exigem estratégia,
-              planejamento e conhecimento jurídico para que os direitos de seus
-              clientes sejam devidamente protegidos.
-              <br />
-              <br />
-              Com uma prática jurídica pautada na ética e na responsabilidade,
-              Dra. Thanielly dedica-se a orientar seus clientes com clareza,
-              auxiliando na compreensão das questões jurídicas envolvidas e na
-              tomada de decisões mais seguras.
-              <br />
-              <br />
-              Seu trabalho tem como objetivo não apenas conduzir processos, mas
-              também oferecer suporte jurídico sólido e confiável, contribuindo
-              para a solução de conflitos e para a defesa dos interesses de quem
-              busca seu atendimento.
+              Doutorando em Políticas Públicas, Estratégias e Desenvolvimento
+              pela Universidade Federal do Rio de Janeiro (UFRJ), Mestre em
+              Ecoturismo e Conservação pela Universidade Federal do Estado do
+              Rio de Janeiro (UNIRIO), Especialista em Gestão e Governança de
+              Áreas Marinhas Protegidas pela Universidad Austral de Chile (UACh)
+              e bacharel em Turismo pela Universidade Federal Rural do Rio de
+              Janeiro (UFRRJ). Atua há mais de 10 anos com turismo baseado na
+              natureza. Membro da Comissão Mundial de Áreas Protegidas e do
+              Grupo de Especialistas em Turismo e Áreas Protegidas da União
+              Internacional para a Conservação da Natureza (IUCN).
             </>
           ),
-          linkedIn: "",
+          linkedIn: "https://www.linkedin.com/in/tarcisio-cunha/",
         },
       },
       sectionTitle: <>A_Definir</>,

@@ -130,7 +130,7 @@ export default function Footer({
                     <div className="flex items-center gap-3">
                       <Phone size={18} className="text-primaryLight" />
                       <span className="text-md">
-                        {content.texts.infos.phone}
+                        {content.texts.infos.phone} - Planitur
                       </span>
                     </div>
                   )}
@@ -139,7 +139,7 @@ export default function Footer({
                     <div className="flex items-center gap-3">
                       <Phone size={18} className="text-primaryLight" />
                       <span className="text-[12px] desktop1:text-[14px]">
-                        {content.texts.infos.phoneSecundario}
+                        {content.texts.infos.phoneSecundario} - Tarcísio Cunha
                       </span>
                     </div>
                   )}
@@ -148,7 +148,7 @@ export default function Footer({
                     <div className="flex items-center gap-3">
                       <Phone size={18} className="text-primaryLight" />
                       <span className="text-[12px] desktop1:text-[14px]">
-                        {content.texts.infos.phoneTerciario}
+                        {content.texts.infos.phoneTerciario} - Angelice Motter
                       </span>
                     </div>
                   )}

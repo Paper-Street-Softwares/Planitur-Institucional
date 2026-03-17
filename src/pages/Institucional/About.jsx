@@ -19,7 +19,7 @@ function About({ colorMode }) {
             <div className="flex justify-center items-center">
               <div className="w-full">
                 <img
-                  src={content.texts.about.imagem.imgMobile}
+                  src={content.texts.about.imagem.img}
                   alt={content.texts.about.imagem.alt}
                   className="w-[90%] tablet1:w-[95%] tablet2:w-full desktop1:max-w-[428px] mx-auto rounded-md desktop1:hidden"
                 />

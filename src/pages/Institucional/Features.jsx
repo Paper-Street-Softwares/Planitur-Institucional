@@ -22,7 +22,7 @@ function Features({ colorMode }) {
             subtitle={content.texts.features.subtitle}
           />
 
-          <div className="grid tablet1:grid-cols-2 gap-6">
+          <div className="grid tablet1:grid-cols-2 desktop1:grid-cols-3 gap-6">
             {features.map((feature, idx) => (
               <MotionDivDownToUp>
                 <div key={idx} className={`group p-6 rounded-xl bg-neutral-50`}>

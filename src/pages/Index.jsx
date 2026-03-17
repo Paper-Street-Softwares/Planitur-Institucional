@@ -32,7 +32,14 @@ export default function Index() {
           {/* <Mapa colorMode={colorMode} /> */}
           {/* <FormNovoTemplate colorMode={colorMode} /> */}
         </main>
-        <Footer phone={true} sociais={false} adress={true} expedient={true} />
+        <Footer
+          phone={true}
+          phone2={true}
+          phone3={true}
+          sociais={false}
+          adress={true}
+          expedient={true}
+        />
       </ColorModeProvider>
     </>
   );
