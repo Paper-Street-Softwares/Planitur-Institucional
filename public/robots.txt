@@ -1,0 +1,2 @@
+User-agent: *
+Sitemap: https://A_Definir/sitemap.xml
