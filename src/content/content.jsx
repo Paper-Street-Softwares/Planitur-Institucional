@@ -45,6 +45,8 @@ import {
   Clock,
   ShieldCheck,
   Building,
+  Search,
+  Book,
 } from "lucide-react";
 
 const currentYear = new Date().getFullYear();
@@ -172,7 +174,7 @@ const content = {
         card1: {
           icon: (
             <>
-              <Users width={18} />
+              <MessageSquare width={18} />
             </>
           ),
           minitag: <>Área de Atuação</>,
@@ -222,13 +224,13 @@ const content = {
               propósito.
             </div>
           ),
-          rota: "/features/direitodefamilia",
+          rota: "/features/tecnicoconsultivo",
         },
 
         card2: {
           icon: (
             <>
-              <Building width={18} />
+              <Book width={18} />
             </>
           ),
           minitag: <>Área de Atuação</>,
@@ -280,13 +282,13 @@ const content = {
               impacto positivo, consistente e duradouro.
             </div>
           ),
-          rota: "/features/direitobancario",
+          rota: "/features/formativoeeducacional",
         },
 
         card3: {
           icon: (
             <>
-              <Building width={18} />
+              <Search width={18} />
             </>
           ),
           minitag: <>Área de Atuação</>,
@@ -337,7 +339,7 @@ const content = {
               sustentável.
             </div>
           ),
-          rota: "/features/direitobancario",
+          rota: "/features/pesquisaeproducao",
         },
       },
     },
