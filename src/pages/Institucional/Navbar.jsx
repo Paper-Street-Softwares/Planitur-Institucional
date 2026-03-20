@@ -114,7 +114,7 @@ function Navbar() {
           {/* DESKTOP MENU */}
           <div className="hidden desktop1:flex items-center gap-5 text-primaryDark text-sm tracking-wide font-mainFont font-medium">
             <Link to="/" className={linkClass()}>
-              HOME
+              INÍCIO
               {underline("home")}
             </Link>
 

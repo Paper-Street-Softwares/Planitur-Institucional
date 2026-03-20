@@ -1,7 +1,7 @@
 .custom-native-scroll {
   height: 500px !important;
   overflow-y: auto;
-  padding-right: 22px;
+  padding-right: 15px;
 
   /* Firefox */
   scrollbar-width: none;

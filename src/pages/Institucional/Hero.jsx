@@ -14,7 +14,7 @@ function Hero({ colorMode }) {
     <SectionArea className={``} paddingTopAndBottom={false}>
       <section
         id="/"
-        className="relative min-h-[550px] max-h-[750px] flex flex-col items-center justify-center overflow-hidden w-full"
+        className="relative min-h-[550px] h-[90%] max-h-[750px] flex flex-col items-center justify-center overflow-hidden w-full"
       >
         <div className="absolute inset-0 z-0">
           {" "}
@@ -46,6 +46,7 @@ function Hero({ colorMode }) {
                   {content.texts.hero.SecondPart}
                 </h1>
               }
+              subtitle={content.texts.hero.subtitle}
             />
           </motion.div>
         </div>

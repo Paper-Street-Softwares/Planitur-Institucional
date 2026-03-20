@@ -13,7 +13,7 @@ function Features1({ colorMode }) {
 
   return (
     <div id={content.texts.features.cards.card1.rota}>
-      <section className="relative min-h-[200px] h-[47vh] max-h-[405px] flex flex-col items-center justify-center overflow-hidden w-full">
+      <section className="font-mainFont relative min-h-[250px] phone3:h-[40vh] tablet2:h-[50vh] desktop1:min-h-[50vh] desktop3:h-[70vh] flex flex-col items-center justify-center overflow-hidden w-full">
         <div className="absolute inset-0 z-0">
           <img
             src={content.texts.features.cards.card1.imgFeatures1}

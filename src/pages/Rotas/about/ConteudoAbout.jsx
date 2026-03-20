@@ -37,17 +37,19 @@ function ConteudoAbout({ colorMode, social }) {
     };
   }, []);
 
+  const imageslList = Object.values(content.texts.about.logosAbout);
+
   return (
     <div>
       <section
         id="home"
-        className="font-mainFont relative min-h-[250px] h-[40vh] max-h-[405px] flex flex-col items-center justify-center overflow-hidden w-full"
+        className="font-mainFont relative min-h-[250px] phone3:h-[40vh] tablet2:h-[50vh] desktop1:min-h-[50vh] desktop3:h-[70vh] flex flex-col items-center justify-center overflow-hidden w-full"
       >
         <div className="absolute inset-0 z-0">
           <img
             src={content.texts.about.imagemBg}
             alt="Cityscape"
-            className="w-full h-full object-cover bg-center"
+            className="w-full h-full object-cover object-center"
           />
         </div>
 
@@ -84,6 +86,32 @@ function ConteudoAbout({ colorMode, social }) {
                     />
                     <span className="text-black/70">
                       {content.texts.about.paragraph}
+                      <br />
+                      <div className="flex flex-wrap gap-1 tablet1:gap-4 tablet2:gap-1">
+                        {imageslList.map((item, index) => (
+                          <div key={index} className="flex justify-center">
+                            <img
+                              src={item.img}
+                              alt={item.alt}
+                              className="max-w-[100px] tablet2:max-w-[90px] bg-green-500"
+                            />
+                          </div>
+                        ))}
+                      </div>
+                      <br />
+                      <br />
+                      <h1 className="font-secondFont font-bold">
+                        Nossa atuação:
+                      </h1>
+                      <br />
+                      <div>
+                        <iframe
+                          src="https://www.google.com/maps/d/embed?mid=1Dww8t0DOx1bY-AyFUx5MU6tw5TsxcCA&ehbc=2E312F"
+                          width=""
+                          height="480"
+                          className="w-[95%]"
+                        ></iframe>
+                      </div>{" "}
                     </span>
                   </p>
                 </div>

@@ -26,7 +26,7 @@ function ConteudoTeam({ colorMode }) {
 
   return (
     <div>
-      <section className="relative min-h-[200px] h-[47vh] max-h-[405px] flex flex-col items-center justify-center overflow-hidden w-full">
+      <section className="font-mainFont relative min-h-[250px] phone3:h-[40vh] tablet2:h-[50vh] desktop1:min-h-[50vh] desktop3:h-[70vh] flex flex-col items-center justify-center overflow-hidden w-full">
         <div className="absolute inset-0 z-0">
           <img
             src={content.texts.team.imgFundo}
@@ -44,6 +44,7 @@ function ConteudoTeam({ colorMode }) {
 
       <SectionArea className={`bg-terciary`}>
         <SectionHeaderNovo
+          miniTitle={content.texts.team.miniTag}
           title={content.texts.team.title}
           subtitle={content.texts.team.subtitle}
           className={`mb-2`}
@@ -96,7 +97,7 @@ function ConteudoTeam({ colorMode }) {
                 className={`mb-4`}
               />
 
-              <div className="flex flex-wrap justify-center gap-4">
+              <div className="flex flex-wrap justify-center items-center gap-4">
                 {clientes.map((item, index) => (
                   <div key={index} className="">
                     <img
@@ -116,7 +117,7 @@ function ConteudoTeam({ colorMode }) {
                 className={`mb-4`}
               />
 
-              <div className="flex flex-wrap justify-center gap-4">
+              <div className="flex flex-wrap justify-center items-center gap-4">
                 {parceiros.map((item, index) => (
                   <div key={index} className="">
                     <img

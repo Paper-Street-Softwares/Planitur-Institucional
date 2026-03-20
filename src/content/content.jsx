@@ -35,9 +35,21 @@ import logo1Cliente from "../assets/imgs/team/clientesLogo/logo1.webp";
 import logo2Cliente from "../assets/imgs/team/clientesLogo/logo2.webp";
 import logo3Cliente from "../assets/imgs/team/clientesLogo/logo3.webp";
 import logo4Cliente from "../assets/imgs/team/clientesLogo/logo4.webp";
+import logo5Cliente from "../assets/imgs/team/clientesLogo/logo5.webp";
 
 import logo1Parceiro from "../assets/imgs/team/parceirosLogo/logo1.webp";
 import logo2Parceiro from "../assets/imgs/team/parceirosLogo/logo2.webp";
+import logo3Parceiro from "../assets/imgs/team/parceirosLogo/logo3.webp";
+
+import logo1 from "../assets/imgs/about/rotaAbout/logosAbout/logo1.webp";
+import logo2 from "../assets/imgs/about/rotaAbout/logosAbout/logo2.webp";
+import logo3 from "../assets/imgs/about/rotaAbout/logosAbout/logo3.webp";
+import logo4 from "../assets/imgs/about/rotaAbout/logosAbout/logo4.webp";
+import logo5 from "../assets/imgs/about/rotaAbout/logosAbout/logo5.webp";
+import logo6 from "../assets/imgs/about/rotaAbout/logosAbout/logo6.webp";
+import logo7 from "../assets/imgs/about/rotaAbout/logosAbout/logo7.webp";
+import logo8 from "../assets/imgs/about/rotaAbout/logosAbout/logo8.webp";
+import logo9 from "../assets/imgs/about/rotaAbout/logosAbout/logo9.webp";
 
 //Imports Icons
 import {
@@ -146,7 +158,7 @@ const content = {
       ctaButtonTextResponsive: "Contato",
     },
     hero: {
-      miniTag: <>PLANITUR CONSULTORIA</>,
+      miniTag: <></>,
       FirstPart: <span>Turismo que conecta</span>,
       Destaque: (
         <span className="destaque relative italic font-light">
@@ -410,6 +422,44 @@ const content = {
         img: aboutImg,
         alt: "Imagem ilustrativa da Seção Sobre",
       },
+      logosAbout: {
+        img1: {
+          img: logo1,
+          alt: "Logomarca",
+        },
+        img2: {
+          img: logo2,
+          alt: "Logomarca",
+        },
+        img3: {
+          img: logo3,
+          alt: "Logomarca",
+        },
+        img4: {
+          img: logo4,
+          alt: "Logomarca",
+        },
+        img5: {
+          img: logo5,
+          alt: "Logomarca",
+        },
+        img6: {
+          img: logo6,
+          alt: "Logomarca",
+        },
+        img7: {
+          img: logo7,
+          alt: "Logomarca",
+        },
+        img8: {
+          img: logo8,
+          alt: "Logomarca",
+        },
+        img9: {
+          img: logo9,
+          alt: "Logomarca",
+        },
+      },
       miniTag: <>QUEM É A PLANITUR CONSULTORIA</>,
       FirstPart: <span>Especialistas em Turismo Sustentável</span>,
       Destaque: <span className="italic font-light">A_Definir</span>,
@@ -422,34 +472,94 @@ const content = {
       ),
       paragraph: (
         <div>
-          A PLANITUR é uma empresa socioambiental especializada na gestão e no
-          desenvolvimento de projetos em turismo, recreação, uso público em
-          áreas protegidas e desenvolvimento territorial. Atuamos em todo o
-          Brasil conectando pessoas, territórios e natureza para fortalecer
-          destinos e iniciativas que valorizem modos de vida em equilíbrio com a
-          conservação do meio ambiente, com foco em impacto positivo e
-          resultados duradouros.
+          A PLANITUR é uma empresa com atuação socioambiental especializada no
+          planejamento, desenvolvimento e gestão de projetos em turismo, lazer e
+          uso público. Atuamos especialmente no Brasil integrando pessoas,
+          paisagens e saberes para fortalecer destinos e iniciativas que
+          valorizem modos de vida em equilíbrio com a conservação do meio
+          ambiente, com foco em impacto positivo e resultados duradouros.
           <br />
           <br />
           Nosso propósito é fazer do turismo uma ferramenta de transformação
-          socioambiental, capaz de conservar a natureza, valorizar culturas
-          locais, fortalecer identidades e ampliar oportunidades para
-          comunidades e territórios. Acreditamos no turismo como um meio de
-          cuidado com os lugares e com as pessoas que os habitam.
+          socioambiental. Acreditamos no turismo como um meio de cuidado com os
+          lugares e com as pessoas.
           <br />
           <br />
-          Entregamos soluções que unem rigor técnico, sensibilidade territorial
-          e diálogo com os atores locais, orientadas por processos
-          participativos e pela construção de legados que permanecem além dos
-          projetos.
+          Nesse sentido, atuamos com serviços de consultoria, assessoria,
+          curadoria, instrutoria, palestras, pesquisas e capacitações na área do
+          turismo, com foco no desenvolvimento territorial e socioambiental, bem
+          como na qualificação de destinos, pessoas, produtos e experiências.
           <br />
           <br />
-          Atuamos com consultoria, assessoria, planejamento, curadoria,
-          pesquisa, instrutoria e capacitações, além do desenvolvimento e
-          implementação de projetos voltados ao turismo responsável e
-          sustentável. Também apoiamos instituições na estruturação de propostas
-          e captação de recursos, transformando boas ideias em projetos viáveis
-          e financiáveis.
+          Também apoiamos instituições na estruturação de propostas e captação
+          de recursos, transformando boas ideias em projetos viáveis e
+          financiáveis. Nosso objetivo é gerar soluções viáveis, alinhadas às
+          realidades dos territórios e sustentáveis (ambiental, social e
+          economicamente).
+          <br />
+          <br />
+          <span className="font-bold"> Missão: </span> <br />
+          Transformar territórios por meio do planejamento, da gestão e da
+          formação em turismo e lazer, promovendo sustentabilidade, conservação
+          da natureza e a valorização das identidades locais.
+          <br />
+          <br />
+          <span className="font-bold"> Visão: </span> <br />
+          Ser referência no planejamento e na implementação de iniciativas
+          socioambientais em turismo, lazer e conservação da natureza.
+          <br />
+          <br />
+          <span className="font-bold"> Valores: </span> <br />
+          <div className="flex flex-col gap-4">
+            <p>
+              1. Sustentabilidade <br /> Atuamos com responsabilidade ambiental,
+              social e econômica, considerando os impactos das decisões no
+              presente e no futuro.
+            </p>
+            <p>
+              2. Valorização dos saberes locais
+              <br /> Reconhecemos o conhecimento popular e tradicional como
+              parte essencial da identidade e do desenvolvimento dos
+              territórios.
+            </p>
+            <p>
+              3. Ética e compromisso socioambiental
+              <br />
+              Conduzimos nossas ações com respeito, integridade, transparência e
+              compromisso com o bem comum.
+            </p>
+            <p>
+              4. Excelência técnica com sensibilidade humana
+              <br />
+              Integramos conhecimento qualificado com empatia, escuta e
+              respeito, valorizando a diversidade de vozes nos processos de
+              planejamento e atuação.
+            </p>
+            <p>
+              5. Colaboração em rede
+              <br />
+              Acreditamos na força da cooperação entre comunidades, governos,
+              academia e iniciativa privada para gerar resultados consistentes.
+            </p>
+            <p>
+              6. Inovação
+              <br />
+              Buscamos soluções criativas e adaptadas às realidades locais,
+              respeitando a autenticidade de cada território.
+            </p>
+            <p>
+              7. Valorização do patrimônio
+              <br />
+              Promovemos o reconhecimento e a proteção do patrimônio natural e
+              cultural, material e imaterial.
+            </p>
+          </div>
+          <br />
+          <span className="font-bold">Nosso compromisso:</span> <br />
+          Desenvolvemos projetos socioambientais alinhados a agendas globais de
+          sustentabilidade, integrando conservação ambiental, inclusão social e
+          desenvolvimento territorial, com foco em impacto positivo e soluções
+          de longo prazo.
         </div>
       ),
       imagemBg: aboutImgBg,
@@ -479,7 +589,7 @@ const content = {
       },
     },
     team: {
-      miniTag: <>Nosso Time</>,
+      miniTag: <>Sócios</>,
       title: <>Especialistas em planejamento turístico</>,
       subtitle: (
         <>
@@ -578,6 +688,10 @@ const content = {
           img: logo2Parceiro,
           alt: "LogoMarca parceira",
         },
+        card3: {
+          img: logo3Parceiro,
+          alt: "LogoMarca parceira",
+        },
       },
       clientesLogo: {
         card1: {
@@ -594,6 +708,10 @@ const content = {
         },
         card4: {
           img: logo4Cliente,
+          alt: "LogoMarca parceira",
+        },
+        card5: {
+          img: logo5Cliente,
           alt: "LogoMarca parceira",
         },
       },
