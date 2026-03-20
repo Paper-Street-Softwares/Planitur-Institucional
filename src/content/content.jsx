@@ -424,19 +424,19 @@ const content = {
       },
       logosAbout: {
         img1: {
-          img: logo1,
+          img: logo9,
           alt: "Logomarca",
         },
         img2: {
-          img: logo2,
+          img: logo8,
           alt: "Logomarca",
         },
         img3: {
-          img: logo3,
+          img: logo7,
           alt: "Logomarca",
         },
         img4: {
-          img: logo4,
+          img: logo6,
           alt: "Logomarca",
         },
         img5: {
@@ -444,19 +444,19 @@ const content = {
           alt: "Logomarca",
         },
         img6: {
-          img: logo6,
+          img: logo4,
           alt: "Logomarca",
         },
         img7: {
-          img: logo7,
+          img: logo3,
           alt: "Logomarca",
         },
         img8: {
-          img: logo8,
+          img: logo2,
           alt: "Logomarca",
         },
         img9: {
-          img: logo9,
+          img: logo1,
           alt: "Logomarca",
         },
       },
@@ -471,7 +471,7 @@ const content = {
         </>
       ),
       paragraph: (
-        <div>
+        <div className="w-full">
           A PLANITUR é uma empresa com atuação socioambiental especializada no
           planejamento, desenvolvimento e gestão de projetos em turismo, lazer e
           uso público. Atuamos especialmente no Brasil integrando pessoas,
@@ -504,55 +504,96 @@ const content = {
           da natureza e a valorização das identidades locais.
           <br />
           <br />
-          <span className="font-bold"> Visão: </span> <br />
-          Ser referência no planejamento e na implementação de iniciativas
-          socioambientais em turismo, lazer e conservação da natureza.
-          <br />
-          <br />
-          <span className="font-bold"> Valores: </span> <br />
-          <div className="flex flex-col gap-4">
-            <p>
-              1. Sustentabilidade <br /> Atuamos com responsabilidade ambiental,
-              social e econômica, considerando os impactos das decisões no
-              presente e no futuro.
-            </p>
-            <p>
-              2. Valorização dos saberes locais
-              <br /> Reconhecemos o conhecimento popular e tradicional como
-              parte essencial da identidade e do desenvolvimento dos
-              territórios.
-            </p>
-            <p>
-              3. Ética e compromisso socioambiental
-              <br />
-              Conduzimos nossas ações com respeito, integridade, transparência e
-              compromisso com o bem comum.
-            </p>
-            <p>
-              4. Excelência técnica com sensibilidade humana
-              <br />
-              Integramos conhecimento qualificado com empatia, escuta e
-              respeito, valorizando a diversidade de vozes nos processos de
-              planejamento e atuação.
-            </p>
-            <p>
-              5. Colaboração em rede
-              <br />
-              Acreditamos na força da cooperação entre comunidades, governos,
-              academia e iniciativa privada para gerar resultados consistentes.
-            </p>
-            <p>
-              6. Inovação
-              <br />
-              Buscamos soluções criativas e adaptadas às realidades locais,
-              respeitando a autenticidade de cada território.
-            </p>
-            <p>
-              7. Valorização do patrimônio
-              <br />
-              Promovemos o reconhecimento e a proteção do patrimônio natural e
-              cultural, material e imaterial.
-            </p>
+          <div className="flex flex-col md:flex-row justify-center items-stretch gap-12 tablet2:gap-8 p-5 bg-gray-50 relative">
+            {/* CARD 01 - MISSÃO */}
+            <div className="relative flex-1 group max-w-[210px]">
+              {/* Moldura de fundo (Verde) */}
+              <div className="relative bg-white p-8 shadow-xl h-full flex flex-col items-center text-center">
+                <div className="text-lime-500 mb-6">
+                  <svg
+                    className="w-12 h-12"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="1.5"
+                      d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+                    />
+                  </svg>
+                </div>
+                <h3 className="text-lime-600 font-black text-xl tracking-widest mb-4">
+                  MISSÃO
+                </h3>
+                <p className="text-gray-500 text-sm leading-relaxed">
+                  Transformar territórios por meio do planejamento, da gestão e
+                  da formação em turismo e lazer, promovendo sustentabilidade e
+                  a valorização das identidades locais.
+                </p>
+              </div>
+            </div>
+
+            {/* CARD 02 - VISÃO */}
+            <div className="relative flex-1 group max-w-[210px]">
+              <div className="relative bg-white p-8 shadow-xl h-full flex flex-col items-center text-center">
+                <div className="text-teal-500 mb-6">
+                  <svg
+                    className="w-12 h-12"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="1.5"
+                      d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"
+                    />
+                  </svg>
+                </div>
+                <h3 className="text-teal-600 font-black text-xl tracking-widest mb-4">
+                  VISÃO
+                </h3>
+                <p className="text-gray-500 text-sm leading-relaxed">
+                  Ser referência no planejamento e na implementação de
+                  iniciativas socioambientais em turismo, lazer e conservação da
+                  natureza.
+                </p>
+              </div>
+            </div>
+
+            {/* CARD 03 - VALORES */}
+            <div className="relative flex-1 group max-w-[210px]">
+              <div className="relative bg-white p-8 shadow-xl h-full flex flex-col items-center text-center">
+                <div className="text-blue-600 mb-6">
+                  <svg
+                    className="w-12 h-12"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="1.5"
+                      d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
+                    />
+                  </svg>
+                </div>
+                <h3 className="text-blue-700 font-black text-xl tracking-widest mb-4">
+                  VALORES
+                </h3>
+                <ul className="text-gray-500 text-xs leading-tight text-left space-y-2">
+                  <li>• Sustentabilidade e Ética</li>
+                  <li>• Valorização dos saberes locais</li>
+                  <li>• Excelência técnica e sensibilidade</li>
+                  <li>• Colaboração em rede</li>
+                  <li>• Inovação e Proteção do patrimônio</li>
+                </ul>
+              </div>
+            </div>
           </div>
           <br />
           <span className="font-bold">Nosso compromisso:</span> <br />
