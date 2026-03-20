@@ -26,7 +26,8 @@ function ConteudoTeam({ colorMode }) {
 
   return (
     <div>
-      <section className="font-mainFont relative min-h-[250px] phone3:h-[40vh] tablet2:h-[50vh] desktop1:min-h-[50vh] desktop3:h-[70vh] flex flex-col items-center justify-center overflow-hidden w-full">
+      <section className="relative min-h-[550px] h-[90%] max-h-[750px] flex flex-col items-center justify-center overflow-hidden w-full">
+        {" "}
         <div className="absolute inset-0 z-0">
           <img
             src={content.texts.team.imgFundo}
@@ -34,7 +35,6 @@ function ConteudoTeam({ colorMode }) {
             className="w-full h-full object-cover object-top"
           />
         </div>
-
         <MotionDivDownToUp className="z-10 w-full flex justify-center absolute bottom-10">
           <div>
             <ScrollMouse />

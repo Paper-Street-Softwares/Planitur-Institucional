@@ -14,7 +14,7 @@ function ConteudoAbout({ colorMode, social }) {
   useEffect(() => {
     const el = $(boxRef.current);
     const dot = $(".scroll-dot");
-    window.scrollTo(0, 0);
+    // window.scrollTo(0, 0);
 
     el.css({
       height: "435px",
@@ -41,10 +41,7 @@ function ConteudoAbout({ colorMode, social }) {
 
   return (
     <div>
-      <section
-        id="home"
-        className="font-mainFont relative min-h-[250px] phone3:h-[40vh] tablet2:h-[50vh] desktop1:min-h-[50vh] desktop3:h-[70vh] flex flex-col items-center justify-center overflow-hidden w-full"
-      >
+      <section className="relative min-h-[550px] h-[90%] max-h-[750px] flex flex-col items-center justify-center overflow-hidden w-full">
         <div className="absolute inset-0 z-0">
           <img
             src={content.texts.about.imagemBg}
@@ -89,16 +86,119 @@ function ConteudoAbout({ colorMode, social }) {
                   <span className="text-black/70 w-full">
                     {content.texts.about.paragraph}
                     <br />
-                    <div className="flex flex-wrap gap-4 tablet1:gap-4 tablet2:gap-1">
-                      {imageslList.map((item, index) => (
-                        <div key={index} className="flex justify-center">
-                          <img
-                            src={item.img}
-                            alt={item.alt}
-                            className="max-w-[130px]"
-                          />
+                    <div className="grid grid-cols-1 tablet1:grid-cols-2 tablet2:grid-cols-3 m-auto gap-12 tablet1:gap-x-6 p-5 relative">
+                      {/* CARD 01 - MISSÃO */}
+                      <div className="relative mx-auto flex w-fit">
+                        {/* Moldura de fundo (Verde) */}
+                        <div className="relative bg-white phone3:max-w-[300px] mx-auto p-8 shadow-xl h-full flex flex-col items-center text-center">
+                          <div className="text-lime-500 mb-6">
+                            <svg
+                              className="w-12 h-12"
+                              fill="none"
+                              stroke="currentColor"
+                              viewBox="0 0 24 24"
+                            >
+                              <path
+                                strokeLinecap="round"
+                                strokeLinejoin="round"
+                                strokeWidth="1.5"
+                                d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+                              />
+                            </svg>
+                          </div>
+                          <h3 className="text-lime-500 font-black text-xl tracking-widest mb-4">
+                            MISSÃO
+                          </h3>
+                          <p className="text-gray-500 text-sm leading-relaxed">
+                            Transformar territórios por meio do planejamento, da
+                            gestão e da formação em turismo e lazer, promovendo
+                            sustentabilidade e a valorização das identidades
+                            locais.
+                          </p>
                         </div>
-                      ))}
+                      </div>
+
+                      {/* CARD 02 - VISÃO */}
+                      <div className="relative mx-auto group w-fit">
+                        <div className="relative bg-white phone3:max-w-[300px] mx-auto p-8 shadow-xl h-full flex flex-col items-center text-center">
+                          <div className="text-teal-500 mb-6">
+                            <svg
+                              className="w-12 h-12"
+                              fill="none"
+                              stroke="currentColor"
+                              viewBox="0 0 24 24"
+                            >
+                              <path
+                                strokeLinecap="round"
+                                strokeLinejoin="round"
+                                strokeWidth="1.5"
+                                d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"
+                              />
+                            </svg>
+                          </div>
+                          <h3 className="text-teal-600 font-black text-xl tracking-widest mb-4">
+                            VISÃO
+                          </h3>
+                          <p className="text-gray-500 text-sm leading-relaxed">
+                            Ser referência no planejamento e na implementação de
+                            iniciativas socioambientais em turismo, lazer e
+                            conservação da natureza.
+                          </p>
+                        </div>
+                      </div>
+
+                      {/* CARD 03 - VALORES */}
+                      <div className="relative mx-auto group w-fit">
+                        <div className="relative bg-white phone3:max-w-[300px] mx-auto p-8 shadow-xl h-full flex flex-col items-center text-center">
+                          <div className="text-blue-600 mb-6">
+                            <svg
+                              className="w-12 h-12"
+                              fill="none"
+                              stroke="currentColor"
+                              viewBox="0 0 24 24"
+                            >
+                              <path
+                                strokeLinecap="round"
+                                strokeLinejoin="round"
+                                strokeWidth="1.5"
+                                d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
+                              />
+                            </svg>
+                          </div>
+                          <h3 className="text-blue-700 font-black text-xl tracking-widest mb-4">
+                            VALORES
+                          </h3>
+                          <ul className="text-gray-500 text-xs leading-tight text-left space-y-2">
+                            <li>• Sustentabilidade e Ética</li>
+                            <li>• Valorização dos saberes locais</li>
+                            <li>• Excelência técnica e sensibilidade</li>
+                            <li>• Colaboração em rede</li>
+                            <li>• Inovação e Proteção do patrimônio</li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="flex mt-6 flex-wrap gap-4 tablet1:gap-4 tablet2:gap-1">
+                      <span className="font-bold">Nosso compromisso:</span>{" "}
+                      <br />
+                      <p className="font-secondFont mb-4 text-start">
+                        Desenvolvemos projetos socioambientais alinhados a
+                        agendas globais de sustentabilidade, integrando
+                        conservação ambiental, inclusão social e desenvolvimento
+                        territorial, com foco em impacto positivo e soluções de
+                        longo prazo.
+                      </p>
+                      <div className="grid grid-cols-3 gap-4">
+                        {imageslList.map((item, index) => (
+                          <div key={index} className="flex justify-center ">
+                            <img
+                              src={item.img}
+                              alt={item.alt}
+                              className="max-w-full object-cover"
+                            />
+                          </div>
+                        ))}
+                      </div>
                     </div>
                     <br />
                     <br />
