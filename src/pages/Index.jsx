@@ -25,6 +25,7 @@ export default function Index() {
         <Navbar />
         <main>
           <Hero />
+          <div></div>
           <About colorMode={colorMode} />
           <Features colorMode={colorMode} />
           <TeamHome colorMode={colorMode} />
