@@ -68,7 +68,7 @@ export default function Footer({
                     rel="noopener noreferrer"
                     className="hover:text-primaryLight duration-300 transition-all cursor-pointer"
                   >
-                    Nossa Equipe
+                    Quem Somos
                   </a>
                   <a
                     href="/contato"

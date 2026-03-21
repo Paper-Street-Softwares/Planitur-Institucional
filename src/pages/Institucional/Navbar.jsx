@@ -34,7 +34,7 @@ function Navbar() {
           root: null,
           rootMargin: "-40% 0px -55% 0px",
           threshold: 0,
-        },
+        }
       );
 
       observer.observe(section);
@@ -90,7 +90,9 @@ function Navbar() {
 
   return (
     <div
-      className={`bg-neutral-50 fixed w-full z-50 py-2 ${mobileOpen ? "" : " border-b-2 border-[#C03D1A]"} `}
+      className={`bg-neutral-50 fixed w-full z-50 py-2 ${
+        mobileOpen ? "" : " border-b-2 border-[#C03D1A]"
+      } `}
     >
       <div className="max-w-[1215px] w-[90%] mx-auto">
         <div className="flex items-center justify-between ">
@@ -149,7 +151,7 @@ function Navbar() {
                   href="/team"
                   className="block px-4 py-2 hover:text-primaryLight transition"
                 >
-                  Nossa equipe
+                  Quem Somos
                 </a>
 
                 {/* <a
@@ -249,7 +251,9 @@ function Navbar() {
               setMobileOfficeOpen(!mobileOfficeOpen);
               setMobileAreasOpen(false); // fecha o outro
             }}
-            className={`w-full flex items-center justify-between ${linkClass("office")}`}
+            className={`w-full flex items-center justify-between ${linkClass(
+              "office"
+            )}`}
           >
             <span>NOSSO ESCRITÓRIO</span>
             <ChevronDown
@@ -285,7 +289,9 @@ function Navbar() {
               setMobileAreasOpen(!mobileAreasOpen);
               setMobileOfficeOpen(false);
             }}
-            className={`w-full flex items-center justify-between ${linkClass("features")}`}
+            className={`w-full flex items-center justify-between ${linkClass(
+              "features"
+            )}`}
           >
             <span>ÁREAS DE ATUAÇÃO</span>
             <ChevronDown
