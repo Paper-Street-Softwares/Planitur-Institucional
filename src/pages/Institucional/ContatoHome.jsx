@@ -69,12 +69,12 @@ function ContatoHome({ colorMode }) {
               <a
                 href={"/contato"}
                 rel="noopener noreferrer"
-                className="text-primaryLight text-sm hover:scale-90 transition-all duration-500 cursor-pointer mt-6 flex w-fit gap-2 items-center"
+                className="mt-6 inline-block border-2 border-orange-500 text-orange-500 font-semibold uppercase text-sm py-3 px-8 hover:bg-orange-500 hover:text-white transition-colors duration-300"
               >
                 {content.texts.contato.ctaButtonText}
-                <span>
+                {/* <span>
                   <ArrowRight width={18} />
-                </span>
+                </span> */}
               </a>
             </div>
           </MotionDivDownToUp>
