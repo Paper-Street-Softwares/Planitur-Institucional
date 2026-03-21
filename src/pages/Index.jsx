@@ -11,6 +11,10 @@ import Mapa from "../components/sections/Mapa";
 import Features from "./Institucional/Features";
 import TeamHome from "./Institucional/TeamHome";
 import ContatoHome from "./Institucional/ContatoHome";
+import imgBrasilMapa from "../assets/imgs/home/brasilmap.png";
+import SectionArea from "../components/sectionElements/SectionArea";
+import SectionHeaderNovo from "../components/sectionElements/SectionHeaderNovo";
+import MapaBrasil from "./Institucional/MapaBrasil";
 
 export default function Index() {
   const { colorMode, setColorMode } = useColorMode();
@@ -25,7 +29,7 @@ export default function Index() {
         <Navbar />
         <main>
           <Hero />
-          <div></div>
+          <MapaBrasil colorMode={colorMode} />
           <About colorMode={colorMode} />
           <Features colorMode={colorMode} />
           <TeamHome colorMode={colorMode} />
