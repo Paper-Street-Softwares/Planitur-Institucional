@@ -41,12 +41,12 @@ function ConteudoAbout({ colorMode, social }) {
 
   return (
     <div>
-      <section className="relative min-h-[550px] h-[90%] max-h-[750px] flex flex-col items-center justify-center overflow-hidden w-full">
+      <section className="relative w-full h-auto py-20 desktop2:py-32 aspect-video min-h-[300px] desktop2:aspect-[10/3] flex flex-col items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
           <img
             src={content.texts.about.imagemBg}
-            alt="Cityscape"
-            className="w-full h-full object-cover object-center"
+            alt=""
+            className="w-full h-full object-cover"
           />
         </div>
 
