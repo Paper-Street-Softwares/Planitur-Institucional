@@ -145,11 +145,11 @@ function Contato({ colorMode, social }) {
 
         <div className="grid desktop1:grid-cols-2">
           <MotionDivDownToUp>
-            <TalentForm />
+            <TalentForm colorMode={colorMode} />
           </MotionDivDownToUp>
 
           <MotionDivDownToUp>
-            <ContactForm />
+            <ContactForm colorMode={colorMode} />
           </MotionDivDownToUp>
         </div>
       </SectionArea>

@@ -1,4 +1,5 @@
 import { useState } from "react";
+import emailjs from "@emailjs/browser"; // Não esqueça de instalar: npm install @emailjs/browser
 import SectionArea from "../../../components/sectionElements/SectionArea";
 import SectionWrapper from "../../../components/sectionElements/SectionWrapper";
 import SectionHeaderNovo from "../../../components/sectionElements/SectionHeaderNovo";
@@ -14,6 +15,8 @@ const helpOptions = [
 
 function ContactForm({ colorMode }) {
   const [checked, setChecked] = useState(helpOptions.map(() => false));
+  const [isSending, setIsSending] = useState(false);
+  const [sent, setSent] = useState(false);
 
   const [form, setForm] = useState({
     nome: "",
@@ -22,8 +25,6 @@ function ContactForm({ colorMode }) {
     cnpj: "",
     mensagem: "",
   });
-
-  const [sent, setSent] = useState(false);
 
   function toggle(i) {
     setChecked((c) => c.map((v, idx) => (idx === i ? !v : v)));
@@ -35,25 +36,44 @@ function ContactForm({ colorMode }) {
 
   function handleSubmit(e) {
     e.preventDefault();
+    setIsSending(true);
 
-    const selected = helpOptions.filter((_, i) => checked[i]);
+    // Filtra as opções selecionadas
+    const selectedHelp = helpOptions.filter((_, i) => checked[i]).join(", ");
 
-    const subject = encodeURIComponent("Contato - PLANITUR");
-    const body = encodeURIComponent(
-      `Como podemos ajudar: ${selected.join(", ")}\n\nNome: ${form.nome}\nEmail: ${form.email}\nWhatsApp: ${form.whatsapp}${
-        form.cnpj ? `\nCNPJ: ${form.cnpj}` : ""
-      }\n\nMensagem:\n${form.mensagem}`,
+    // Prepara os parâmetros para o template do EmailJS
+    const templateParams = {
+      user_name: form.nome,
+      user_email: form.email,
+      whatsapp: form.whatsapp,
+      cnpj: form.cnpj || "Não informado",
+      ajuda_com: selectedHelp || "Nenhuma opção selecionada",
+      message: form.mensagem,
+    };
+
+    // IDs do seu painel EmailJS
+    const SERVICE_ID = "seu_service_id";
+    const TEMPLATE_ID = "seu_template_id";
+    const PUBLIC_KEY = "sua_public_key";
+
+    emailjs.send(SERVICE_ID, TEMPLATE_ID, templateParams, PUBLIC_KEY).then(
+      () => {
+        setSent(true);
+        setIsSending(false);
+        // Limpa o formulário se desejar
+        setForm({ nome: "", email: "", whatsapp: "", cnpj: "", mensagem: "" });
+        setChecked(helpOptions.map(() => false));
+      },
+      (error) => {
+        console.error("Erro:", error);
+        alert("Erro ao enviar mensagem. Tente novamente mais tarde.");
+        setIsSending(false);
+      },
     );
-
-    window.open(
-      `mailto:gabrielsouza65115@gmail.com?subject=${subject}&body=${body}`,
-    );
-
-    setSent(true);
   }
 
   return (
-    <SectionArea className={`desktop1:max-w-[600px]`}>
+    <SectionArea className={`desktop1:max-w-[600px] font-secondFont`}>
       <SectionWrapper>
         <SectionHeaderNovo
           title="Vamos conversar?"
@@ -97,8 +117,9 @@ function ContactForm({ colorMode }) {
                         type="checkbox"
                         checked={checked[i]}
                         onChange={() => toggle(i)}
+                        className="appearance-none min-w-[20px] min-h-[20px] border-[1px] border-black/20 cursor-pointer rounded-[5px] checked:bg-orange-500 checked:border-orange-500"
                       />
-                      <span className="text-sm">{opt}</span>
+                      <span className="text-sm text-black/50">{opt}</span>
                     </label>
                   ))}
                 </div>
@@ -145,7 +166,6 @@ function ContactForm({ colorMode }) {
                 />
               </div>
 
-              {/* TEXTAREA */}
               <textarea
                 name="mensagem"
                 placeholder="Descreva sua mensagem..."
@@ -156,13 +176,17 @@ function ContactForm({ colorMode }) {
                 required
               />
 
-              {/* BOTÃO */}
               <div className="">
                 <button
                   type="submit"
-                  className="mt-2 inline-block border-2 border-orange-500 text-orange-500 font-semibold uppercase text-sm py-3 px-8 hover:bg-orange-500 hover:text-white transition-colors duration-300"
+                  disabled={isSending}
+                  className={`mt-2 inline-block border-2 border-orange-500 font-semibold uppercase text-sm py-3 px-8 transition-colors duration-300 ${
+                    isSending
+                      ? "opacity-50 cursor-not-allowed bg-gray-200"
+                      : "text-orange-500 hover:bg-orange-500 hover:text-white"
+                  }`}
                 >
-                  Enviar mensagem
+                  {isSending ? "Enviando..." : "Enviar mensagem"}
                 </button>
               </div>
             </form>
