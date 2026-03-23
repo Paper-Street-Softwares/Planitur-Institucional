@@ -73,7 +73,10 @@ function ContactForm({ colorMode }) {
   }
 
   return (
-    <SectionArea className={`desktop1:max-w-[600px] font-secondFont`}>
+    <SectionArea
+      className={`desktop1:max-w-[600px] font-secondFont`}
+      paddingtop={false}
+    >
       <SectionWrapper>
         <SectionHeaderNovo
           title="Vamos conversar?"
