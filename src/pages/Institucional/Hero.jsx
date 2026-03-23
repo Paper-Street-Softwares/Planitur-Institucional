@@ -14,14 +14,13 @@ function Hero({ colorMode }) {
     <SectionArea className={``} paddingTopAndBottom={false}>
       <section
         id="/"
-        className="relative min-h-[550px] h-[90%] max-h-[750px] flex flex-col items-center justify-center overflow-hidden w-full"
+        className="relative w-full h-auto py-20 desktop2:py-32 flex flex-col aspect-auto min-h-[300px] items-center justify-center overflow-hidden"
       >
         <div className="absolute inset-0 z-0">
-          {" "}
           <img
             src={content.texts.hero.heroBg}
-            alt="Cityscape"
-            className="w-full h-full object-cover object-top"
+            alt=""
+            className="w-full h-full object-cover" // Aqui o h-full preenche o que o padding criou
           />
           <div className="absolute inset-0 bg-black/70 mix-blend-multiply" />
           {/* <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent" /> */}
@@ -38,7 +37,7 @@ function Hero({ colorMode }) {
               colorMode={colorMode}
               miniTitle={content.texts.hero.miniTag}
               title={
-                <h1 className="w-fit mx-auto text-[29px] desktop2:text-[50px] font-mainFont leading-10 desktop1:leading-[60px] text-white font-medium drop-shadow-lg">
+                <h1 className="w-fit mx-auto text-[29px] desktop2:text-[50px] font-mainFont leading-10 desktop1:leading-[60px] desktop2:leading-[70px] text-white font-medium drop-shadow-lg">
                   {content.texts.hero.FirstPart}
                   <br />
                   {content.texts.hero.Destaque}

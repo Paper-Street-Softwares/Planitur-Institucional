@@ -9,12 +9,12 @@ import MotionDivDownToUp from "../../../components/animation/MotionDivDownToUp";
 function Features3({ colorMode }) {
   return (
     <div id={content.texts.features.cards.card3.rota}>
-      <section className="relative min-h-[550px] h-[90%] max-h-[750px] flex flex-col items-center justify-center overflow-hidden w-full">
+      <section className="relative w-full h-auto py-20 desktop2:py-32 aspect-video min-h-[300px] desktop2:aspect-[10/3] flex flex-col items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
           <img
             src={content.texts.features.cards.card3.imgFeatures3}
             alt="Cityscape"
-            className="w-full h-full object-cover object-top"
+            className="w-full h-full object-cover object-center"
           />
           {/* <div className="absolute inset-0 bg-[#0f2a3a]/40 mix-blend-multiply" />
           <div className="absolute inset-0 bg-gradient-to-t from-[#0f2a3a] via-transparent to-transparent" /> */}

@@ -15,6 +15,8 @@ import {
 import SectionWrapper from "../../../components/sectionElements/SectionWrapper";
 import content from "../../../content/content";
 import MotionDivDownToUp from "../../../components/animation/MotionDivDownToUp";
+import ContactForm from "./ContactForm";
+import TalentForm from "./FormTalentos";
 
 function Contato({ colorMode, social }) {
   const linksContato = {
@@ -51,17 +53,17 @@ function Contato({ colorMode, social }) {
   };
 
   useEffect(() => {
-    window.scrollTo(0, 0);
+    // window.scrollTo(0, 0);
   });
 
   return (
     <div id="">
-      <section className="relative min-h-[550px] h-[90%] max-h-[750px] flex flex-col items-center justify-center overflow-hidden w-full">
+      <section className="relative w-full h-auto py-20 desktop2:py-32 aspect-video min-h-[300px] desktop2:aspect-[10/3] flex flex-col items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
           <img
             src={bgImg}
             alt="Cityscape"
-            className="w-full h-full object-cover object-top"
+            className="w-full h-full object-cover object-center"
           />
           {/* <div className="absolute inset-0 bg-[#0f2a3a]/40 mix-blend-multiply" />
           <div className="absolute inset-0 bg-gradient-to-t from-[#0f2a3a] via-transparent to-transparent" /> */}
@@ -140,6 +142,16 @@ function Contato({ colorMode, social }) {
             ></iframe>
           </div>
         </MotionDivDownToUp>
+
+        <div className="grid desktop1:grid-cols-2">
+          <MotionDivDownToUp>
+            <TalentForm />
+          </MotionDivDownToUp>
+
+          <MotionDivDownToUp>
+            <ContactForm />
+          </MotionDivDownToUp>
+        </div>
       </SectionArea>
     </div>
   );
