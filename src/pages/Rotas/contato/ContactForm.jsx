@@ -75,7 +75,7 @@ function ContactForm({ colorMode }) {
   return (
     <SectionArea
       className={`desktop1:max-w-[600px] font-secondFont`}
-      paddingtop={false}
+      paddingTopAndBottom={false}
     >
       <SectionWrapper>
         <SectionHeaderNovo
@@ -90,8 +90,9 @@ function ContactForm({ colorMode }) {
             </>
           }
           colorMode={colorMode}
+          className={`w-[90%]`}
         />
-        <div className="w-[90%] max-w-[500px]">
+        <div className="w-full max-w-[500px] bg-white border rounded-md p-4">
           {sent ? (
             <div className="bg-green-100 p-6 rounded-md text-center">
               <p className="font-semibold text-green-800">Mensagem enviada!</p>

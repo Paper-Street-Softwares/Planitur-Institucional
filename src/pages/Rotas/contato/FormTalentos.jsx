@@ -55,15 +55,19 @@ function TalentForm({ colorMode }) {
   }
 
   return (
-    <SectionArea className={`desktop1:max-w-[600px] font-secondFont`}>
+    <SectionArea
+      paddingtop={false}
+      className={`desktop1:max-w-[600px] font-secondFont`}
+    >
       <SectionWrapper>
         <SectionHeaderNovo
           title="Quer colaborar com a PLANITUR em projetos e ações técnicas?"
           miniTitle="Banco de talentos"
           subtitle="Cadastre-se em nosso banco de talentos, entraremos em contato sempre que tivermos alguma oportunidade em vista!"
           colorMode={colorMode}
+          className={`w-[90%] desktop1:mb-5 desktop2:mb-6`}
         />
-        <div className="w-[90%] max-w-[400px] desktop1:max-w-[500px]">
+        <div className="w-full max-w-[500px] bg-white border rounded-md p-4">
           {sent ? (
             <div className="bg-green-100 p-6 rounded-md text-center">
               <p className="font-semibold text-green-800">
@@ -144,13 +148,32 @@ function TalentForm({ colorMode }) {
                 <label className="text-sm font-medium text-gray-700">
                   Currículo (Máx 500kb):
                 </label>
+
+                {/* Input escondido */}
                 <input
+                  id="fileInput"
                   type="file"
-                  name="curriculo" // Este nome deve ser o mesmo no template do EmailJS
+                  name="curriculo"
                   onChange={handleFile}
                   accept=".pdf,.doc,.docx"
+                  className="hidden"
                   required
                 />
+
+                {/* Botão customizado */}
+                <label
+                  htmlFor="fileInput"
+                  className="cursor-pointer border p-2 rounded-md text-center bg-gray-100 hover:bg-gray-200 w-fit font-secondFont"
+                >
+                  Escolher arquivo
+                </label>
+
+                {/* Nome do arquivo embaixo */}
+                <p className="text-sm text-gray-600">
+                  {form.curriculo
+                    ? form.curriculo.name
+                    : "Nenhum arquivo escolhido"}
+                </p>
               </div>
 
               <div className="mt-2">

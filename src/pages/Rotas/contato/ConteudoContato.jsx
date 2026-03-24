@@ -142,16 +142,19 @@ function Contato({ colorMode, social }) {
             ></iframe>
           </div>
         </MotionDivDownToUp>
+      </SectionArea>
+      <SectionArea paddingbot={false} className={`bg-neutral-50`}>
+        <SectionWrapper>
+          <div className="grid desktop1:grid-cols-2">
+            <MotionDivDownToUp>
+              <TalentForm colorMode={colorMode} />
+            </MotionDivDownToUp>
 
-        <div className="grid desktop1:grid-cols-2">
-          <MotionDivDownToUp>
-            <TalentForm colorMode={colorMode} />
-          </MotionDivDownToUp>
-
-          <MotionDivDownToUp>
-            <ContactForm colorMode={colorMode} />
-          </MotionDivDownToUp>
-        </div>
+            <MotionDivDownToUp>
+              <ContactForm colorMode={colorMode} />
+            </MotionDivDownToUp>
+          </div>
+        </SectionWrapper>
       </SectionArea>
     </div>
   );
