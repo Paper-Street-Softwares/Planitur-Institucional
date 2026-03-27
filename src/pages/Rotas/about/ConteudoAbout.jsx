@@ -46,7 +46,7 @@ function ConteudoAbout({ colorMode, social }) {
           <img
             src={content.texts.about.imagemBg}
             alt=""
-            className="w-full h-full object-cover"
+            className="w-full h-full object-cover object-top"
           />
         </div>
 
