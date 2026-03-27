@@ -5,11 +5,12 @@ import SectionWrapper from "../../../components/sectionElements/SectionWrapper";
 import SectionHeaderNovo from "../../../components/sectionElements/SectionHeaderNovo";
 
 function TalentForm({ colorMode }) {
-  const formRef = useRef(); // Referência para o formulário
+  const formRef = useRef();
   const [isSending, setIsSending] = useState(false);
   const [sent, setSent] = useState(false);
 
-  const [form, setForm] = useState({
+  // Estado inicial isolado para facilitar o reset
+  const initialState = {
     nome: "",
     cidade: "",
     telefone: "",
@@ -17,7 +18,9 @@ function TalentForm({ colorMode }) {
     area: "",
     resumo: "",
     curriculo: null,
-  });
+  };
+
+  const [form, setForm] = useState(initialState);
 
   function handleChange(e) {
     setForm((f) => ({ ...f, [e.target.name]: e.target.value }));
@@ -34,20 +37,22 @@ function TalentForm({ colorMode }) {
     e.preventDefault();
     setIsSending(true);
 
-    // Substitua os IDs abaixo pelos seus obtidos no painel do EmailJS
-    const SERVICE_ID = "seu_service_id";
-    const TEMPLATE_ID = "seu_template_id";
-    const PUBLIC_KEY = "sua_public_key";
+    const SERVICE_ID = "service_y6ls2ga";
+    const TEMPLATE_ID = "template_mw9885e";
+    const PUBLIC_KEY = "tQ1DPO5JD-O6jvetX";
 
     emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, formRef.current, PUBLIC_KEY).then(
       () => {
+        alert("Cadastro enviado com sucesso!"); // Alert de sucesso
+        setForm(initialState); // Reseta o estado do formulário
+        formRef.current.reset(); // Reseta o formulário HTML (limpa o input de arquivo)
         setSent(true);
         setIsSending(false);
       },
       (error) => {
         console.error("Erro ao enviar:", error.text);
         alert(
-          "Ocorreu um erro ao enviar. Verifique se o arquivo é muito grande (limite 500kb).",
+          "Ocorreu um erro ao enviar. Verifique se o arquivo ultrapassa 50kb (limite do EmailJS gratuito).",
         );
         setIsSending(false);
       },
@@ -57,21 +62,21 @@ function TalentForm({ colorMode }) {
   return (
     <SectionArea
       paddingtop={false}
-      className={`desktop1:max-w-[600px] font-secondFont`}
+      className="desktop1:max-w-[600px] font-secondFont"
     >
       <SectionWrapper>
         <SectionHeaderNovo
           title="Quer colaborar com a PLANITUR em projetos e ações técnicas?"
           miniTitle="Banco de talentos"
-          subtitle="Cadastre-se em nosso banco de talentos, entraremos em contato sempre que tivermos alguma oportunidade em vista!"
+          subtitle="Cadastre-se em nosso banco de talentos!"
           colorMode={colorMode}
-          className={`w-[90%] desktop1:mb-5 desktop2:mb-6`}
+          className="w-[90%] desktop1:mb-5 desktop2:mb-6"
         />
         <div className="w-full max-w-[500px] bg-white border rounded-md p-4">
           {sent ? (
             <div className="bg-green-100 p-6 rounded-md text-center">
               <p className="font-semibold text-green-800">
-                Cadastro enviado com sucesso!
+                Enviado com sucesso!
               </p>
               <button
                 className="mt-3 underline text-green-700"
@@ -104,7 +109,6 @@ function TalentForm({ colorMode }) {
                   onChange={handleChange}
                   required
                 />
-
                 <input
                   name="telefone"
                   placeholder="Telefone"
@@ -124,7 +128,6 @@ function TalentForm({ colorMode }) {
                 onChange={handleChange}
                 required
               />
-
               <input
                 name="area"
                 className="border p-2 rounded-md w-full"
@@ -132,11 +135,10 @@ function TalentForm({ colorMode }) {
                 value={form.area}
                 onChange={handleChange}
                 required
-              ></input>
-
+              />
               <textarea
                 name="resumo"
-                placeholder="Resumo da sua experiência..."
+                placeholder="Resumo..."
                 className="border p-2 rounded-md w-full"
                 rows={4}
                 value={form.resumo}
@@ -144,12 +146,10 @@ function TalentForm({ colorMode }) {
                 required
               />
 
-              <div className="flex flex-col gap-2">
+              {/* <div className="flex flex-col gap-2">
                 <label className="text-sm font-medium text-gray-700">
-                  Currículo (Máx 500kb):
+                  Currículo (Máx 50kb):
                 </label>
-
-                {/* Input escondido */}
                 <input
                   id="fileInput"
                   type="file"
@@ -159,32 +159,24 @@ function TalentForm({ colorMode }) {
                   className="hidden"
                   required
                 />
-
-                {/* Botão customizado */}
                 <label
                   htmlFor="fileInput"
-                  className="cursor-pointer border p-2 rounded-md text-center bg-gray-100 hover:bg-gray-200 w-fit font-secondFont"
+                  className="cursor-pointer border p-2 rounded-md text-center bg-gray-100 hover:bg-gray-200 w-fit"
                 >
                   Escolher arquivo
                 </label>
-
-                {/* Nome do arquivo embaixo */}
                 <p className="text-sm text-gray-600">
                   {form.curriculo
                     ? form.curriculo.name
                     : "Nenhum arquivo escolhido"}
                 </p>
-              </div>
+              </div> */}
 
               <div className="mt-2">
                 <button
                   type="submit"
                   disabled={isSending}
-                  className={`border-2 border-orange-500 font-semibold uppercase text-sm py-3 px-8 transition-colors duration-300 ${
-                    isSending
-                      ? "bg-gray-300 border-gray-300 text-gray-600 cursor-not-allowed"
-                      : "text-orange-500 hover:bg-orange-500 hover:text-white"
-                  }`}
+                  className="border-2 border-orange-500 font-semibold uppercase text-sm py-3 px-8 text-orange-500 hover:bg-orange-500 hover:text-white transition-all"
                 >
                   {isSending ? "Enviando..." : "Enviar cadastro"}
                 </button>

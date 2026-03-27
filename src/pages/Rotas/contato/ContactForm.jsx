@@ -52,9 +52,9 @@ function ContactForm({ colorMode }) {
     };
 
     // IDs do seu painel EmailJS
-    const SERVICE_ID = "seu_service_id";
-    const TEMPLATE_ID = "seu_template_id";
-    const PUBLIC_KEY = "sua_public_key";
+    const SERVICE_ID = "service_8q02srz";
+    const TEMPLATE_ID = "template_qbvjlns";
+    const PUBLIC_KEY = "tQ1DPO5JD-O6jvetX";
 
     emailjs.send(SERVICE_ID, TEMPLATE_ID, templateParams, PUBLIC_KEY).then(
       () => {
