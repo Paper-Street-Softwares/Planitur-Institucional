@@ -14,7 +14,7 @@ function Hero({ colorMode }) {
     <SectionArea className={``} paddingTopAndBottom={false}>
       <section
         id="/"
-        className="relative w-full h-auto py-20 desktop2:py-32 flex flex-col aspect-auto min-h-[300px] items-center justify-center overflow-hidden"
+        className="relative w-full h-auto py-20 desktop1:py-0 flex flex-col aspect-auto min-h-[300px] items-center justify-center overflow-hidden"
       >
         <div className="absolute inset-0 z-0">
           <img
@@ -26,7 +26,7 @@ function Hero({ colorMode }) {
           {/* <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent" /> */}
         </div>
 
-        <div className="container relative z-10 px-4 md:px-6 text-center pt-[112px] pb-[32px] phone3:pt-[120px] phone3:pb-[62px]">
+        <div className="container relative z-10 px-4 md:px-6 text-center pt-[112px] pb-[32px] phone3:pt-[120px] phone3:pb-[62px] desktop1:pt-[80px]">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}

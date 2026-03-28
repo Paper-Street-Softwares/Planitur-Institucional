@@ -26,7 +26,7 @@ function ConteudoTeam({ colorMode }) {
 
   return (
     <div>
-      <section className="relative w-full h-auto py-20 desktop2:py-32 aspect-video min-h-[300px] desktop2:aspect-[10/3] flex flex-col items-center justify-center overflow-hidden">
+      <section className="relative w-full h-auto py-20 desktop2:py-32 aspect-video min-h-[300px] desktop2:aspect-[10/1] flex flex-col items-center justify-center overflow-hidden">
         {" "}
         <div className="absolute inset-0 z-0">
           <img
