@@ -230,7 +230,7 @@ function ConteudoAbout({ colorMode, social }) {
                       id="equipe"
                       className="flex mt-6 flex-wrap gap-4 tablet1:gap-4 tablet2:gap-1"
                     >
-                      <span className="font-bold">Nosso compromisso:</span>{" "}
+                      <span className="font-bold text-lg">Nosso compromisso:</span>{" "}
                       <br />
                       <p className="font-secondFont mb-4 text-start">
                         Desenvolvemos projetos socioambientais alinhados a
@@ -244,8 +244,8 @@ function ConteudoAbout({ colorMode, social }) {
                           value={imageslList}
                           numVisible={3}
                           numScroll={1}
+                          page={page}
                           circular
-                          autoplayInterval={3000}
                           showIndicators={false}
                           itemTemplate={imageTemplate}
                         />
