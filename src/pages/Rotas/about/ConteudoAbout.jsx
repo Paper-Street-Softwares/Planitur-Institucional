@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import SectionHeaderNovo from "../../../components/sectionElements/SectionHeaderNovo";
 import { ScrollMouse } from "../../../components/animation/MouseScroll";
 import SectionArea from "../../../components/sectionElements/SectionArea";
@@ -7,8 +7,54 @@ import "../../../styles/ScrollPanelDemo.css";
 import content from "../../../content/content";
 import SocialMedia from "../../../components/sections/SocialMediaTemplate";
 import MotionDivDownToUp from "../../../components/animation/MotionDivDownToUp";
+import { useLocation } from "react-router-dom";
+import { Carousel } from "primereact/carousel";
 
 function ConteudoAbout({ colorMode, social }) {
+  const baseList = Object.values(content.texts.about.logosAbout);
+  const imageslList = [...baseList, ...baseList, ...baseList];
+  const [page, setPage] = useState(0);
+  const total = imageslList.length;
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setPage((prev) => (prev + 1) % total);
+    }, 3000);
+
+    return () => clearInterval(interval);
+  }, [total]);
+
+  const imageTemplate = (item) => {
+    return (
+      <div className="carousel-item flex justify-center p-3">
+        <img
+          src={item.img}
+          alt={item.alt}
+          className="carousel-img max-w-full object-cover"
+        />
+      </div>
+    );
+  };
+  const location = useLocation();
+  useEffect(() => {
+    if (location.hash) {
+      const id = location.hash.replace("#", "");
+      const element = document.getElementById(id);
+
+      if (element) {
+        const isMobile = window.innerWidth < 768;
+
+        const offset = isMobile ? 90 : 100;
+
+        const y =
+          element.getBoundingClientRect().top + window.pageYOffset - offset;
+
+        window.scrollTo({
+          top: y,
+          behavior: "smooth",
+        });
+      }
+    }
+  }, [location]);
   const boxRef = useRef(null);
 
   useEffect(() => {
@@ -37,10 +83,8 @@ function ConteudoAbout({ colorMode, social }) {
     };
   }, []);
 
-  const imageslList = Object.values(content.texts.about.logosAbout);
-
   return (
-    <div>
+    <div id="top">
       <section className="relative w-full h-auto py-20 desktop2:py-32 aspect-video min-h-[300px] desktop2:aspect-[10/1] flex flex-col items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
           <img
@@ -90,7 +134,7 @@ function ConteudoAbout({ colorMode, social }) {
                       {/* CARD 01 - MISSÃO */}
                       <div className="relative mx-auto flex w-fit">
                         {/* Moldura de fundo (Verde) */}
-                        <div className="relative bg-white phone3:max-w-[300px] mx-auto p-8 shadow-xl h-full flex flex-col items-center text-center">
+                        <div className="relative bg-white phone3:max-w-[300px] mx-auto p-4 shadow-xl h-full flex flex-col items-center text-center">
                           <div className="text-lime-500 mb-6">
                             <svg
                               className="w-12 h-12"
@@ -120,7 +164,7 @@ function ConteudoAbout({ colorMode, social }) {
 
                       {/* CARD 02 - VISÃO */}
                       <div className="relative mx-auto group w-fit">
-                        <div className="relative bg-white phone3:max-w-[300px] mx-auto p-8 shadow-xl h-full flex flex-col items-center text-center">
+                        <div className="relative bg-white phone3:max-w-[300px] mx-auto p-4 shadow-xl h-full flex flex-col items-center text-center">
                           <div className="text-teal-500 mb-6">
                             <svg
                               className="w-12 h-12"
@@ -149,7 +193,7 @@ function ConteudoAbout({ colorMode, social }) {
 
                       {/* CARD 03 - VALORES */}
                       <div className="relative mx-auto group w-fit">
-                        <div className="relative bg-white phone3:max-w-[300px] mx-auto p-8 shadow-xl h-full flex flex-col items-center text-center">
+                        <div className="relative bg-white phone3:max-w-[300px] mx-auto p-4 shadow-xl h-full flex flex-col items-center text-center">
                           <div className="text-blue-600 mb-6">
                             <svg
                               className="w-12 h-12"
@@ -168,17 +212,24 @@ function ConteudoAbout({ colorMode, social }) {
                           <h3 className="text-blue-700 font-black text-xl tracking-widest mb-4">
                             VALORES
                           </h3>
-                          <ul className="text-gray-500 text-xs leading-tight text-left space-y-2">
-                            <li>• Sustentabilidade e Ética</li>
-                            <li>• Valorização dos saberes locais</li>
-                            <li>• Excelência técnica e sensibilidade</li>
-                            <li>• Colaboração em rede</li>
-                            <li>• Inovação e Proteção do patrimônio</li>
+                          <ul className="text-gray-500 text-xs leading-tight space-y-2 items-center text-center">
+                            <li>1. Sustentabilidade</li>
+                            <li>2. Ética e compromisso socioambiental</li>
+                            <li>3. Valorização dos saberes locais</li>
+                            <li>
+                              4. Excelência técnica com sensibilidade humana
+                            </li>
+                            <li>5. Colaboração em rede</li>
+                            <li>6. Inovação</li>
+                            <li>7. Valorização do patrimônio</li>
                           </ul>
                         </div>
                       </div>
                     </div>
-                    <div className="flex mt-6 flex-wrap gap-4 tablet1:gap-4 tablet2:gap-1">
+                    <div
+                      id="equipe"
+                      className="flex mt-6 flex-wrap gap-4 tablet1:gap-4 tablet2:gap-1"
+                    >
                       <span className="font-bold">Nosso compromisso:</span>{" "}
                       <br />
                       <p className="font-secondFont mb-4 text-start">
@@ -188,16 +239,16 @@ function ConteudoAbout({ colorMode, social }) {
                         territorial, com foco em impacto positivo e soluções de
                         longo prazo.
                       </p>
-                      <div className="grid grid-cols-3 gap-4">
-                        {imageslList.map((item, index) => (
-                          <div key={index} className="flex justify-center ">
-                            <img
-                              src={item.img}
-                              alt={item.alt}
-                              className="max-w-full object-cover"
-                            />
-                          </div>
-                        ))}
+                      <div className="w-full mx-auto overflow-hidden">
+                        <Carousel
+                          value={imageslList}
+                          numVisible={3}
+                          numScroll={1}
+                          circular
+                          autoplayInterval={3000}
+                          showIndicators={false}
+                          itemTemplate={imageTemplate}
+                        />
                       </div>
                     </div>
                     <br />
@@ -211,7 +262,7 @@ function ConteudoAbout({ colorMode, social }) {
                         src="https://www.google.com/maps/d/embed?mid=1Dww8t0DOx1bY-AyFUx5MU6tw5TsxcCA&ehbc=2E312F"
                         width=""
                         height="480"
-                        className="w-[95%]"
+                        className="w-full"
                       ></iframe>
                     </div>{" "}
                   </span>

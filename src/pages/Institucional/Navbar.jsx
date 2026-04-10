@@ -34,7 +34,7 @@ function Navbar() {
           root: null,
           rootMargin: "-40% 0px -55% 0px",
           threshold: 0,
-        }
+        },
       );
 
       observer.observe(section);
@@ -141,18 +141,18 @@ function Navbar() {
                 }`}
               >
                 <Link
-                  to="/about"
+                  to="/about#top"
                   className="block px-4 py-2 hover:text-primaryLight transition"
                 >
-                  Sobre Nós
+                  Sobre a Empresa
                 </Link>
 
-                <a
-                  href="/team"
+                <Link
+                  to="/about#equipe"
                   className="block px-4 py-2 hover:text-primaryLight transition"
                 >
-                  Quem Somos
-                </a>
+                  Nosso Compromisso
+                </Link>
 
                 {/* <a
                   href="#office"
@@ -176,7 +176,7 @@ function Navbar() {
                 className={linkClass()}
                 onClick={() => navigate("/features")}
               >
-                ÁREAS DE ATUAÇÃO
+                NOSSA ATUAÇÃO
                 <ChevronDown size={16} className="inline ml-1" />
                 {underline("service")}
               </button>
@@ -199,6 +199,20 @@ function Navbar() {
                 ))}
               </div>
             </div>
+
+            <span className="text-primaryLight">•</span>
+
+            <Link to="/team#clientes" className={linkClass()}>
+              CLIENTES E PARCEIROS
+              {underline("team#clientes")}
+            </Link>
+
+            <span className="text-primaryLight">•</span>
+
+            <Link to="/team#socios" className={linkClass()}>
+              SOBRE OS SÓCIOS
+              {underline("team#socios")}
+            </Link>
 
             <span className="text-primaryLight">•</span>
 
@@ -252,7 +266,7 @@ function Navbar() {
               setMobileAreasOpen(false); // fecha o outro
             }}
             className={`w-full flex items-center justify-between ${linkClass(
-              "office"
+              "office",
             )}`}
           >
             <span>NOSSO ESCRITÓRIO</span>
@@ -267,14 +281,14 @@ function Navbar() {
           {mobileOfficeOpen && (
             <div className="mt-2 ml-4 flex flex-col gap-2 text-sm uppercase">
               <Link
-                to="/about"
+                to="/about#top"
                 onClick={() => setMobileOpen(false)}
                 className={linkClass("office")}
               >
-                Sobre Nós
+                Sobre a Empresa
               </Link>
-              <a href="/team" onClick={() => setMobileOpen(false)}>
-                Nossa equipe
+              <a href="/about#equipe" onClick={() => setMobileOpen(false)}>
+                Nosso Compromisso
               </a>
               {/* <a href="#office" onClick={() => setMobileOpen(false)}>
                 Carreira
@@ -284,16 +298,31 @@ function Navbar() {
         </div>
 
         <div>
+          <Link to="/team#clientes" className={linkClass()}>
+            CLIENTES E PARCEIROS
+            {underline("team#clientes")}
+          </Link>
+        </div>
+
+        <div>
+          {" "}
+          <Link to="/team#socios" className={linkClass()}>
+            SOBRE OS SÓCIOS
+            {underline("team#socios")}
+          </Link>
+        </div>
+
+        <div>
           <button
             onClick={() => {
               setMobileAreasOpen(!mobileAreasOpen);
               setMobileOfficeOpen(false);
             }}
             className={`w-full flex items-center justify-between ${linkClass(
-              "features"
+              "features",
             )}`}
           >
-            <span>ÁREAS DE ATUAÇÃO</span>
+            <span>NOSSA ATUAÇÃO</span>
             <ChevronDown
               size={16}
               className={`transition-transform ${

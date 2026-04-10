@@ -38,3 +38,28 @@ ul.p-carousel-indicators > li.p-carousel-indicator.p-highlight > button {
   background-color: #c03d1a;
   opacity: 1;
 }
+
+/* estado padrão */
+.p-carousel .carousel-item {
+  transform: scale(0.8);
+  opacity: 0.5;
+  transition: all 0.4s ease;
+  padding: 2px !important;
+}
+
+/* todos ativos pequenos */
+.p-carousel .p-carousel-item-active .carousel-item {
+  transform: scale(0.8);
+  opacity: 0.5;
+}
+
+/* pega apenas o item do meio */
+.p-carousel
+  .p-carousel-item-active
+  + .p-carousel-item-active:not(
+    .p-carousel-item-active + .p-carousel-item-active + .p-carousel-item-active
+  )
+  .carousel-item {
+  transform: scale(1.15);
+  opacity: 1;
+}

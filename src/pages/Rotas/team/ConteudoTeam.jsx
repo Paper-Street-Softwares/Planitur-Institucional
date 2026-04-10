@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import SectionHeaderNovo from "../../../components/sectionElements/SectionHeaderNovo";
 import { ScrollMouse } from "../../../components/animation/MouseScroll";
 import SectionArea from "../../../components/sectionElements/SectionArea";
@@ -8,10 +8,32 @@ import SectionWrapper from "../../../components/sectionElements/SectionWrapper";
 import content from "../../../content/content";
 import { Dialog } from "primereact/dialog";
 import MotionDivDownToUp from "../../../components/animation/MotionDivDownToUp";
+import { useLocation } from "react-router-dom";
 
 function ConteudoTeam({ colorMode }) {
   const [visible, setVisible] = useState(false);
   const [selectedDescription, setSelectedDescription] = useState("");
+  const location = useLocation();
+  useEffect(() => {
+    if (location.hash) {
+      const id = location.hash.replace("#", "");
+      const element = document.getElementById(id);
+
+      if (element) {
+        const isMobile = window.innerWidth < 768;
+
+        const offset = isMobile ? 90 : 100;
+
+        const y =
+          element.getBoundingClientRect().top + window.pageYOffset - offset;
+
+        window.scrollTo({
+          top: y,
+          behavior: "smooth",
+        });
+      }
+    }
+  }, [location]);
 
   const openDescription = (description) => {
     setSelectedDescription(description);
@@ -26,7 +48,10 @@ function ConteudoTeam({ colorMode }) {
 
   return (
     <div>
-      <section className="relative w-full h-auto py-20 desktop2:py-32 aspect-video min-h-[300px] desktop2:aspect-[10/1] flex flex-col items-center justify-center overflow-hidden">
+      <section
+        id="socios"
+        className="relative w-full h-auto py-20 desktop2:py-32 aspect-video min-h-[300px] desktop2:aspect-[10/1] flex flex-col items-center justify-center overflow-hidden"
+      >
         {" "}
         <div className="absolute inset-0 z-0">
           <img
@@ -52,7 +77,7 @@ function ConteudoTeam({ colorMode }) {
         />
 
         <SectionWrapper>
-          <div className="mx-auto md:px-0 my-10 ">
+          <div className="mx-auto md:px-0 my-10">
             <div className="grid tablet1:grid-cols-2 justify-center items-start flex-wrap gap-6 tablet2:gap-4 desktop1:gap-2">
               <MotionDivDownToUp>
                 <TeamMember
@@ -81,7 +106,7 @@ function ConteudoTeam({ colorMode }) {
           </div>
         </SectionWrapper>
       </SectionArea>
-      <SectionArea className={`bg-secondary`}>
+      <SectionArea className={`bg-secondary`} id="clientes">
         <SectionWrapper>
           <SectionHeaderNovo
             colorMode={colorMode}
