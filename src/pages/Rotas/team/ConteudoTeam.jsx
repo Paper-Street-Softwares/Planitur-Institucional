@@ -40,11 +40,7 @@ function ConteudoTeam({ colorMode }) {
     setVisible(true);
   };
 
-  const instituicoesAtendidas = Object.values(
-    content.texts.team.instituicoesAtendidas,
-  );
-  const parceiros = Object.values(content.texts.team.parceirosLogo);
-  const clientes = Object.values(content.texts.team.clientesLogo);
+  
 
   return (
     <div>
@@ -106,78 +102,7 @@ function ConteudoTeam({ colorMode }) {
           </div>
         </SectionWrapper>
       </SectionArea>
-      <SectionArea className={`bg-secondary`} id="clientes">
-        <SectionWrapper>
-          <SectionHeaderNovo
-            colorMode={colorMode}
-            title={content.texts.team.sectionTitle}
-          />
-
-          <div className="flex flex-col gap-14">
-            {/* Clientes */}
-            <div className="mx-auto">
-              <SectionHeaderNovo
-                title={content.texts.team.titleClientes}
-                colorMode={colorMode}
-                className={`mb-4`}
-              />
-
-              <div className="flex flex-wrap justify-center items-center gap-4">
-                {clientes.map((item, index) => (
-                  <div key={index} className="">
-                    <img
-                      src={item.img}
-                      alt={item.alt}
-                      className="max-w-[120px] rounded-sm"
-                    />
-                  </div>
-                ))}
-              </div>
-            </div>
-            {/* Parceiros */}
-            <div className="mx-auto">
-              <SectionHeaderNovo
-                title={content.texts.team.titleParceiros}
-                colorMode={colorMode}
-                className={`mb-4`}
-              />
-
-              <div className="flex flex-wrap justify-center items-center gap-4">
-                {parceiros.map((item, index) => (
-                  <div key={index} className="">
-                    <img
-                      src={item.img}
-                      alt={item.alt}
-                      className="max-w-[120px] rounded-sm"
-                    />
-                  </div>
-                ))}
-              </div>
-            </div>
-
-            {/* Instituições */}
-            <div className="mx-auto">
-              <SectionHeaderNovo
-                title={content.texts.team.titleInstituicoes}
-                colorMode={colorMode}
-                className={`mb-4`}
-              />
-
-              <div className="flex flex-wrap justify-center gap-4 tablet2:grid tablet2:grid-cols-4 desktop2:grid-cols-8">
-                {instituicoesAtendidas.map((item, index) => (
-                  <div key={index} className="">
-                    <img
-                      src={item.img}
-                      alt={item.alt}
-                      className="max-w-[120px] rounded-sm"
-                    />
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-        </SectionWrapper>
-      </SectionArea>
+   
 
       <Dialog
         header="Saiba mais"

@@ -202,9 +202,9 @@ function Navbar() {
 
             <span className="text-primaryLight">•</span>
 
-            <Link to="/team#clientes" className={linkClass()}>
+            <Link to="/about#clientes" className={linkClass()}>
               CLIENTES E PARCEIROS
-              {underline("team#clientes")}
+              {underline("about#clientes")}
             </Link>
 
             <span className="text-primaryLight">•</span>
@@ -298,9 +298,9 @@ function Navbar() {
         </div>
 
         <div>
-          <Link to="/team#clientes" className={linkClass()}>
+          <Link to="/about#clientes" className={linkClass()}>
             CLIENTES E PARCEIROS
-            {underline("team#clientes")}
+            {underline("about#clientes")}
           </Link>
         </div>
 

@@ -9,6 +9,7 @@ import SocialMedia from "../../../components/sections/SocialMediaTemplate";
 import MotionDivDownToUp from "../../../components/animation/MotionDivDownToUp";
 import { useLocation } from "react-router-dom";
 import { Carousel } from "primereact/carousel";
+import SectionWrapper from "../../../components/sectionElements/SectionWrapper";
 
 function ConteudoAbout({ colorMode, social }) {
   const baseList = Object.values(content.texts.about.logosAbout);
@@ -22,6 +23,12 @@ function ConteudoAbout({ colorMode, social }) {
 
     return () => clearInterval(interval);
   }, [total]);
+
+  const instituicoesAtendidas = Object.values(
+    content.texts.team.instituicoesAtendidas,
+  );
+  const parceiros = Object.values(content.texts.team.parceirosLogo);
+  const clientes = Object.values(content.texts.team.clientesLogo);
 
   const imageTemplate = (item) => {
     return (
@@ -102,8 +109,8 @@ function ConteudoAbout({ colorMode, social }) {
       </section>
 
       <SectionArea className={`bg-white`} paddingbot={true}>
-        <div className="flex flex-col gap-20">
-          <div className="relative w-[90%] max-w-7xl mx-auto flex flex-col gap-14">
+        <div className="flex flex-col justify-center mx-auto gap-20 max-w-[1215px] ">
+          <div className="relative w-[90%] flex justify-center flex-col gap-14">
             {/* <MotionDivDownToUp className={`w-full`}>
               <img
                 src={aboutImgRota}
@@ -113,12 +120,11 @@ function ConteudoAbout({ colorMode, social }) {
             </MotionDivDownToUp> */}
 
             <MotionDivDownToUp className={`w-full`}>
-              <div className="relative w-full text-justify max-w-[800px]">
+              <div className="relative w-full text-justify max-w-[800px] mx-auto">
                 {/* Área com scroll */}
                 {/* <div ref={boxRef} className="custom-native-scroll flex-1"> */}
-
                 {/* </div> */}
-                <p className="text-justify font-light font-mainFont w-full">
+                <div className="text-justify font-light font-mainFont w-full">
                   <SectionHeaderNovo
                     miniTitle={content.texts.about.miniTag}
                     subtitle={content.texts.about.subtitle}
@@ -230,7 +236,9 @@ function ConteudoAbout({ colorMode, social }) {
                       id="equipe"
                       className="flex mt-6 flex-wrap gap-4 tablet1:gap-4 tablet2:gap-1"
                     >
-                      <span className="font-bold text-lg">Nosso compromisso:</span>{" "}
+                      <span className="font-bold text-lg">
+                        Nosso compromisso:
+                      </span>{" "}
                       <br />
                       <p className="font-secondFont mb-4 text-start">
                         Desenvolvemos projetos socioambientais alinhados a
@@ -253,29 +261,99 @@ function ConteudoAbout({ colorMode, social }) {
                     </div>
                     <br />
                     <br />
-                    <h1 className="font-secondFont font-bold">
+                    <h1 className="font-secondFont text-lg font-bold">
                       Nossa atuação:
                     </h1>
                     <br />
-                    <div>
-                      <iframe
-                        src="https://www.google.com/maps/d/embed?mid=1Dww8t0DOx1bY-AyFUx5MU6tw5TsxcCA&ehbc=2E312F"
-                        width=""
-                        height="480"
-                        className="w-full"
-                      ></iframe>
-                    </div>{" "}
                   </span>
-                </p>
+                </div>
 
                 {/* Linha + bolinha */}
                 {/* <div className="scroll-indicator">
                   <span className="scroll-dot" />
                 </div> */}
               </div>
+              <div className="w-full">
+                <iframe
+                  src="https://www.google.com/maps/d/embed?mid=1Dww8t0DOx1bY-AyFUx5MU6tw5TsxcCA&ehbc=2E312F"
+                  width=""
+                  height="480"
+                  className="w-full"
+                ></iframe>
+              </div>{" "}
             </MotionDivDownToUp>
           </div>
-          {social && <SocialMedia />}
+
+          <div id="clientes" className="w-full">
+            <SectionHeaderNovo
+              colorMode={colorMode}
+              title={content.texts.team.sectionTitle}
+            />
+
+            <div className="flex flex-col gap-14">
+              {/* Clientes */}
+              <div className="mx-auto">
+                <SectionHeaderNovo
+                  title={content.texts.team.titleClientes}
+                  colorMode={colorMode}
+                  className={`mb-4`}
+                />
+
+                <div className="flex flex-wrap justify-center items-center gap-4">
+                  {clientes.map((item, index) => (
+                    <div key={index} className="">
+                      <img
+                        src={item.img}
+                        alt={item.alt}
+                        className="max-w-[120px] rounded-sm"
+                      />
+                    </div>
+                  ))}
+                </div>
+              </div>
+              {/* Parceiros */}
+              <div className="mx-auto">
+                <SectionHeaderNovo
+                  title={content.texts.team.titleParceiros}
+                  colorMode={colorMode}
+                  className={`mb-4`}
+                />
+
+                <div className="flex flex-wrap justify-center items-center gap-4">
+                  {parceiros.map((item, index) => (
+                    <div key={index} className="">
+                      <img
+                        src={item.img}
+                        alt={item.alt}
+                        className="max-w-[120px] rounded-sm"
+                      />
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              {/* Instituições */}
+              <div className="mx-auto">
+                <SectionHeaderNovo
+                  title={content.texts.team.titleInstituicoes}
+                  colorMode={colorMode}
+                  className={`mb-4`}
+                />
+
+                <div className="flex flex-wrap justify-center gap-4 tablet2:grid tablet2:grid-cols-4 desktop2:grid-cols-8">
+                  {instituicoesAtendidas.map((item, index) => (
+                    <div key={index} className="">
+                      <img
+                        src={item.img}
+                        alt={item.alt}
+                        className="max-w-[120px] rounded-sm"
+                      />
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </SectionArea>
     </div>

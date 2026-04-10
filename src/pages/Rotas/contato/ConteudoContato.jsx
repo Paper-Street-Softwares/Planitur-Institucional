@@ -79,7 +79,7 @@ function Contato({ colorMode, social }) {
         <SectionWrapper>
           <MotionDivDownToUp className={`w-full`}>
             <div className="font-mainFont flex flex-col tablet2:flex-row gap-4 w-full tablet2:justify-around">
-              <div className="flex flex-col gap-4">
+              {/* <div className="flex flex-col gap-4">
                 <SectionHeaderNovo
                   miniTitle={content.texts.footer.sectionHeader.miniTag}
                   title={content.texts.footer.sectionHeader.title}
@@ -88,9 +88,9 @@ function Contato({ colorMode, social }) {
                   colorMode={colorMode}
                   className={`max-w-[500px]`}
                 />
-              </div>
+              </div> */}
               <div className="flex flex-col gap-4">
-                <h1 className="text-primaryLight text-xl font-medium">
+                {/* <h1 className="text-primaryLight text-xl font-medium">
                   Assessoria de Imprensa
                 </h1>
                 <div className="flex flex-col gap-4">
@@ -104,7 +104,7 @@ function Contato({ colorMode, social }) {
                         </span>
                       </div>
                     ))}
-                </div>
+                </div> */}
                 {social && (
                   <div className="flex gap-4">
                     <a
@@ -127,8 +127,8 @@ function Contato({ colorMode, social }) {
           </MotionDivDownToUp>
         </SectionWrapper>
 
-        <MotionDivDownToUp className={`max-w-[1215px] w-[90%] mt-10`}>
-          <div className="mt-8 w-full">
+        <MotionDivDownToUp className={`max-w-[1215px] w-[90%] mt-0`}>
+          <div className="mt-0 w-full">
             <iframe
               src={content.texts.maps.embedsrc}
               width="100%"
