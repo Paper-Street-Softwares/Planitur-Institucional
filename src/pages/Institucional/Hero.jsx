@@ -26,7 +26,7 @@ function Hero({ colorMode }) {
           {/* <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent" /> */}
         </div>
 
-        <div className="container relative z-10 px-4 md:px-6 text-center pt-[112px] pb-[32px] phone3:pt-[120px] phone3:pb-[62px] desktop1:pt-[80px]">
+        <div className="container relative z-10 px-4 md:px-6 text-center pt-[0px] pb-[32px] phone3:pb-[62px] desktop1:pt-[80px]">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -37,7 +37,7 @@ function Hero({ colorMode }) {
               colorMode={colorMode}
               miniTitle={content.texts.hero.miniTag}
               title={
-                <h1 className="w-fit mx-auto text-[29px] desktop2:text-[50px] font-mainFont leading-10 desktop1:leading-[60px] desktop2:leading-[70px] text-white font-medium drop-shadow-lg">
+                <h1 className="w-fit mx-auto text-[29px] desktop2:text-[30px] font-mainFont leading-10 desktop1:leading-[40px] desktop2:leading-[40px] text-white font-medium drop-shadow-lg">
                   {content.texts.hero.FirstPart}
                   <br />
                   {content.texts.hero.Destaque}

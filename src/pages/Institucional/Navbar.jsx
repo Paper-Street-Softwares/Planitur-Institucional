@@ -154,6 +154,14 @@ function Navbar() {
                   Nosso Compromisso
                 </Link>
 
+                <Link
+                  to="/about#clientes"
+                  className={`{$linkClass()} block px-4 py-2 hover:text-primaryLight transition`}
+                >
+                  CLIENTES E PARCEIROS
+                  {underline("about#clientes")}
+                </Link>
+
                 {/* <a
                   href="#office"
                   className="block px-4 py-2 hover:text-primaryLight transition"
@@ -199,13 +207,6 @@ function Navbar() {
                 ))}
               </div>
             </div>
-
-            <span className="text-primaryLight">•</span>
-
-            <Link to="/about#clientes" className={linkClass()}>
-              CLIENTES E PARCEIROS
-              {underline("about#clientes")}
-            </Link>
 
             <span className="text-primaryLight">•</span>
 

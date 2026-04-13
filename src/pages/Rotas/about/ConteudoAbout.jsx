@@ -50,7 +50,7 @@ function ConteudoAbout({ colorMode, social }) {
       if (element) {
         const isMobile = window.innerWidth < 768;
 
-        const offset = isMobile ? 90 : 100;
+        const offset = isMobile ? 90 : 150;
 
         const y =
           element.getBoundingClientRect().top + window.pageYOffset - offset;
@@ -110,7 +110,7 @@ function ConteudoAbout({ colorMode, social }) {
 
       <SectionArea className={`bg-white`} paddingbot={true}>
         <div className="flex flex-col justify-center mx-auto gap-20 max-w-[1215px] ">
-          <div className="relative w-[90%] flex justify-center flex-col gap-14">
+          <div className="relative w-full flex justify-center flex-col gap-14">
             {/* <MotionDivDownToUp className={`w-full`}>
               <img
                 src={aboutImgRota}
@@ -119,7 +119,7 @@ function ConteudoAbout({ colorMode, social }) {
               />
             </MotionDivDownToUp> */}
 
-            <MotionDivDownToUp className={`w-full`}>
+            <MotionDivDownToUp className={`w-[90%] mx-auto`}>
               <div className="relative w-full text-justify max-w-[800px] mx-auto">
                 {/* Área com scroll */}
                 {/* <div ref={boxRef} className="custom-native-scroll flex-1"> */}
@@ -236,7 +236,7 @@ function ConteudoAbout({ colorMode, social }) {
                       id="equipe"
                       className="flex mt-6 flex-wrap gap-4 tablet1:gap-4 tablet2:gap-1"
                     >
-                      <span className="font-bold text-lg">
+                      <span className="font-bold text-2xl">
                         Nosso compromisso:
                       </span>{" "}
                       <br />
@@ -261,26 +261,25 @@ function ConteudoAbout({ colorMode, social }) {
                     </div>
                     <br />
                     <br />
-                    <h1 className="font-secondFont text-lg font-bold">
+                    <h1 className="font-secondFont text-2xl font-bold">
                       Nossa atuação:
                     </h1>
                     <br />
                   </span>
                 </div>
-
+                <div className="w-full mx-auto">
+                  <iframe
+                    src="https://www.google.com/maps/d/embed?mid=1Dww8t0DOx1bY-AyFUx5MU6tw5TsxcCA&ehbc=2E312F"
+                    width=""
+                    height="480"
+                    className="w-full"
+                  ></iframe>
+                </div>{" "}
                 {/* Linha + bolinha */}
                 {/* <div className="scroll-indicator">
                   <span className="scroll-dot" />
                 </div> */}
               </div>
-              <div className="w-full">
-                <iframe
-                  src="https://www.google.com/maps/d/embed?mid=1Dww8t0DOx1bY-AyFUx5MU6tw5TsxcCA&ehbc=2E312F"
-                  width=""
-                  height="480"
-                  className="w-full"
-                ></iframe>
-              </div>{" "}
             </MotionDivDownToUp>
           </div>
 
