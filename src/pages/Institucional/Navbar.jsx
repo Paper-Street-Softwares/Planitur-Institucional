@@ -188,8 +188,10 @@ function Navbar() {
                   </button>
 
                   <div
-                    className={`absolute top-full left-0 mt-4 bg-neutral-50 shadow-xl normal-case transition-all duration-300 ${
-                      areasOpen ? "opacity-100 visible" : "opacity-0 invisible"
+                    className={`ml-4 bg-neutral-50 normal-case overflow-hidden transition-all duration-300 ${
+                      areasOpen
+                        ? "max-h-[400px] opacity-100 mt-2"
+                        : "max-h-0 opacity-0"
                     }`}
                   >
                     {linksFeatures.map((item, index) => (
@@ -237,7 +239,7 @@ function Navbar() {
       </div>
       {/* MOBILE MENU */}
       <div
-        className={`xl:hidden bg-neutral-50 text-primaryDark px-6 text-sm space-y-4 font-medium
+        className={`xl:hidden bg-neutral-50 text-primaryDark px-6 text-sm space-y-4 font-medium 
   transition-all duration-300 ease-out transform origin-top
   ${
     mobileOpen
@@ -245,7 +247,11 @@ function Navbar() {
       : "scale-y-0 opacity-0 -translate-y-4 max-h-0 overflow-hidden"
   }`}
       >
-        <Link to="/" onClick={() => setMobileOpen(false)} className="block">
+        <Link
+          to="/"
+          onClick={() => setMobileOpen(false)}
+          className="uppercase block"
+        >
           HOME
         </Link>
 
@@ -256,9 +262,9 @@ function Navbar() {
               setMobileOfficeOpen(!mobileOfficeOpen);
               setMobileAreasOpen(false);
             }}
-            className="w-full flex items-center justify-between"
+            className="uppercase w-full flex items-center justify-between"
           >
-            <span>NOSSO ESCRITÓRIO</span>
+            <span>A planitur</span>
 
             <ChevronDown
               size={16}
@@ -269,7 +275,7 @@ function Navbar() {
           </button>
 
           {mobileOfficeOpen && (
-            <div className="mt-2 ml-4 flex flex-col gap-2 uppercase">
+            <div className="uppercase mt-2 ml-4 flex flex-col gap-2 ">
               <Link to="/about#top" onClick={() => setMobileOpen(false)}>
                 Sobre a Empresa
               </Link>
@@ -277,53 +283,48 @@ function Navbar() {
               <Link to="/about#equipe" onClick={() => setMobileOpen(false)}>
                 Nosso Compromisso
               </Link>
-            </div>
-          )}
-        </div>
 
-        <div>
-          {" "}
-          <Link to="/about#clientes" className="">
-            CLIENTES E PARCEIROS
-          </Link>
-        </div>
+              <Link to="/about#clientes" className="uppercase ">
+                CLIENTES E PARCEIROS
+              </Link>
 
-        <div>
-          {" "}
-          <Link to="/team#socios">SOBRE OS SÓCIOS</Link>
-        </div>
-
-        {/* ÁREAS */}
-        <div>
-          <button
-            onClick={() => {
-              setMobileAreasOpen(!mobileAreasOpen);
-              setMobileOfficeOpen(false);
-            }}
-            className="w-full flex items-center justify-between"
-          >
-            <span>NOSSA ATUAÇÃO</span>
-
-            <ChevronDown
-              size={16}
-              className={`transition-transform ${
-                mobileAreasOpen ? "rotate-180" : ""
-              }`}
-            />
-          </button>
-
-          {mobileAreasOpen && (
-            <div className="mt-2 ml-4 flex flex-col normal-case">
-              {linksFeatures.map((item, index) => (
-                <Link
-                  key={index}
-                  to={item.rota}
-                  onClick={() => setMobileOpen(false)}
-                  className="py-2 uppercase flex items-center gap-2"
+              {/* ÁREAS */}
+              <div>
+                <button
+                  onClick={() => {
+                    setMobileAreasOpen(!mobileAreasOpen);
+                  }}
+                  className="uppercase w-full flex items-center justify-between"
                 >
-                  <span>{item.icon}</span> {item.title}
-                </Link>
-              ))}
+                  <span>NOSSA ATUAÇÃO</span>
+
+                  <ChevronDown
+                    size={16}
+                    className={`transition-transform ${
+                      mobileAreasOpen ? "rotate-180" : ""
+                    }`}
+                  />
+                </button>
+
+                <div
+                  className={`ml-4 flex flex-col normal-case overflow-hidden transition-all duration-300 ${
+                    mobileAreasOpen ? "max-h-[500px] mt-2" : "max-h-0"
+                  }`}
+                >
+                  {linksFeatures.map((item, index) => (
+                    <Link
+                      key={index}
+                      to={item.rota}
+                      onClick={() => setMobileOpen(false)}
+                      className="uppercase py-2  flex items-center gap-2"
+                    >
+                      <span>{item.icon}</span> {item.title}
+                    </Link>
+                  ))}
+                </div>
+              </div>
+
+              <Link to="/team#socios">SOBRE OS SÓCIOS</Link>
             </div>
           )}
         </div>
