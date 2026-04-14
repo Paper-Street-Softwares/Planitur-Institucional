@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Menu, ChevronDown, X } from "lucide-react";
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import content from "../../content/content";
 
 function Navbar() {
@@ -8,10 +8,12 @@ function Navbar() {
   const [mobileOfficeOpen, setMobileOfficeOpen] = useState(false);
   const [mobileAreasOpen, setMobileAreasOpen] = useState(false);
   const [openDropdown, setOpenDropdown] = useState(null);
+  const [areasOpen, setAreasOpen] = useState(false);
   const [activeSection, setActiveSection] = useState("home");
   const [closeTimer, setCloseTimer] = useState(null);
 
   const location = useLocation();
+  const navigate = useNavigate();
 
   const sections = ["/", "office", "service", "team", "reconhecimento"];
 
@@ -61,14 +63,19 @@ function Navbar() {
   const currentRoute = routeActive();
 
   const handleOpen = (menu) => {
-    if (closeTimer) clearTimeout(closeTimer);
+    if (closeTimer) {
+      clearTimeout(closeTimer);
+      setCloseTimer(null);
+    }
     setOpenDropdown(menu);
   };
 
   const handleClose = () => {
     const timer = setTimeout(() => {
       setOpenDropdown(null);
+      setAreasOpen(false);
     }, 300);
+
     setCloseTimer(timer);
   };
 
@@ -92,20 +99,20 @@ function Navbar() {
     <div
       className={`bg-neutral-50 fixed w-full z-50 py-2 ${
         mobileOpen ? "" : " border-b-2 border-[#C03D1A]"
-      } `}
+      }`}
     >
       <div className="max-w-[1215px] w-[90%] mx-auto">
-        <div className="flex items-center justify-between ">
+        <div className="flex items-center justify-between">
           {/* LOGO */}
-          <div className="w-[45%] phone3:max-w-[158px] tablet2:w-[20%] desktop1:w-[20%] ">
+          <div className="w-[45%] phone3:max-w-[158px] tablet2:w-[20%] desktop1:w-[20%]">
             <Link to="/">
               <img
-                onClick={() => {
+                onClick={() =>
                   window.scrollTo({
                     top: 0,
                     behavior: "smooth",
-                  });
-                }}
+                  })
+                }
                 src={content.texts.navbar.logo.img}
                 alt={content.texts.navbar.logo.alt}
                 className="w-full"
@@ -114,27 +121,27 @@ function Navbar() {
           </div>
 
           {/* DESKTOP MENU */}
-          <div className="hidden desktop1:flex items-center gap-5 text-primaryDark text-sm tracking-wide font-mainFont font-medium">
-            <Link to="/" className={linkClass()}>
+          <div className="hidden desktop1:flex items-center gap-5 text-sm tracking-wide font-mainFont font-medium">
+            <Link to="/" className={linkClass("home")}>
               INÍCIO
               {underline("home")}
             </Link>
 
             <span className="text-primaryLight">•</span>
 
-            {/* NOSSO ESCRITÓRIO */}
+            {/* PLANITUR */}
             <div
               className="relative"
               onMouseEnter={() => handleOpen("escritorio")}
               onMouseLeave={handleClose}
             >
-              <button type="button" className={linkClass()}>
+              <button type="button" className={linkClass("office")}>
                 A PLANITUR <ChevronDown size={16} className="inline ml-1" />
                 {underline("office")}
               </button>
 
               <div
-                className={`absolute top-full left-0 mt-4 bg-neutral-50 uppercase text-text-primaryDark shadow-xl w-auto py-3 transition-all duration-300 ${
+                className={`absolute top-full left-0 mt-4 bg-neutral-50 uppercase shadow-xl py-3 transition-all duration-300 ${
                   openDropdown === "escritorio"
                     ? "opacity-100 visible"
                     : "opacity-0 invisible"
@@ -142,106 +149,92 @@ function Navbar() {
               >
                 <Link
                   to="/about#top"
-                  className="block px-4 py-2 hover:text-primaryLight transition"
+                  className="block px-4 py-2 hover:text-primaryLight"
                 >
                   Sobre a Empresa
                 </Link>
 
                 <Link
                   to="/about#equipe"
-                  className="block px-4 py-2 hover:text-primaryLight transition"
+                  className="block px-4 py-2 hover:text-primaryLight"
                 >
                   Nosso Compromisso
                 </Link>
 
                 <Link
                   to="/about#clientes"
-                  className={`{$linkClass()} block px-4 py-2 hover:text-primaryLight transition`}
+                  className="block px-4 py-2 hover:text-primaryLight"
                 >
                   CLIENTES E PARCEIROS
-                  {underline("about#clientes")}
                 </Link>
 
-                {/* <a
-                  href="#office"
-                  className="block px-4 py-2 hover:text-primaryLight transition"
-                >
-                  Carreira
-                </a> */}
-              </div>
-            </div>
-
-            <span className="text-primaryLight">•</span>
-
-            {/* ÁREAS DE ATUAÇÃO */}
-            <div
-              className="relative uppercase"
-              onMouseEnter={() => handleOpen("areas")}
-              onMouseLeave={handleClose}
-            >
-              <button
-                type="button"
-                className={linkClass()}
-                onClick={() => navigate("/features")}
-              >
-                NOSSA ATUAÇÃO
-                <ChevronDown size={16} className="inline ml-1" />
-                {underline("service")}
-              </button>
-
-              <div
-                className={`absolute top-full left-0 mt-4 bg-neutral-50 text-text-primaryDark shadow-xl w-auto py-3 transition-all duration-300 normal-case ${
-                  openDropdown === "areas"
-                    ? "opacity-100 visible"
-                    : "opacity-0 invisible"
-                }`}
-              >
-                {linksFeatures.map((item, index) => (
-                  <Link
-                    key={index}
-                    to={item.rota}
-                    className="block px-4 py-2 hover:text-primaryLight"
+                {/* ÁREAS */}
+                <div className="relative">
+                  <button
+                    type="button"
+                    className="block px-4 py-2 hover:text-primaryLight w-full text-left"
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      setAreasOpen(!areasOpen);
+                    }}
                   >
-                    {item.title}
+                    NOSSA ATUAÇÃO
+                    <ChevronDown
+                      size={16}
+                      className={`inline ml-1 transition-transform ${
+                        areasOpen ? "rotate-180" : ""
+                      }`}
+                    />
+                  </button>
+
+                  <div
+                    className={`absolute top-full left-0 mt-4 bg-neutral-50 shadow-xl normal-case transition-all duration-300 ${
+                      areasOpen ? "opacity-100 visible" : "opacity-0 invisible"
+                    }`}
+                  >
+                    {linksFeatures.map((item, index) => (
+                      <Link
+                        key={index}
+                        to={item.rota}
+                        className="block px-4 py-2 hover:text-primaryLight"
+                        onClick={() => setAreasOpen(false)}
+                      >
+                        {item.title}
+                      </Link>
+                    ))}
+                  </div>
+                </div>
+
+                <div>
+                  {" "}
+                  <Link
+                    to="/team#socios"
+                    className={`linkClass("team") block px-4 py-2 hover:text-primaryLight`}
+                  >
+                    SOBRE OS SÓCIOS
                   </Link>
-                ))}
+                </div>
               </div>
             </div>
 
             <span className="text-primaryLight">•</span>
 
-            <Link to="/team#socios" className={linkClass()}>
-              SOBRE OS SÓCIOS
-              {underline("team#socios")}
-            </Link>
-
-            <span className="text-primaryLight">•</span>
-
-            <Link to="/contato" className={linkClass()}>
+            <Link to="/contato" className={linkClass("contato")}>
               CONTATO
-              {underline("contato")}
             </Link>
           </div>
 
-          {/* RIGHT SIDE */}
-          <section className="desktop1:hidden  flex gap-4">
-            <div className="flex items-center gap-4">
-              <button
-                onClick={() => setMobileOpen(!mobileOpen)}
-                className="text-primaryLight"
-              >
-                {mobileOpen ? <X size={28} /> : <Menu size={28} />}
-              </button>
-            </div>
-
-            {/* <div className="flex flex-col gap-0">
-              <button className="text-primaryDark">PT</button>
-              <button className="text-primaryDark/40 hover:text-primaryDark">EN</button>
-            </div> */}
+          {/* MOBILE BUTTON */}
+          <section className="desktop1:hidden flex gap-4">
+            <button
+              onClick={() => setMobileOpen(!mobileOpen)}
+              className="text-primaryLight"
+            >
+              {mobileOpen ? <X size={28} /> : <Menu size={28} />}
+            </button>
           </section>
         </div>
       </div>
-
       {/* MOBILE MENU */}
       <div
         className={`xl:hidden bg-neutral-50 text-primaryDark px-6 text-sm space-y-4 font-medium
@@ -252,25 +245,21 @@ function Navbar() {
       : "scale-y-0 opacity-0 -translate-y-4 max-h-0 overflow-hidden"
   }`}
       >
-        <Link
-          to="/"
-          onClick={() => setMobileOpen(false)}
-          className={`block ${linkClass("/")}`}
-        >
+        <Link to="/" onClick={() => setMobileOpen(false)} className="block">
           HOME
         </Link>
 
+        {/* ESCRITÓRIO */}
         <div>
           <button
             onClick={() => {
               setMobileOfficeOpen(!mobileOfficeOpen);
-              setMobileAreasOpen(false); // fecha o outro
+              setMobileAreasOpen(false);
             }}
-            className={`w-full flex items-center justify-between ${linkClass(
-              "office",
-            )}`}
+            className="w-full flex items-center justify-between"
           >
             <span>NOSSO ESCRITÓRIO</span>
+
             <ChevronDown
               size={16}
               className={`transition-transform ${
@@ -280,50 +269,41 @@ function Navbar() {
           </button>
 
           {mobileOfficeOpen && (
-            <div className="mt-2 ml-4 flex flex-col gap-2 text-sm uppercase">
-              <Link
-                to="/about#top"
-                onClick={() => setMobileOpen(false)}
-                className={linkClass("office")}
-              >
+            <div className="mt-2 ml-4 flex flex-col gap-2 uppercase">
+              <Link to="/about#top" onClick={() => setMobileOpen(false)}>
                 Sobre a Empresa
               </Link>
-              <a href="/about#equipe" onClick={() => setMobileOpen(false)}>
+
+              <Link to="/about#equipe" onClick={() => setMobileOpen(false)}>
                 Nosso Compromisso
-              </a>
-              {/* <a href="#office" onClick={() => setMobileOpen(false)}>
-                Carreira
-              </a> */}
+              </Link>
             </div>
           )}
         </div>
 
         <div>
-          <Link to="/about#clientes" className={linkClass()}>
+          {" "}
+          <Link to="/about#clientes" className="">
             CLIENTES E PARCEIROS
-            {underline("about#clientes")}
           </Link>
         </div>
 
         <div>
           {" "}
-          <Link to="/team#socios" className={linkClass()}>
-            SOBRE OS SÓCIOS
-            {underline("team#socios")}
-          </Link>
+          <Link to="/team#socios">SOBRE OS SÓCIOS</Link>
         </div>
 
+        {/* ÁREAS */}
         <div>
           <button
             onClick={() => {
               setMobileAreasOpen(!mobileAreasOpen);
               setMobileOfficeOpen(false);
             }}
-            className={`w-full flex items-center justify-between ${linkClass(
-              "features",
-            )}`}
+            className="w-full flex items-center justify-between"
           >
             <span>NOSSA ATUAÇÃO</span>
+
             <ChevronDown
               size={16}
               className={`transition-transform ${
@@ -333,12 +313,13 @@ function Navbar() {
           </button>
 
           {mobileAreasOpen && (
-            <div className="mt-2 ml-4 flex flex-col gap-0 text-sm normal-case">
+            <div className="mt-2 ml-4 flex flex-col normal-case">
               {linksFeatures.map((item, index) => (
                 <Link
                   key={index}
                   to={item.rota}
-                  className=" py-2 hover:text-primaryLight uppercase flex items-center gap-2"
+                  onClick={() => setMobileOpen(false)}
+                  className="py-2 uppercase flex items-center gap-2"
                 >
                   <span>{item.icon}</span> {item.title}
                 </Link>
@@ -347,19 +328,17 @@ function Navbar() {
           )}
         </div>
 
-        <Link
-          to="/contato"
-          onClick={() => setMobileOpen(false)}
-          className={`block ${linkClass("contato")} pb-4`}
-        >
-          CONTATO
-        </Link>
-
-        {/* <div className="flex gap-3 pt-4 border-t border-white/20">
-            <button>PT</button>
-            <button className="text-primaryDark/50">EN</button>
-          </div> */}
-      </div>
+        <div>
+          {" "}
+          <Link
+            to="/contato"
+            onClick={() => setMobileOpen(false)}
+            className="pb-4"
+          >
+            CONTATO
+          </Link>
+        </div>
+      </div>{" "}
     </div>
   );
 }
