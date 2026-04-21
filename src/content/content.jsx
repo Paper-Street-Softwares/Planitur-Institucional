@@ -50,7 +50,7 @@ import logo6 from "../assets/imgs/about/rotaAbout/logosAbout/logo6.webp";
 import logo7 from "../assets/imgs/about/rotaAbout/logosAbout/logo7.webp";
 import logo8 from "../assets/imgs/about/rotaAbout/logosAbout/logo8.webp";
 import logo9 from "../assets/imgs/about/rotaAbout/logosAbout/logo9.webp";
-
+import imgService from "../assets/imgs/services/serviceImag.webp";
 //Imports Icons
 import {
   Baby,
@@ -186,6 +186,187 @@ const content = {
       ctaButtonAriaLabel: "Botão para Whatsapp",
       ctaButtonText: <>Falar com nossa equipe</>,
       ctaButtonTextSecondary: <>A_Definir</>,
+    },
+    services: {
+      img: imgService,
+      miniTag: <>Nossos Serviços</>,
+      FirstPart: (
+        <span>Soluções completas para o desenvolvimento do turismo</span>
+      ),
+      Destaque: <span className="italic font-light"></span>,
+      SecondPart: <span></span>,
+      subtitle:
+        "Atuamos de forma estratégica, conectando planejamento, território e execução para estruturar iniciativas turísticas sustentáveis.",
+
+      cards: {
+        card1: {
+          title: <>Trilhas</>,
+          subtitle: (
+            <>
+              Estruturamos trilhas como produtos turísticos integrados ao
+              território.
+            </>
+          ),
+          description: (
+            <>
+              • Mapeamento e definição de rotas
+              <br />
+              • Planejamento de sinalização e infraestrutura
+              <br />• Classificação conforme normas técnicas (ABNT/ISO)
+            </>
+          ),
+        },
+
+        card2: {
+          title: <>Planejamento municipal</>,
+          subtitle: (
+            <>
+              Apoiamos municípios na organização e no desenvolvimento do turismo
+              de forma estratégica.
+            </>
+          ),
+          description: (
+            <>
+              • Inventário da oferta turística
+              <br />
+              • Plano Municipal de Turismo
+              <br />• Diagnósticos e planejamento territorial
+            </>
+          ),
+        },
+
+        card3: {
+          title: <>Governança</>,
+          subtitle: (
+            <>
+              Fortalecemos a organização e articulação entre atores do
+              território.
+            </>
+          ),
+          description: (
+            <>
+              • Estruturação de instâncias de governança
+              <br />
+              • Facilitação de processos participativos
+              <br />• Articulação institucional
+            </>
+          ),
+        },
+
+        card4: {
+          title: <>Projetos e Captação de Recursos</>,
+          subtitle: (
+            <>
+              Apoiamos na estruturação de projetos e no acesso a financiamentos
+              para viabilizar iniciativas.
+            </>
+          ),
+          description: (
+            <>
+              • Escrita de projetos e editais
+              <br />
+              • Planos de viabilidade e de negócio
+              <br />• Apoio à submissão e articulação
+            </>
+          ),
+        },
+
+        card5: {
+          title: <>Uso Público</>,
+          subtitle: (
+            <>
+              Planejamos a visitação em áreas naturais com equilíbrio entre
+              conservação e turismo.
+            </>
+          ),
+          description: (
+            <>
+              • Diagnóstico de uso público
+              <br />
+              • Mapeamento de atrativos e serviços
+              <br />• Diretrizes para visitação e manejo
+            </>
+          ),
+        },
+
+        card6: {
+          title: <>Turismo de base comunitária</>,
+          subtitle: (
+            <>
+              Fortalecemos iniciativas locais com foco na valorização cultural e
+              no desenvolvimento do território.
+            </>
+          ),
+          description: (
+            <>
+              • Diagnósticos e estruturação de iniciativas
+              <br />
+              • Desenvolvimento de experiências turísticas
+              <br />• Capacitação de comunidades
+            </>
+          ),
+        },
+
+        card7: {
+          title: <>Sustentabilidade e ESG</>,
+          subtitle: (
+            <>
+              Integramos princípios socioambientais ao planejamento e à gestão
+              do turismo.
+            </>
+          ),
+          description: (
+            <>
+              • Diagnósticos socioambientais
+              <br />
+              • Indicadores e monitoramento
+              <br />• Estratégias de sustentabilidade
+            </>
+          ),
+        },
+
+        card8: {
+          title: <>Treinamentos e Qualificações</>,
+          subtitle: (
+            <>
+              Desenvolvemos competências para atuação qualificada no turismo e
+              no território.
+            </>
+          ),
+          description: (
+            <>
+              • Cursos, oficinas e capacitações
+              <br />
+              • Formação de condutores e equipes
+              <br />• Processos formativos e mentorias
+            </>
+          ),
+        },
+
+        card9: {
+          title: <>Outros</>,
+          subtitle: (
+            <>
+              Atuamos de forma personalizada, adaptando soluções às demandas
+              específicas de cada território, negócio, instituição ou projeto.
+            </>
+          ),
+          description: <></>,
+        },
+      },
+
+      bottomTitle: <>Não encontrou exatamente o que procura?</>,
+
+      bottomText: (
+        <>
+          Cada território e projeto tem suas particularidades — e nossa atuação
+          é adaptada a cada realidade, de forma personalizada.
+          <br />
+          <br />
+          Vamos conversar sobre a sua demanda e construir juntos a melhor
+          solução.
+        </>
+      ),
     },
     features: {
       miniTag: <>Turismo que transforma</>,

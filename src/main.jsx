@@ -24,6 +24,9 @@ import Features3 from "./pages/Rotas/features/Features3.jsx";
 import RouteContato from "./pages/Rotas/contato/RouteContato.jsx";
 import RouteTeam from "./pages/Rotas/team/RouteTeam.jsx";
 import content from "./content/content.jsx";
+import Services from "./pages/Rotas/services/Services.jsx";
+import RouteServices from "./pages/Rotas/services/RouteServices.jsx";
+import RouteExperience from "./pages/Rotas/experience/RouteExperience.jsx";
 
 const mode = "LP";
 
@@ -37,6 +40,14 @@ function MainApp() {
         <Routes>
           <Route path="/" element={<Index mode={mode} />} />
           <Route path="/about" element={<RouteAbout colorMode={colorMode} />} />
+          <Route
+            path="/services"
+            element={<RouteServices colorMode={colorMode} />}
+          />
+          <Route
+            path="/experience"
+            element={<RouteExperience colorMode={colorMode} />}
+          />
           <Route
             path="/contato"
             element={<RouteContato colorMode={colorMode} />}
@@ -56,7 +67,7 @@ function MainApp() {
               path={content.texts.features.cards.card2.rota}
               element={<Features2 colorMode={colorMode} />}
             />
-             <Route
+            <Route
               path={content.texts.features.cards.card3.rota}
               element={<Features3 colorMode={colorMode} />}
             />

@@ -121,7 +121,7 @@ function Navbar() {
           </div>
 
           {/* DESKTOP MENU */}
-          <div className="hidden desktop1:flex items-center gap-5 text-sm tracking-wide font-mainFont font-medium">
+          <div className="hidden uppercase desktop1:flex items-center gap-5 text-sm tracking-wide font-mainFont font-medium">
             <Link to="/" className={linkClass("home")}>
               INÍCIO
               {underline("home")}
@@ -221,6 +221,18 @@ function Navbar() {
 
             <span className="text-primaryLight">•</span>
 
+            <Link to="/services" className={linkClass("services")}>
+              Nossos Serviços
+            </Link>
+
+            <span className="text-primaryLight">•</span>
+
+            <Link to="/experience" className={linkClass("experience")}>
+              Experiências e Resultados
+            </Link>
+
+            <span className="text-primaryLight">•</span>
+
             <Link to="/contato" className={linkClass("contato")}>
               CONTATO
             </Link>
@@ -252,7 +264,7 @@ function Navbar() {
           onClick={() => setMobileOpen(false)}
           className="uppercase block"
         >
-          HOME
+          INÍCIO
         </Link>
 
         {/* ESCRITÓRIO */}
@@ -331,6 +343,19 @@ function Navbar() {
 
         <div>
           {" "}
+          <Link to="/services" className={linkClass("services")}>
+            Nossos Serviços
+          </Link>
+        </div>
+
+        <div>
+          {" "}
+          <Link to="/experience" className={linkClass("experience")}>
+            Experiências e Resultados
+          </Link>
+        </div>
+
+        <div>
           <Link
             to="/contato"
             onClick={() => setMobileOpen(false)}
