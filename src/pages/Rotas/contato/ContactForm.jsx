@@ -79,19 +79,13 @@ function ContactForm({ colorMode }) {
     >
       <SectionWrapper>
         <SectionHeaderNovo
-          title="Vamos conversar?"
-          miniTitle="Contato com a PLANITUR"
-          subtitle={
-            <>
-              Tem uma ideia e quer transformá-la em projeto? <br />
-              Busca apoio para estruturar uma proposta ou captar recursos?
-              <br />
-              Deseja qualificar o turismo em seu território ou iniciativa?
-            </>
-          }
+          title="Quer colaborar com a PLANITUR em projetos e ações técnicas?"
+          miniTitle="Banco de talentos"
+          subtitle="Cadastre-se em nosso banco de talentos!"
           colorMode={colorMode}
-          className={`w-[90%]`}
+          className="w-[90%] desktop1:mb-5 desktop2:mb-6"
         />
+
         <div className="w-full max-w-[500px] bg-white border rounded-md p-4">
           {sent ? (
             <div className="bg-green-100 p-6 rounded-md text-center">

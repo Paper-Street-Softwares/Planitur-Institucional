@@ -51,7 +51,7 @@ function Services({ colorMode }) {
             {servicesCards.map((card, index) => (
               <div
                 key={index}
-                className="bg-white rounded-[20px] p-8 shadow-sm border border-gray-100 min-h-[320px] h-fit flex flex-col"
+                className="bg-primaryDark/5 rounded-[20px] p-8 shadow-sm border border-gray-100 min-h-[320px] h-fit flex flex-col"
               >
                 {/* <div className="w-10 h-10 rounded-full bg-[#f8f8f8] flex items-center justify-center mb-6">
                   <span className="text-[#E85D04] text-xl">◦</span>

@@ -75,7 +75,7 @@ function Contato({ colorMode, social }) {
         </MotionDivDownToUp>
       </section>
 
-      <SectionArea className={`bg-white`}>
+      <SectionArea className={`bg-white`} paddingTopAndBottom={false}>
         <SectionWrapper>
           <MotionDivDownToUp className={`w-full`}>
             <div className="font-mainFont flex flex-col tablet2:flex-row gap-4 w-full tablet2:justify-around">
@@ -127,7 +127,7 @@ function Contato({ colorMode, social }) {
           </MotionDivDownToUp>
         </SectionWrapper>
 
-        <MotionDivDownToUp className={`max-w-[1215px] w-[90%] mt-0`}>
+        {/* <MotionDivDownToUp className={`max-w-[1215px] w-[90%] mt-0`}>
           <div className="mt-0 w-full">
             <iframe
               src={content.texts.maps.embedsrc}
@@ -141,7 +141,7 @@ function Contato({ colorMode, social }) {
               className="h-[350px] desktop1:h-[420px] rounded-md"
             ></iframe>
           </div>
-        </MotionDivDownToUp>
+        </MotionDivDownToUp> */}
       </SectionArea>
       <SectionArea paddingbot={false} className={`bg-neutral-50`}>
         <SectionWrapper>

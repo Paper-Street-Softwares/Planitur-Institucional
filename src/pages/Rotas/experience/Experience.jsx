@@ -5,6 +5,9 @@ import { ScrollMouse } from "../../../components/animation/MouseScroll";
 import content from "../../../content/content";
 import MotionDivDownToUp from "../../../components/animation/MotionDivDownToUp";
 import imgExperience from "../../../assets/imgs/experience/experienceImg.webp";
+import img1 from "../../../assets/imgs/experience/img1.webp";
+import img2 from "../../../assets/imgs/experience/img2.webp";
+import img3 from "../../../assets/imgs/experience/img3.webp";
 
 function Experiences({ colorMode }) {
   const [activeModal, setActiveModal] = useState(null);
@@ -16,6 +19,7 @@ function Experiences({ colorMode }) {
   const experienceCards = [
     {
       id: 1,
+      image: img1,
       title: "Eixo 1",
       subtitle: "Técnico-Consultivo e Planejamento",
       shortDescription:
@@ -193,6 +197,7 @@ function Experiences({ colorMode }) {
 
     {
       id: 2,
+      image: img2,
       title: "Eixo 2",
       subtitle: "Formativo e Educacional",
       shortDescription:
@@ -276,6 +281,7 @@ function Experiences({ colorMode }) {
 
     {
       id: 3,
+      image: img3,
       title: "Eixo 3",
       subtitle: "Pesquisa Aplicada e Produção de Conhecimento",
       shortDescription:
@@ -397,6 +403,13 @@ function Experiences({ colorMode }) {
                 key={card.id}
                 className="bg-white rounded-[20px] p-8 shadow-sm border border-gray-100 min-h-[320px] h-fit flex flex-col justify-between"
               >
+                <div className="w-full h-[340px] mb-4 rounded-md">
+                  <img
+                    src={card.image}
+                    alt={card.title}
+                    className="w-full h-full object-cover rounded-md object-top"
+                  />
+                </div>
                 <div>
                   <h3 className="text-[28px] font-semibold text-[#1C4B3C] mb-4">
                     {card.title}

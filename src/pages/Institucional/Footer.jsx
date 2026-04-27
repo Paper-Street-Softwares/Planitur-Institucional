@@ -23,10 +23,15 @@ export default function Footer({
         <SectionWrapper>
           <div className="flex flex-col w-full pt-[20px] tablet2:flex-row tablet2:pt-[50px] items-start justify-center gap-12 tablet2:gap-6 phone3:grid phone3:grid-cols-2 tablet1:grid-cols-4 desktop1:grid-cols-4">
             {/* COLUNA 1 - LOGO */}
-            <div className="flex flex-col gap-8">
+            <div className="flex flex-col gap-0">
               <img
                 src={content.texts.navbar.logo.img}
-                alt="Miguel Neto Advogados"
+                alt="Logo Planitur"
+                className="w-[220px]"
+              />
+              <img
+                src={content.texts.navbar.logo.logoCadastur}
+                alt="Logo Planitur"
                 className="w-[220px]"
               />
 
@@ -64,14 +69,14 @@ export default function Footer({
                     rel="noopener noreferrer"
                     className="hover:text-primaryLight duration-300 transition-all cursor-pointer"
                   >
-                    Nosso Escritório
+                    A Planitur
                   </a>
                   <a
                     href="/team"
                     rel="noopener noreferrer"
                     className="hover:text-primaryLight duration-300 transition-all cursor-pointer"
                   >
-                    Quem Somos
+                    Dos Sócios
                   </a>
                   <a
                     href="/contato"
@@ -133,7 +138,7 @@ export default function Footer({
                     <div className="flex items-center gap-3">
                       <Phone size={18} className="text-primaryLight" />
                       <span className="text-md">
-                        {content.texts.infos.phone} - Planitur
+                        {content.texts.infos.phone} 
                       </span>
                     </div>
                   )}
@@ -142,7 +147,7 @@ export default function Footer({
                     <div className="flex items-center gap-3">
                       <Phone size={18} className="text-primaryLight" />
                       <span className="text-[12px] desktop1:text-[14px]">
-                        {content.texts.infos.phoneSecundario} - Tarcísio Cunha
+                        {content.texts.infos.phoneSecundario}
                       </span>
                     </div>
                   )}
@@ -151,7 +156,7 @@ export default function Footer({
                     <div className="flex items-center gap-3">
                       <Phone size={18} className="text-primaryLight" />
                       <span className="text-[12px] desktop1:text-[14px]">
-                        {content.texts.infos.phoneTerciario} - Angelice Motter
+                        {content.texts.infos.phoneTerciario} 
                       </span>
                     </div>
                   )}

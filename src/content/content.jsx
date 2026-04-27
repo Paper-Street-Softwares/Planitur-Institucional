@@ -1,4 +1,5 @@
 import logo from "../assets/imgs/logo/logo.webp";
+import logoCadastur from "../assets/imgs/logo/logoCadastur.webp";
 import logoDesktop from "../assets/imgs/logo/logoDesktop.webp";
 
 //Imports Hero
@@ -120,7 +121,7 @@ export const infos = {
   expediente: (
     <div>
       <p>Segunda a sexta-feira:</p>
-      <p>8h às 18h</p>
+      <p>9h às 19h</p>
     </div>
   ),
   obs: <span className="italic">A_Definir </span>,
@@ -145,6 +146,7 @@ const content = {
       logo: {
         img: logo,
         imgDesktop: logoDesktop,
+        logoCadastur: logoCadastur,
         alt: `Logomarca ${infos.name}`,
       },
       solidLogo: {
