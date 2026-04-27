@@ -403,7 +403,7 @@ function Experiences({ colorMode }) {
                 key={card.id}
                 className="bg-white rounded-[20px] p-8 shadow-sm border border-gray-100 min-h-[320px] h-fit flex flex-col justify-between"
               >
-                <div className="w-full h-[340px] mb-4 rounded-md">
+                <div className="w-full h-[200px] mb-4 rounded-md">
                   <img
                     src={card.image}
                     alt={card.title}
