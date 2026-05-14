@@ -221,14 +221,14 @@ function Navbar() {
 
             <span className="text-primaryLight">•</span>
 
-            <Link to="/services" className={linkClass("services")}>
-              Nossos Serviços
+            <Link to="/experience" className={linkClass("experience")}>
+              Experiências e Resultados
             </Link>
 
             <span className="text-primaryLight">•</span>
 
-            <Link to="/experience" className={linkClass("experience")}>
-              Experiências e Resultados
+            <Link to="/services" className={linkClass("services")}>
+              Nossos Serviços
             </Link>
 
             <span className="text-primaryLight">•</span>

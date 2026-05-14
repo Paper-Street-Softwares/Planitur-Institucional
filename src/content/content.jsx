@@ -391,16 +391,7 @@ const content = {
           ),
           minitag: <>Área de Atuação</>,
           title: <>Técnico-Consultivo</>,
-          subtitle: (
-            <>
-              Apresentam soluções estratégicas que apoiam a tomada de decisão,
-              estruturam iniciativas e fortalecem territórios de forma
-              consistente e sustentável. Mais do que entregar diagnósticos, esse
-              eixo atua como um guia para organizações e gestores que precisam
-              enxergar com clareza onde estão, quais caminhos podem seguir e
-              como avançar com segurança em cenários cada vez mais complexos.
-            </>
-          ),
+          subtitle: <>Estrutura ações e soluções</>,
           imgFeatures1: imgFeatures1,
           description: (
             <div>
@@ -445,53 +436,29 @@ const content = {
               <Book width={18} />
             </>
           ),
-          minitag: <>Área de Atuação</>,
+          minitag: <>Eixo de Atuação</>,
           title: <>Formativo e Educacional</>,
-          subtitle: (
-            <>
-              Promovem o desenvolvimento de competências e a qualificação de
-              pessoas, empresários, gestores, equipes, instituições e
-              comunidades, com foco em gerar transformação real. Mais do que
-              transmitir conteúdo, essas iniciativas formativas buscam preparar
-              indivíduos e organizações para lidar com desafios concretos, tomar
-              decisões com mais segurança e atuar de forma mais estratégica em
-              seus contextos.
-            </>
-          ),
+          subtitle: <>Fortalece pessoas e conhecimento</>,
           imgFeatures2: imgFeatures2,
           description: (
             <div>
-              Promovem o desenvolvimento de competências e a qualificação de
-              pessoas, empresários, gestores, equipes, instituições e
-              comunidades, com foco em gerar transformação real. Mais do que
-              transmitir conteúdo, essas iniciativas formativas buscam preparar
-              indivíduos e organizações para lidar com desafios concretos, tomar
-              decisões com mais segurança e atuar de forma mais estratégica em
-              seus contextos.
+              O eixo Formativo e Educacional da PLANITUR é voltado ao
+              fortalecimento de pessoas, equipes, negócios e iniciativas ligadas
+              ao turismo, ao lazer e ao território. Atuamos junto a
+              empreendedores, gestores, comunidades, instituições e grupos que
+              desejam qualificar serviços, aprimorar experiências, fortalecer
+              processos e ampliar capacidades de atuação.
               <br />
               <br />
-              As ações incluem cursos, oficinas e processos formativos
-              estruturados para fortalecer habilidades técnicas, gerenciais e
-              estratégicas. Cada iniciativa é desenhada para desenvolver não
-              apenas o conhecimento, mas também a capacidade de aplicação
-              prática, estimulando a autonomia, a inovação e a adaptação diante
-              de um cenário em constante mudança.
-              <br />
-              <br />
-              Com base em metodologias participativas e conteúdos alinhados às
-              demandas do mercado e da sociedade, os processos formativos criam
-              ambientes de aprendizado dinâmicos e colaborativos. Neles, o
-              conhecimento não é apenas transmitido, mas construído
-              coletivamente por meio da troca de experiências, da vivência
-              prática e da conexão entre diferentes realidades.
-              <br />
-              <br />
-              Como resultado, essas iniciativas contribuem diretamente para o
-              aprimoramento profissional dos participantes, o fortalecimento das
-              instituições e a construção de organizações mais preparadas e
-              resilientes. Ao mesmo tempo, impulsionam o desenvolvimento
-              sustentável dos territórios, formando agentes capazes de gerar
-              impacto positivo, consistente e duradouro.
+              Nesse eixo, realizamos cursos, oficinas, mentorias e processos
+              formativos adaptados às diferentes realidades e necessidades dos
+              territórios. Nossas formações abordam, principalmente, temas
+              relacionados à gestão de negócios turísticos, precificação,
+              formação de condutores de visitantes, desenvolvimento de
+              experiências, hospitalidade, bem receber e qualificação da atuação
+              nos territórios. Também atuamos na facilitação e mediação de
+              processos participativos, promovendo diálogo, troca de
+              experiências e construção coletiva do conhecimento.
             </div>
           ),
           rota: "/features/formativoeeducacional",
@@ -503,52 +470,38 @@ const content = {
               <Search width={18} />
             </>
           ),
-          minitag: <>Área de Atuação</>,
+          minitag: <>Eixo de Atuação</>,
           title: <>Pesquisa e Produção de Conhecimento</>,
-          subtitle: (
-            <>
-              A investigação aplicada atua como um suporte estratégico para
-              qualificar decisões, políticas e projetos, transformando dados e
-              informações em direcionamentos claros e acionáveis. Mais do que
-              produzir estudos, esse eixo tem como objetivo gerar conhecimento
-              útil, capaz de reduzir incertezas e orientar escolhas mais seguras
-              em contextos complexos.
-            </>
-          ),
+          subtitle: <>Produz inteligência e base técnica para decisões</>,
           imgFeatures3: imgFeatures3,
           description: (
             <div>
-              A investigação aplicada atua como um suporte estratégico para
-              qualificar decisões, políticas e projetos, transformando dados e
-              informações em direcionamentos claros e acionáveis. Mais do que
-              produzir estudos, esse eixo tem como objetivo gerar conhecimento
-              útil, capaz de reduzir incertezas e orientar escolhas mais seguras
-              em contextos complexos.
+              O eixo Pesquisa Aplicada e Produção de Conhecimento da PLANITUR é
+              voltado à investigação, análise e sistematização de informações
+              que apoiem decisões, políticas públicas, projetos e iniciativas
+              ligadas ao turismo, ao lazer e ao território. Atuamos junto a
+              instituições, organizações, redes, comunidades e projetos que
+              precisam compreender melhor suas realidades, identificar
+              potencialidades, organizar informações estratégicas e qualificar
+              processos de gestão e planejamento.
               <br />
               <br />
-              As entregas incluem o desenvolvimento de estudos, sistematizações,
-              indicadores e produção técnica, sempre com foco em apoiar a gestão
-              e o planejamento. Cada produto é estruturado para ir além da
-              análise teórica, trazendo interpretações práticas que auxiliam
-              gestores e instituições a entenderem melhor seus cenários e a
-              definirem prioridades com maior precisão.
+              Nesse eixo, realizamos pesquisas qualitativas e quantitativas,
+              diagnósticos institucionais e territoriais, levantamentos
+              socioambientais, entrevistas com atores-chave, estudos técnicos e
+              análises aplicadas ao turismo e à governança. Também atuamos na
+              organização e interpretação de dados, elaboração de relatórios,
+              sistematizações e produção de conteúdos técnicos voltados ao
+              planejamento, à gestão e à tomada de decisão em diferentes
+              contextos.
               <br />
               <br />
-              A partir de metodologias de pesquisa, análise de dados e produção
-              de evidências, são elaborados diagnósticos, relatórios técnicos e
-              instrumentos de monitoramento que permitem acompanhar resultados e
-              ajustar estratégias ao longo do tempo. Isso possibilita uma gestão
-              mais orientada por dados, com maior capacidade de avaliação e
-              resposta diante de mudanças e desafios.
+              Nossa atuação busca transformar dados, experiências e informações
+              em conhecimento acessível, aplicado e útil para fortalecer
+              projetos, orientar estratégias e apoiar o desenvolvimento dos
+              territórios.
               <br />
               <br />
-              Como resultado, a investigação aplicada amplia a compreensão sobre
-              realidades específicas, revela tendências relevantes e fortalece a
-              base de conhecimento necessária para decisões mais consistentes.
-              Dessa forma, contribui diretamente para a formulação de políticas
-              e iniciativas mais eficazes, alinhadas às demandas sociais e
-              institucionais e com maior potencial de gerar impacto positivo e
-              sustentável.
             </div>
           ),
           rota: "/features/pesquisaeproducao",
