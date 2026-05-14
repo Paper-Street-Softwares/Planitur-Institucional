@@ -40,8 +40,6 @@ function ConteudoTeam({ colorMode }) {
     setVisible(true);
   };
 
-  
-
   return (
     <div>
       <section
@@ -79,8 +77,18 @@ function ConteudoTeam({ colorMode }) {
                 <TeamMember
                   img={content.texts.team.cards.card1.img}
                   name={content.texts.team.cards.card1.name}
-                  role={content.texts.team.cards.card1.role}
-                  linkedIn={content.texts.team.cards.card1.linkedIn}
+                  role={
+                    <p>
+                      Sócia Administrativa e Coordenadora de Projetos |{" "}
+                      <a
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        href={content.texts.team.cards.card1.linkedIn}
+                      >
+                        LinkedIn
+                      </a>
+                    </p>
+                  }
                   description={content.texts.team.cards.card1.description}
                   onOpenModal={openDescription}
                   modal={false}
@@ -91,8 +99,18 @@ function ConteudoTeam({ colorMode }) {
                 <TeamMember
                   img={content.texts.team.cards.card2.img}
                   name={content.texts.team.cards.card2.name}
-                  role={content.texts.team.cards.card2.role}
-                  linkedIn={content.texts.team.cards.card2.linkedIn}
+                  role={
+                    <p>
+                      Líder de Projetos |{" "}
+                      <a
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        href={content.texts.team.cards.card2.linkedIn}
+                      >
+                        LinkedIn
+                      </a>
+                    </p>
+                  }
                   description={content.texts.team.cards.card2.description}
                   onOpenModal={openDescription}
                   modal={false}
@@ -102,7 +120,6 @@ function ConteudoTeam({ colorMode }) {
           </div>
         </SectionWrapper>
       </SectionArea>
-   
 
       <Dialog
         header="Saiba mais"

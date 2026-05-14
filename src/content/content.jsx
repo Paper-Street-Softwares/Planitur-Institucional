@@ -677,18 +677,31 @@ const content = {
         card1: {
           img: team1,
           name: <>Angelice Motter</>,
-          role: <>Líder Administrativo e Coordenadora de Projetos</>,
+          role: <></>,
           rota: "/team",
           description: (
             <>
-              Mestre em Turismo e Hotelaria (2025), pós-graduada em Ecoturismo e
-              Interpretação da Natureza (2025) e graduada em Turismo pela
-              Universidade Federal do Rio Grande (2022).
+              In Turismóloga, mestre em Turismo e Hotelaria e especialista em
+              Ecoturismo e Interpretação da Natureza, Angelice Motter possui
+              mais de cinco anos de experiência em projetos voltados ao
+              planejamento turístico, desenvolvimento territorial e turismo
+              sustentável. Atua na elaboração de diagnósticos, estudos técnicos
+              e pesquisas aplicadas, além da coordenação e gestão técnica de
+              projetos socioambientais relacionados à estruturação de destinos,
+              turismo de natureza e governança territorial.
               <br />
               <br />
-              Sua trajetória acadêmica e profissional concentra-se nos temas de
-              planejamento e gestão do turismo, políticas públicas, governança,
-              sustentabilidade e turismo de natureza.
+              Ao longo de sua trajetória, participou da concepção, planejamento,
+              coordenação e execução de projetos voltados ao desenvolvimento
+              territorial, estruturação de destinos turísticos, turismo de
+              natureza e articulação entre diferentes atores locais, incluindo
+              organizações, municípios e iniciativas territoriais.
+              <br />
+              <br />
+              Na PLANITUR, busca contribuir para o desenvolvimento de destinos,
+              negócios e territórios mais planejados, sustentáveis e integrados,
+              compreendendo o turismo como uma ferramenta de transformação
+              socioambiental e fortalecimento territorial.
             </>
           ),
           linkedIn:
@@ -702,18 +715,31 @@ const content = {
           description: (
             <>
               Doutorando em Políticas Públicas, Estratégias e Desenvolvimento
-              pela Universidade Federal do Rio de Janeiro (UFRJ), Mestre em
+              pela Universidade Federal do Rio de Janeiro (UFRJ), mestre em
               Ecoturismo e Conservação pela Universidade Federal do Estado do
-              Rio de Janeiro (UNIRIO), Especialista em Gestão e Governança de
+              Rio de Janeiro (UNIRIO), especialista em Gestão e Governança de
               Áreas Marinhas Protegidas pela Universidad Austral de Chile (UACh)
               e bacharel em Turismo pela Universidade Federal Rural do Rio de
-              Janeiro (UFRRJ).
+              Janeiro (UFRRJ), atua há mais de 10 anos no desenvolvimento de
+              projetos socioambientais relacionados ao turismo de natureza,
+              conservação e desenvolvimento territorial.
               <br />
               <br />
-              Atua há mais de 10 anos com turismo baseado na natureza. Membro da
-              Comissão Mundial de Áreas Protegidas e do Grupo de Especialistas
-              em Turismo e Áreas Protegidas da União Internacional para a
-              Conservação da Natureza (IUCN).
+              Ao longo de sua trajetória, participou da concepção, articulação e
+              execução de iniciativas voltadas ao turismo sustentável,
+              governança territorial, uso público em áreas protegidas e
+              fortalecimento de projetos socioambientais, atuando junto a
+              governos, organizações, instituições e diferentes atores
+              territoriais. Também integra a Comissão Mundial de Áreas
+              Protegidas e o Grupo de Especialistas em Turismo e Áreas
+              Protegidas da União Internacional para a Conservação da Natureza
+              (IUCN).
+              <br />
+              <br />
+              Na PLANITUR, busca contribuir para o desenvolvimento de projetos e
+              territórios mais sustentáveis, fortalecendo iniciativas que
+              integrem turismo, conservação da natureza, planejamento e
+              transformação socioambiental.
             </>
           ),
           linkedIn: "https://www.linkedin.com/in/tarcisio-cunha/",
