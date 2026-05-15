@@ -162,14 +162,10 @@ const content = {
     hero: {
       miniTag: <></>,
       FirstPart: <span>Turismo que conecta</span>,
-      Destaque: (
-        <span className="destaque relative italic font-light">
-          pessoas, território e natureza
-        </span>
-      ),
+      Destaque: <span className="">pessoas, território e natureza</span>,
       SecondPart: <span></span>,
       subtitle: (
-        <p>
+        <p className="text-white">
           Transformamos realidades por meio do turismo, com projetos e
           consultorias sob medida que integram saberes locais e conhecimento
           técnico para gerar soluções viáveis.

@@ -33,7 +33,7 @@ function Hero({ colorMode }) {
             transition={{ duration: 0.8 }}
           >
             <SectionHeaderNovo
-              className={`text-white max-w-[600px] mx-auto mb-8`}
+              className={`text-white max-w-[600px] mx-auto mb-8 `}
               colorMode={colorMode}
               miniTitle={content.texts.hero.miniTag}
               title={

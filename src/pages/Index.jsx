@@ -15,6 +15,7 @@ import imgBrasilMapa from "../assets/imgs/home/brasilmap.png";
 import SectionArea from "../components/sectionElements/SectionArea";
 import SectionHeaderNovo from "../components/sectionElements/SectionHeaderNovo";
 import MapaBrasil from "./Institucional/MapaBrasil";
+import Home from "./Institucional/Home";
 
 export default function Index() {
   const { colorMode, setColorMode } = useColorMode();
@@ -28,7 +29,8 @@ export default function Index() {
       <ColorModeProvider>
         <Navbar />
         <main>
-          <Hero />
+          {/* <Hero /> */}
+          <Home colorMode={colorMode} />
           <MapaBrasil colorMode={colorMode} />
           <About colorMode={colorMode} />
           <Features colorMode={colorMode} />
