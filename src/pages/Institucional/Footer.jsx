@@ -1,5 +1,5 @@
 import React from "react";
-import { Instagram, Linkedin, MapPin, Phone, Timer } from "lucide-react";
+import { Instagram, Linkedin, Mail, MapPin, Phone, Timer } from "lucide-react";
 import SectionArea from "../../components/sectionElements/SectionArea";
 import SectionWrapper from "../../components/sectionElements/SectionWrapper";
 import content from "../../content/content";
@@ -138,7 +138,7 @@ export default function Footer({
                     <div className="flex items-center gap-3">
                       <Phone size={18} className="text-primaryLight" />
                       <span className="text-md">
-                        {content.texts.infos.phone} 
+                        {content.texts.infos.phone}
                       </span>
                     </div>
                   )}
@@ -156,12 +156,11 @@ export default function Footer({
                     <div className="flex items-center gap-3">
                       <Phone size={18} className="text-primaryLight" />
                       <span className="text-[12px] desktop1:text-[14px]">
-                        {content.texts.infos.phoneTerciario} 
+                        {content.texts.infos.phoneTerciario}
                       </span>
                     </div>
                   )}
                 </div>
-
                 {adress && (
                   <div className="flex items-start gap-3">
                     <MapPin size={18} className="mt-1 text-primaryLight" />
@@ -170,7 +169,6 @@ export default function Footer({
                     </p>
                   </div>
                 )}
-
                 {expedient && (
                   <div className="flex items-start gap-3">
                     <Timer size={18} className="mt-1 text-primaryLight" />
@@ -179,6 +177,12 @@ export default function Footer({
                     </p>
                   </div>
                 )}
+                <div className="flex items-start gap-3">
+                  <Mail size={18} className="mt-1 text-primaryLight" />
+                  <p className="text-primaryDark/80">
+                    contato@planiturconsultoria.com
+                  </p>
+                </div>
               </div>
             </div>
           </div>

@@ -162,14 +162,10 @@ const content = {
     hero: {
       miniTag: <></>,
       FirstPart: <span>Turismo que conecta</span>,
-      Destaque: (
-        <span className="destaque relative italic font-light">
-          pessoas, território e natureza
-        </span>
-      ),
+      Destaque: <span className="">pessoas, território e natureza</span>,
       SecondPart: <span></span>,
       subtitle: (
-        <p>
+        <p className="text-white">
           Transformamos realidades por meio do turismo, com projetos e
           consultorias sob medida que integram saberes locais e conhecimento
           técnico para gerar soluções viáveis.
@@ -391,16 +387,7 @@ const content = {
           ),
           minitag: <>Área de Atuação</>,
           title: <>Técnico-Consultivo</>,
-          subtitle: (
-            <>
-              Apresentam soluções estratégicas que apoiam a tomada de decisão,
-              estruturam iniciativas e fortalecem territórios de forma
-              consistente e sustentável. Mais do que entregar diagnósticos, esse
-              eixo atua como um guia para organizações e gestores que precisam
-              enxergar com clareza onde estão, quais caminhos podem seguir e
-              como avançar com segurança em cenários cada vez mais complexos.
-            </>
-          ),
+          subtitle: <>Estrutura ações e soluções</>,
           imgFeatures1: imgFeatures1,
           description: (
             <div>
@@ -445,53 +432,29 @@ const content = {
               <Book width={18} />
             </>
           ),
-          minitag: <>Área de Atuação</>,
+          minitag: <>Eixo de Atuação</>,
           title: <>Formativo e Educacional</>,
-          subtitle: (
-            <>
-              Promovem o desenvolvimento de competências e a qualificação de
-              pessoas, empresários, gestores, equipes, instituições e
-              comunidades, com foco em gerar transformação real. Mais do que
-              transmitir conteúdo, essas iniciativas formativas buscam preparar
-              indivíduos e organizações para lidar com desafios concretos, tomar
-              decisões com mais segurança e atuar de forma mais estratégica em
-              seus contextos.
-            </>
-          ),
+          subtitle: <>Fortalece pessoas e conhecimento</>,
           imgFeatures2: imgFeatures2,
           description: (
             <div>
-              Promovem o desenvolvimento de competências e a qualificação de
-              pessoas, empresários, gestores, equipes, instituições e
-              comunidades, com foco em gerar transformação real. Mais do que
-              transmitir conteúdo, essas iniciativas formativas buscam preparar
-              indivíduos e organizações para lidar com desafios concretos, tomar
-              decisões com mais segurança e atuar de forma mais estratégica em
-              seus contextos.
+              O eixo Formativo e Educacional da PLANITUR é voltado ao
+              fortalecimento de pessoas, equipes, negócios e iniciativas ligadas
+              ao turismo, ao lazer e ao território. Atuamos junto a
+              empreendedores, gestores, comunidades, instituições e grupos que
+              desejam qualificar serviços, aprimorar experiências, fortalecer
+              processos e ampliar capacidades de atuação.
               <br />
               <br />
-              As ações incluem cursos, oficinas e processos formativos
-              estruturados para fortalecer habilidades técnicas, gerenciais e
-              estratégicas. Cada iniciativa é desenhada para desenvolver não
-              apenas o conhecimento, mas também a capacidade de aplicação
-              prática, estimulando a autonomia, a inovação e a adaptação diante
-              de um cenário em constante mudança.
-              <br />
-              <br />
-              Com base em metodologias participativas e conteúdos alinhados às
-              demandas do mercado e da sociedade, os processos formativos criam
-              ambientes de aprendizado dinâmicos e colaborativos. Neles, o
-              conhecimento não é apenas transmitido, mas construído
-              coletivamente por meio da troca de experiências, da vivência
-              prática e da conexão entre diferentes realidades.
-              <br />
-              <br />
-              Como resultado, essas iniciativas contribuem diretamente para o
-              aprimoramento profissional dos participantes, o fortalecimento das
-              instituições e a construção de organizações mais preparadas e
-              resilientes. Ao mesmo tempo, impulsionam o desenvolvimento
-              sustentável dos territórios, formando agentes capazes de gerar
-              impacto positivo, consistente e duradouro.
+              Nesse eixo, realizamos cursos, oficinas, mentorias e processos
+              formativos adaptados às diferentes realidades e necessidades dos
+              territórios. Nossas formações abordam, principalmente, temas
+              relacionados à gestão de negócios turísticos, precificação,
+              formação de condutores de visitantes, desenvolvimento de
+              experiências, hospitalidade, bem receber e qualificação da atuação
+              nos territórios. Também atuamos na facilitação e mediação de
+              processos participativos, promovendo diálogo, troca de
+              experiências e construção coletiva do conhecimento.
             </div>
           ),
           rota: "/features/formativoeeducacional",
@@ -503,52 +466,38 @@ const content = {
               <Search width={18} />
             </>
           ),
-          minitag: <>Área de Atuação</>,
+          minitag: <>Eixo de Atuação</>,
           title: <>Pesquisa e Produção de Conhecimento</>,
-          subtitle: (
-            <>
-              A investigação aplicada atua como um suporte estratégico para
-              qualificar decisões, políticas e projetos, transformando dados e
-              informações em direcionamentos claros e acionáveis. Mais do que
-              produzir estudos, esse eixo tem como objetivo gerar conhecimento
-              útil, capaz de reduzir incertezas e orientar escolhas mais seguras
-              em contextos complexos.
-            </>
-          ),
+          subtitle: <>Produz inteligência e base técnica para decisões</>,
           imgFeatures3: imgFeatures3,
           description: (
             <div>
-              A investigação aplicada atua como um suporte estratégico para
-              qualificar decisões, políticas e projetos, transformando dados e
-              informações em direcionamentos claros e acionáveis. Mais do que
-              produzir estudos, esse eixo tem como objetivo gerar conhecimento
-              útil, capaz de reduzir incertezas e orientar escolhas mais seguras
-              em contextos complexos.
+              O eixo Pesquisa Aplicada e Produção de Conhecimento da PLANITUR é
+              voltado à investigação, análise e sistematização de informações
+              que apoiem decisões, políticas públicas, projetos e iniciativas
+              ligadas ao turismo, ao lazer e ao território. Atuamos junto a
+              instituições, organizações, redes, comunidades e projetos que
+              precisam compreender melhor suas realidades, identificar
+              potencialidades, organizar informações estratégicas e qualificar
+              processos de gestão e planejamento.
               <br />
               <br />
-              As entregas incluem o desenvolvimento de estudos, sistematizações,
-              indicadores e produção técnica, sempre com foco em apoiar a gestão
-              e o planejamento. Cada produto é estruturado para ir além da
-              análise teórica, trazendo interpretações práticas que auxiliam
-              gestores e instituições a entenderem melhor seus cenários e a
-              definirem prioridades com maior precisão.
+              Nesse eixo, realizamos pesquisas qualitativas e quantitativas,
+              diagnósticos institucionais e territoriais, levantamentos
+              socioambientais, entrevistas com atores-chave, estudos técnicos e
+              análises aplicadas ao turismo e à governança. Também atuamos na
+              organização e interpretação de dados, elaboração de relatórios,
+              sistematizações e produção de conteúdos técnicos voltados ao
+              planejamento, à gestão e à tomada de decisão em diferentes
+              contextos.
               <br />
               <br />
-              A partir de metodologias de pesquisa, análise de dados e produção
-              de evidências, são elaborados diagnósticos, relatórios técnicos e
-              instrumentos de monitoramento que permitem acompanhar resultados e
-              ajustar estratégias ao longo do tempo. Isso possibilita uma gestão
-              mais orientada por dados, com maior capacidade de avaliação e
-              resposta diante de mudanças e desafios.
+              Nossa atuação busca transformar dados, experiências e informações
+              em conhecimento acessível, aplicado e útil para fortalecer
+              projetos, orientar estratégias e apoiar o desenvolvimento dos
+              territórios.
               <br />
               <br />
-              Como resultado, a investigação aplicada amplia a compreensão sobre
-              realidades específicas, revela tendências relevantes e fortalece a
-              base de conhecimento necessária para decisões mais consistentes.
-              Dessa forma, contribui diretamente para a formulação de políticas
-              e iniciativas mais eficazes, alinhadas às demandas sociais e
-              institucionais e com maior potencial de gerar impacto positivo e
-              sustentável.
             </div>
           ),
           rota: "/features/pesquisaeproducao",
@@ -724,18 +673,31 @@ const content = {
         card1: {
           img: team1,
           name: <>Angelice Motter</>,
-          role: <>Líder Administrativo e Coordenadora de Projetos</>,
+          role: <></>,
           rota: "/team",
           description: (
             <>
-              Mestre em Turismo e Hotelaria (2025), pós-graduada em Ecoturismo e
-              Interpretação da Natureza (2025) e graduada em Turismo pela
-              Universidade Federal do Rio Grande (2022).
+              In Turismóloga, mestre em Turismo e Hotelaria e especialista em
+              Ecoturismo e Interpretação da Natureza, Angelice Motter possui
+              mais de cinco anos de experiência em projetos voltados ao
+              planejamento turístico, desenvolvimento territorial e turismo
+              sustentável. Atua na elaboração de diagnósticos, estudos técnicos
+              e pesquisas aplicadas, além da coordenação e gestão técnica de
+              projetos socioambientais relacionados à estruturação de destinos,
+              turismo de natureza e governança territorial.
               <br />
               <br />
-              Sua trajetória acadêmica e profissional concentra-se nos temas de
-              planejamento e gestão do turismo, políticas públicas, governança,
-              sustentabilidade e turismo de natureza.
+              Ao longo de sua trajetória, participou da concepção, planejamento,
+              coordenação e execução de projetos voltados ao desenvolvimento
+              territorial, estruturação de destinos turísticos, turismo de
+              natureza e articulação entre diferentes atores locais, incluindo
+              organizações, municípios e iniciativas territoriais.
+              <br />
+              <br />
+              Na PLANITUR, busca contribuir para o desenvolvimento de destinos,
+              negócios e territórios mais planejados, sustentáveis e integrados,
+              compreendendo o turismo como uma ferramenta de transformação
+              socioambiental e fortalecimento territorial.
             </>
           ),
           linkedIn:
@@ -749,18 +711,31 @@ const content = {
           description: (
             <>
               Doutorando em Políticas Públicas, Estratégias e Desenvolvimento
-              pela Universidade Federal do Rio de Janeiro (UFRJ), Mestre em
+              pela Universidade Federal do Rio de Janeiro (UFRJ), mestre em
               Ecoturismo e Conservação pela Universidade Federal do Estado do
-              Rio de Janeiro (UNIRIO), Especialista em Gestão e Governança de
+              Rio de Janeiro (UNIRIO), especialista em Gestão e Governança de
               Áreas Marinhas Protegidas pela Universidad Austral de Chile (UACh)
               e bacharel em Turismo pela Universidade Federal Rural do Rio de
-              Janeiro (UFRRJ).
+              Janeiro (UFRRJ), atua há mais de 10 anos no desenvolvimento de
+              projetos socioambientais relacionados ao turismo de natureza,
+              conservação e desenvolvimento territorial.
               <br />
               <br />
-              Atua há mais de 10 anos com turismo baseado na natureza. Membro da
-              Comissão Mundial de Áreas Protegidas e do Grupo de Especialistas
-              em Turismo e Áreas Protegidas da União Internacional para a
-              Conservação da Natureza (IUCN).
+              Ao longo de sua trajetória, participou da concepção, articulação e
+              execução de iniciativas voltadas ao turismo sustentável,
+              governança territorial, uso público em áreas protegidas e
+              fortalecimento de projetos socioambientais, atuando junto a
+              governos, organizações, instituições e diferentes atores
+              territoriais. Também integra a Comissão Mundial de Áreas
+              Protegidas e o Grupo de Especialistas em Turismo e Áreas
+              Protegidas da União Internacional para a Conservação da Natureza
+              (IUCN).
+              <br />
+              <br />
+              Na PLANITUR, busca contribuir para o desenvolvimento de projetos e
+              territórios mais sustentáveis, fortalecendo iniciativas que
+              integrem turismo, conservação da natureza, planejamento e
+              transformação socioambiental.
             </>
           ),
           linkedIn: "https://www.linkedin.com/in/tarcisio-cunha/",

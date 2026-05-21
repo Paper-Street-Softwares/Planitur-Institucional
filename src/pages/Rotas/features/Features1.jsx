@@ -36,6 +36,7 @@ function Features1({ colorMode }) {
           colorMode={colorMode}
           miniTitle={content.texts.features.cards.card1.minitag}
           title={content.texts.features.cards.card1.title}
+          subtitle={content.texts.features.cards.card1.subtitle}
           className="mb-4"
         />
 
