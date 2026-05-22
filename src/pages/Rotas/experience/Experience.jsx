@@ -38,7 +38,7 @@ function Experiences({ colorMode }) {
 
               <p className="font-medium text-[#1C4B3C] mb-2">Atuação:</p>
 
-              <ul className="space-y-2 list-disc pl-5">
+              <ul className="pl-5 space-y-2 list-disc">
                 <li>
                   Mapeamento e definição de rotas para caminhada, ciclismo,
                   trecho aquático e cavalgada
@@ -72,7 +72,7 @@ function Experiences({ colorMode }) {
 
               <p className="font-medium text-[#1C4B3C] mb-2">Atuação:</p>
 
-              <ul className="space-y-2 list-disc pl-5">
+              <ul className="pl-5 space-y-2 list-disc">
                 <li>Elaboração de diagnósticos turísticos e socioambientais</li>
                 <li>
                   Mapeamento de atrativos, oportunidades e dinâmicas
@@ -108,7 +108,7 @@ function Experiences({ colorMode }) {
 
               <p className="font-medium text-[#1C4B3C] mb-2">Atuação:</p>
 
-              <ul className="space-y-2 list-disc pl-5">
+              <ul className="pl-5 space-y-2 list-disc">
                 <li>
                   Estruturação de modelos de governança para iniciativas
                   públicas e privadas, redes e coletivos locais
@@ -139,7 +139,7 @@ function Experiences({ colorMode }) {
 
               <p className="font-medium text-[#1C4B3C] mb-2">Atuação:</p>
 
-              <ul className="space-y-2 list-disc pl-5">
+              <ul className="pl-5 space-y-2 list-disc">
                 <li>
                   Escrita de projetos técnicos e propostas para editais e
                   financiamentos
@@ -162,7 +162,7 @@ function Experiences({ colorMode }) {
 
               <p className="font-medium text-[#1C4B3C] mb-2">Atuação:</p>
 
-              <ul className="space-y-2 list-disc pl-5">
+              <ul className="pl-5 space-y-2 list-disc">
                 <li>
                   Caracterização do uso público e das atividades turísticas em
                   áreas naturais
@@ -216,7 +216,7 @@ function Experiences({ colorMode }) {
 
               <p className="font-medium text-[#1C4B3C] mb-2">Atuação:</p>
 
-              <ul className="space-y-2 list-disc pl-5">
+              <ul className="pl-5 space-y-2 list-disc">
                 <li>
                   Realização de cursos, oficinas e treinamentos em turismo, em
                   temas de precificação, técnicas de bem receber, agentes
@@ -241,7 +241,7 @@ function Experiences({ colorMode }) {
 
               <p className="font-medium text-[#1C4B3C] mb-2">Atuação:</p>
 
-              <ul className="space-y-2 list-disc pl-5">
+              <ul className="pl-5 space-y-2 list-disc">
                 <li>
                   Condução de oficinas e grupos de trabalho com múltiplos atores
                 </li>
@@ -264,7 +264,7 @@ function Experiences({ colorMode }) {
 
               <p className="font-medium text-[#1C4B3C] mb-2">Atuação:</p>
 
-              <ul className="space-y-2 list-disc pl-5">
+              <ul className="pl-5 space-y-2 list-disc">
                 <li>
                   Elaboração de materiais técnicos, guias, manuais,
                   apresentações e conteúdos formativos
@@ -300,7 +300,7 @@ function Experiences({ colorMode }) {
 
               <p className="font-medium text-[#1C4B3C] mb-2">Atuação:</p>
 
-              <ul className="space-y-2 list-disc pl-5">
+              <ul className="pl-5 space-y-2 list-disc">
                 <li>Levantamentos socioambientais e territoriais</li>
                 <li>
                   Diagnósticos institucionais e análises aplicadas ao turismo
@@ -320,7 +320,7 @@ function Experiences({ colorMode }) {
 
               <p className="font-medium text-[#1C4B3C] mb-2">Atuação:</p>
 
-              <ul className="space-y-2 list-disc pl-5">
+              <ul className="pl-5 space-y-2 list-disc">
                 <li>Condução de pesquisas qualitativas e quantitativas</li>
                 <li>
                   Realização de entrevistas com atores-chave em escala local e
@@ -341,7 +341,7 @@ function Experiences({ colorMode }) {
 
               <p className="font-medium text-[#1C4B3C] mb-2">Atuação:</p>
 
-              <ul className="space-y-2 list-disc pl-5">
+              <ul className="pl-5 space-y-2 list-disc">
                 <li>Organização, análise e interpretação de dados</li>
                 <li>Elaboração de relatórios, estudos e documentos técnicos</li>
                 <li>Produção de conteúdos voltados à gestão e planejamento</li>
@@ -359,16 +359,16 @@ function Experiences({ colorMode }) {
 
   return (
     <div className="mb-24">
-      <section className="relative w-full h-auto py-20 desktop2:py-32 aspect-video min-h-[300px] desktop2:aspect-[10/1] flex flex-col items-center justify-center overflow-hidden">
+      <section className="relative w-full h-auto pt-20 desktop2:pt-32 aspect-video min-h-[300px] desktop2:aspect-[10/1] flex flex-col items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
           <img
             src={imgExperience}
             alt="Experiências"
-            className="w-full h-full object-cover object-center"
+            className="object-cover object-center w-full h-full"
           />
         </div>
 
-        <MotionDivDownToUp className="z-10 w-full flex justify-center absolute bottom-6">
+        <MotionDivDownToUp className="absolute z-10 flex justify-center w-full bottom-6">
           <ScrollMouse />
         </MotionDivDownToUp>
       </section>
@@ -393,7 +393,7 @@ function Experiences({ colorMode }) {
               técnicas e resultados alcançados.
             </>
           }
-          className="mb-16"
+          className="mb-8"
         />
 
         <MotionDivDownToUp>
@@ -403,11 +403,11 @@ function Experiences({ colorMode }) {
                 key={card.id}
                 className="bg-white rounded-[20px] p-8 shadow-sm border border-gray-100 min-h-[320px] h-fit flex flex-col justify-between"
               >
-                <div className="w-full h-[200px] mb-4 rounded-md">
+                <div className="w-full h-[400px] mb-4 rounded-md">
                   <img
                     src={card.image}
                     alt={card.title}
-                    className="w-full h-full object-cover rounded-md object-top"
+                    className="object-cover object-top w-full h-full rounded-md"
                   />
                 </div>
                 <div>
