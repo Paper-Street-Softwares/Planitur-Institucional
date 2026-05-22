@@ -677,7 +677,7 @@ const content = {
           rota: "/team",
           description: (
             <>
-              In Turismóloga, mestre em Turismo e Hotelaria e especialista em
+              Turismóloga, mestre em Turismo e Hotelaria e especialista em
               Ecoturismo e Interpretação da Natureza, Angelice Motter possui
               mais de cinco anos de experiência em projetos voltados ao
               planejamento turístico, desenvolvimento territorial e turismo
