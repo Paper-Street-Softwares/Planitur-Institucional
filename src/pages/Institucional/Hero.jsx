@@ -14,7 +14,7 @@ function Hero({ colorMode }) {
     <SectionArea className={``} paddingTopAndBottom={false}>
       <section
         id="/"
-        className="relative w-full h-auto py-20 desktop1:py-0 flex flex-col aspect-auto min-h-[300px] items-center justify-center overflow-hidden"
+        className="relative w-full h-auto py-20 desktop1:py-0 flex flex-col aspect-auto min-h-[500px] items-center justify-center overflow-hidden"
       >
         <div className="absolute inset-0 z-0">
           <img

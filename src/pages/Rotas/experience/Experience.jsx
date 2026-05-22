@@ -359,7 +359,7 @@ function Experiences({ colorMode }) {
 
   return (
     <div className="mb-24">
-      <section className="relative w-full h-auto pt-20 desktop2:pt-32 aspect-video min-h-[300px] desktop2:aspect-[10/1] flex flex-col items-center justify-center overflow-hidden">
+      <section className="relative w-full h-auto pt-20 desktop2:pt-32 aspect-video min-h-[500px] desktop2:aspect-[10/1] flex flex-col items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
           <img
             src={imgExperience}

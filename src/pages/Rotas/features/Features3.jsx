@@ -9,7 +9,7 @@ import MotionDivDownToUp from "../../../components/animation/MotionDivDownToUp";
 function Features3({ colorMode }) {
   return (
     <div id={content.texts.features.cards.card3.rota}>
-      <section className="relative w-full h-auto py-20 desktop2:py-32 aspect-video min-h-[300px] desktop2:aspect-[10/1] flex flex-col items-center justify-center overflow-hidden">
+      <section className="relative w-full h-auto py-20 desktop2:py-32 aspect-video min-h-[500px] desktop2:aspect-[10/1] flex flex-col items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
           <img
             src={content.texts.features.cards.card3.imgFeatures3}

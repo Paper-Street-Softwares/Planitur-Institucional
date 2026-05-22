@@ -12,18 +12,18 @@ function Features2({ colorMode }) {
   });
   return (
     <div id={content.texts.features.cards.card2.rota}>
-      <section className="relative w-full h-auto py-20 desktop2:py-32 aspect-video min-h-[300px] desktop2:aspect-[10/1] flex flex-col items-center justify-center overflow-hidden">
+      <section className="relative w-full h-auto py-20 desktop2:py-32 aspect-video min-h-[500px] desktop2:aspect-[10/1] flex flex-col items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
           <img
             src={content.texts.features.cards.card2.imgFeatures2}
             alt="Cityscape"
-            className="w-full h-full object-cover object-top"
+            className="object-cover object-top w-full h-full"
           />
           {/* <div className="absolute inset-0 bg-[#0f2a3a]/40 mix-blend-multiply" />
           <div className="absolute inset-0 bg-gradient-to-t from-[#0f2a3a] via-transparent to-transparent" /> */}
         </div>
 
-        <MotionDivDownToUp className="z-10 w-full flex justify-center absolute bottom-6">
+        <MotionDivDownToUp className="absolute z-10 flex justify-center w-full bottom-6">
           <div>
             <ScrollMouse />
           </div>
