@@ -180,7 +180,7 @@ export default function Footer({
                 )}
                 <div className="flex items-start gap-3">
                   <Mail size={18} className="mt-1 text-primaryLight" />
-                  <p className="text-primaryDark/80">
+                  <p className="text-[10px] text-primaryDark/80">
                     contato@planiturconsultoria.com
                   </p>
                 </div>
