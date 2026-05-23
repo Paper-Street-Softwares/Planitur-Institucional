@@ -31,11 +31,11 @@ export default function Index() {
         <main>
           {/* <Hero /> */}
           <Home colorMode={colorMode} />
-          <MapaBrasil colorMode={colorMode} />
+          {/* <MapaBrasil colorMode={colorMode} />
           <About colorMode={colorMode} />
           <Features colorMode={colorMode} />
           <TeamHome colorMode={colorMode} />
-          <ContatoHome colorMode={colorMode} />
+          <ContatoHome colorMode={colorMode} /> */}
           {/* <Mapa colorMode={colorMode} /> */}
           {/* <FormNovoTemplate colorMode={colorMode} /> */}
         </main>
