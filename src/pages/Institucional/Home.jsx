@@ -54,9 +54,12 @@ function Home({ colorMode }) {
                 CONHEÇA NOSSOS SERVIÇOS
               </a>
 
-              <button className="w-full px-8 py-4 text-sm font-semibold tracking-wide text-white transition-colors border border-white rounded-sm hover:bg-white/10 sm:w-auto">
-                <a href="/contato">INICIAR CONVERSA</a>
-              </button>
+              <a
+                className="w-full px-8 py-4 text-sm font-semibold tracking-wide text-white transition-colors border border-white rounded-sm hover:bg-white/10 sm:w-auto"
+                href="/contato"
+              >
+                INICIAR CONVERSA
+              </a>
             </div>
           </div>
         </SectionWrapper>
@@ -79,9 +82,12 @@ function Home({ colorMode }) {
                 organizações, negócios e territórios no planejamento,
                 qualificação e desenvolvimento do turismo.
               </p>
-              <button className="border border-[#E85D22] text-[#E85D22] hover:bg-[#E85D22] hover:text-white transition-colors px-8 py-4 font-semibold text-sm tracking-wide rounded-sm">
-                <a href="/experience">CONHEÇA NOSSAS EXPERIÊNCIAS</a>
-              </button>
+
+              <a href="/experience">
+                <button className="border border-[#E85D22] text-[#E85D22] hover:bg-[#E85D22] hover:text-white transition-colors px-8 py-4 font-semibold text-sm tracking-wide rounded-sm">
+                  CONHEÇA NOSSAS EXPERIÊNCIAS
+                </button>
+              </a>
             </div>
 
             {/* Coluna Direita: Ícones e Imagens */}
@@ -248,9 +254,12 @@ function Home({ colorMode }) {
                 Juntos, construímos soluções sustentáveis que geram impacto real
                 e duradouro.
               </p>
-              <button className="bg-[#E85D22] hover:bg-[#d1521d] transition-colors text-white px-8 py-4 font-semibold text-sm tracking-wide rounded-sm">
-                <a href="/about">CONHEÇA A PLANITUR</a>
-              </button>
+              <a href="/about">
+                {" "}
+                <button className="bg-[#E85D22] hover:bg-[#d1521d] transition-colors text-white px-8 py-4 font-semibold text-sm tracking-wide rounded-sm">
+                  CONHEÇA A PLANITUR
+                </button>
+              </a>
             </div>
 
             {/* Imagens Secundárias Direita */}
@@ -490,9 +499,12 @@ function Home({ colorMode }) {
                 negócios, territórios e organizações no desenvolvimento do
                 turismo.
               </p>
-              <button className="bg-[#E85D22] hover:bg-[#d1521d] transition-colors text-white px-8 py-4 font-semibold text-sm tracking-wide rounded-sm self-start">
-                <a href="/contato">INICIAR CONVERSA</a>
-              </button>
+              <a href="/contato">
+                {" "}
+                <button className="bg-[#E85D22] hover:bg-[#d1521d] transition-colors text-white px-8 py-4 font-semibold text-sm tracking-wide rounded-sm self-start">
+                  INICIAR CONVERSA
+                </button>
+              </a>
             </div>
 
             {/* Imagem Central */}
