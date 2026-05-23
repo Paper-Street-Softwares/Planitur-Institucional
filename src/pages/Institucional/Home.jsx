@@ -48,14 +48,14 @@ function Home({ colorMode }) {
             </p>
             <div className="flex flex-col w-full gap-4 mt-10 sm:flex-row sm:w-auto">
               <a
-                className="bg-[#E85D22] hover:bg-[#d1521d] transition-colors text-white px-8 py-4 font-semibold text-sm tracking-wide rounded-sm w-full sm:w-auto"
+                className="bg-[#E85D22] hover:bg-[#d1521d] transition-colors text-white px-8 py-4 font-semibold text-sm tracking-wide rounded-sm w-fit"
                 href="/services"
               >
                 CONHEÇA NOSSOS SERVIÇOS
               </a>
 
               <a
-                className="w-full px-8 py-4 text-sm font-semibold tracking-wide text-white transition-colors border border-white rounded-sm hover:bg-white/10 sm:w-auto"
+                className="px-8 py-4 text-sm font-semibold tracking-wide text-white transition-colors border border-white rounded-sm w-fit hover:bg-white/10"
                 href="/contato"
               >
                 INICIAR CONVERSA
