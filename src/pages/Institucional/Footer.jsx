@@ -21,7 +21,7 @@ export default function Footer({
         className={`bg-neutral-50 text-primaryDark/80 border-t w-full pb-10 font-mainFont flex justify-center ${className}`}
       >
         <SectionWrapper>
-          <div className="flex flex-col w-full pt-[20px] tablet2:flex-row tablet2:pt-[50px] items-start justify-center gap-12 tablet2:gap-6 phone3:grid phone3:grid-cols-2 tablet1:grid-cols-4 desktop1:grid-cols-4">
+          <div className="flex flex-col w-full pt-[20px] tablet2:flex-row tablet2:pt-[50px] items-start justify-center gap-12 tablet2:gap-6 tablet1:grid-cols-4 desktop1:grid-cols-4">
             {/* COLUNA 1 - LOGO */}
             <div className="flex flex-col gap-0">
               <img
@@ -180,7 +180,7 @@ export default function Footer({
                 )}
                 <div className="flex items-start gap-3">
                   <Mail size={18} className="mt-1 text-primaryLight" />
-                  <p className="text-[10px] text-primaryDark/80">
+                  <p className="text-[12px] text-primaryDark/80">
                     contato@planiturconsultoria.com
                   </p>
                 </div>
