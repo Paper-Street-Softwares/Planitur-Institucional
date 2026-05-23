@@ -47,11 +47,15 @@ function Home({ colorMode }) {
               técnico para gerar soluções viáveis.
             </p>
             <div className="flex flex-col w-full gap-4 mt-10 sm:flex-row sm:w-auto">
-              <button className="bg-[#E85D22] hover:bg-[#d1521d] transition-colors text-white px-8 py-4 font-semibold text-sm tracking-wide rounded-sm w-full sm:w-auto">
+              <a
+                className="bg-[#E85D22] hover:bg-[#d1521d] transition-colors text-white px-8 py-4 font-semibold text-sm tracking-wide rounded-sm w-full sm:w-auto"
+                href="/services"
+              >
                 CONHEÇA NOSSOS SERVIÇOS
-              </button>
+              </a>
+
               <button className="w-full px-8 py-4 text-sm font-semibold tracking-wide text-white transition-colors border border-white rounded-sm hover:bg-white/10 sm:w-auto">
-                INICIAR CONVERSA
+                <a href="/contato">INICIAR CONVERSA</a>
               </button>
             </div>
           </div>
@@ -76,7 +80,7 @@ function Home({ colorMode }) {
                 qualificação e desenvolvimento do turismo.
               </p>
               <button className="border border-[#E85D22] text-[#E85D22] hover:bg-[#E85D22] hover:text-white transition-colors px-8 py-4 font-semibold text-sm tracking-wide rounded-sm">
-                CONHEÇA NOSSAS EXPERIÊNCIAS
+                <a href="/experience">CONHEÇA NOSSAS EXPERIÊNCIAS</a>
               </button>
             </div>
 
@@ -245,7 +249,7 @@ function Home({ colorMode }) {
                 e duradouro.
               </p>
               <button className="bg-[#E85D22] hover:bg-[#d1521d] transition-colors text-white px-8 py-4 font-semibold text-sm tracking-wide rounded-sm">
-                CONHEÇA A PLANITUR
+                <a href="/about">CONHEÇA A PLANITUR</a>
               </button>
             </div>
 
@@ -315,7 +319,9 @@ function Home({ colorMode }) {
                 fortalecer territórios e iniciativas.
               </p>
               <button className="text-[#C24127] font-bold text-sm flex items-center gap-2 hover:opacity-80 transition-opacity">
-                SAIBA MAIS <span>→</span>
+                <a href="/features/tecnicoconsultivo">
+                  SAIBA MAIS <span>→</span>
+                </a>
               </button>
             </div>
 
@@ -344,7 +350,9 @@ function Home({ colorMode }) {
                 para gerar transformação real.
               </p>
               <button className="text-[#C24127] font-bold text-sm flex items-center gap-2 hover:opacity-80 transition-opacity">
-                SAIBA MAIS <span>→</span>
+                <a href="/features/formativoeeducacional">
+                  SAIBA MAIS <span>→</span>
+                </a>
               </button>
             </div>
 
@@ -373,7 +381,9 @@ function Home({ colorMode }) {
                 para melhores decisões.
               </p>
               <button className="text-[#C24127] font-bold text-sm flex items-center gap-2 hover:opacity-80 transition-opacity">
-                SAIBA MAIS <span>→</span>
+                <a href="/features/pesquisaeproducao">
+                  SAIBA MAIS <span>→</span>
+                </a>
               </button>
             </div>
           </div>
@@ -417,8 +427,9 @@ function Home({ colorMode }) {
                   desenvolvimento territorial.
                 </p>
                 <a
-                  href="#"
-                  className="text-[#0A66C2] hover:opacity-80 transition-opacity"
+                  href="https://www.linkedin.com/in/angelice-raquel-motter-manzino-a261b2217/"
+                  target="_blank"
+                  className="text-[#0A3D24] hover:opacity-80 transition-opacity"
                 >
                   <svg className="w-6 h-6 fill-current" viewBox="0 0 24 24">
                     <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
@@ -447,8 +458,9 @@ function Home({ colorMode }) {
                   governança territorial.
                 </p>
                 <a
-                  href="#"
-                  className="text-[#0A66C2] hover:opacity-80 transition-opacity"
+                  href="https://www.linkedin.com/in/tarcisio-cunha/"
+                  target="_blank"
+                  className="text-[#0A3D24] hover:opacity-80 transition-opacity"
                 >
                   <svg className="w-6 h-6 fill-current" viewBox="0 0 24 24">
                     <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
@@ -461,7 +473,7 @@ function Home({ colorMode }) {
       </SectionArea>
 
       {/* 6. CONTATO */}
-      <SectionArea className="bg-white">
+      <SectionArea className="bg-white" paddingtop={false}>
         <SectionWrapper>
           <div className="flex flex-col w-full overflow-hidden shadow-sm xl:flex-row rounded-2xl">
             {/* Bloco Verde Escuro */}
@@ -479,7 +491,7 @@ function Home({ colorMode }) {
                 turismo.
               </p>
               <button className="bg-[#E85D22] hover:bg-[#d1521d] transition-colors text-white px-8 py-4 font-semibold text-sm tracking-wide rounded-sm self-start">
-                INICIAR CONVERSA
+                <a href="/contato">INICIAR CONVERSA</a>
               </button>
             </div>
 
@@ -517,23 +529,18 @@ function Home({ colorMode }) {
 
               <div className="flex items-start gap-4">
                 <svg
-                  className="w-6 h-6 text-[#0A3D24] mt-1 shrink-0"
-                  fill="none"
-                  stroke="currentColor"
+                  className="w-5 h-5 text-[#0A3D24] mt-1 shrink-0"
+                  fill="currentColor"
                   viewBox="0 0 24 24"
                 >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="1.5"
-                    d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"
-                  ></path>
+                  <path d="M20.52 3.48A11.86 11.86 0 0012.06 0C5.49 0 .14 5.35.14 11.92c0 2.1.55 4.16 1.59 5.97L0 24l6.29-1.65a11.92 11.92 0 005.77 1.47h.01c6.57 0 11.92-5.35 11.92-11.92 0-3.18-1.24-6.17-3.47-8.4zM12.07 21.8h-.01a9.9 9.9 0 01-5.05-1.38l-.36-.21-3.73.98 1-3.63-.23-.37a9.87 9.87 0 01-1.52-5.28c0-5.46 4.44-9.9 9.91-9.9 2.64 0 5.12 1.03 6.98 2.89a9.8 9.8 0 012.89 6.99c0 5.46-4.44 9.91-9.89 9.91zm5.43-7.43c-.3-.15-1.77-.87-2.05-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.95 1.17-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.47-.89-.79-1.49-1.77-1.66-2.07-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.03-.52-.07-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.5h-.57c-.2 0-.52.07-.8.37-.27.3-1.05 1.02-1.05 2.5s1.08 2.9 1.23 3.1c.15.2 2.13 3.25 5.16 4.56.72.31 1.28.5 1.72.64.72.23 1.38.2 1.9.12.58-.09 1.77-.72 2.02-1.42.25-.7.25-1.3.17-1.42-.07-.12-.27-.2-.57-.35z" />
                 </svg>
                 <div>
                   <h4 className="text-[#0A3D24] font-bold text-sm mb-1">
                     WhatsApp
                   </h4>
                   <p className="text-sm text-gray-600">(51) 98225-1864</p>
+                  <p className="text-sm text-gray-600">(21) 98385-6516</p>
                 </div>
               </div>
 
@@ -553,9 +560,9 @@ function Home({ colorMode }) {
                 </svg>
                 <div>
                   <h4 className="text-[#0A3D24] font-bold text-sm mb-1">
-                    Atuação em
+                    Atuação
                   </h4>
-                  <p className="text-sm text-gray-600">todo o Brasil</p>
+                  <p className="text-sm text-gray-600">Em todo o Brasil</p>
                 </div>
               </div>
             </div>
