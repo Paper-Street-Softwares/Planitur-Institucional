@@ -2,7 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import SectionArea from "../../components/sectionElements/SectionArea";
 import SectionWrapper from "../../components/sectionElements/SectionWrapper";
-import imgHero from "../../assets/imgs/hero/hero.png";
+import imgHero from "../../assets/imgs/hero/hero.jpg";
 import imgAnalise from "../../assets/imgs/hero/analise.jpg";
 import imgMontanha from "../../assets/imgs/hero/montanha.jpg";
 import imgAula from "../../assets/imgs/hero/aula.jpg";
