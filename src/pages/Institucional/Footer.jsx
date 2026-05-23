@@ -42,13 +42,13 @@ export default function Footer({
                   <div className="flex gap-4">
                     <a
                       href={content.texts.links.instagram}
-                      className="bg-primaryDark/20 flex justify-center items-center w-8 h-8 rounded-md cursor-pointer hover:scale-90 duration-500 transition-all"
+                      className="flex items-center justify-center w-8 h-8 transition-all duration-500 rounded-md cursor-pointer bg-primaryDark/20 hover:scale-90"
                     >
                       <Instagram width={18} className="text-primaryDark/70" />
                     </a>
                     <a
                       href={content.texts.links.linkedin}
-                      className="bg-primaryDark/20 flex justify-center items-center w-8 h-8 rounded-md cursor-pointer hover:scale-90 duration-500 transition-all"
+                      className="flex items-center justify-center w-8 h-8 transition-all duration-500 rounded-md cursor-pointer bg-primaryDark/20 hover:scale-90"
                     >
                       <Linkedin width={18} className="text-primaryDark/70" />
                     </a>
@@ -58,30 +58,30 @@ export default function Footer({
             </div>
 
             {/* COLUNA 2 - LINKS */}
-            <div className="space-y-10 text-sm flex flex-col tablet2:h-auto ">
+            <div className="flex flex-col space-y-10 text-sm tablet2:h-auto ">
               <div>
-                <h3 className="text-primaryLight font-semibold mb-3">
+                <h3 className="mb-3 font-semibold text-primaryLight">
                   SOBRE NÓS
                 </h3>
-                <ul className="space-y-2 text-sm text-primaryDark/80 flex flex-col">
+                <ul className="flex flex-col space-y-2 text-sm text-primaryDark/80">
                   <a
                     href="/about"
                     rel="noopener noreferrer"
-                    className="hover:text-primaryLight duration-300 transition-all cursor-pointer"
+                    className="transition-all duration-300 cursor-pointer hover:text-primaryLight"
                   >
                     A Planitur
                   </a>
                   <a
                     href="/team"
                     rel="noopener noreferrer"
-                    className="hover:text-primaryLight duration-300 transition-all cursor-pointer"
+                    className="transition-all duration-300 cursor-pointer hover:text-primaryLight"
                   >
                     Dos Sócios
                   </a>
                   <a
                     href="/contato"
                     rel="noopener noreferrer"
-                    className="hover:text-primaryLight duration-300 transition-all cursor-pointer"
+                    className="transition-all duration-300 cursor-pointer hover:text-primaryLight"
                   >
                     Contato
                   </a>
@@ -89,13 +89,13 @@ export default function Footer({
               </div>
 
               {/* <div>
-              <h3 className="text-primaryLight font-semibold mb-3">
+              <h3 className="mb-3 font-semibold text-primaryLight">
                 ADVOGADOS
               </h3>
             </div> */}
 
               {/* <div>
-              <h3 className="text-primaryLight font-semibold mb-3">
+              <h3 className="mb-3 font-semibold text-primaryLight">
                 NOTÍCIAS E PUBLICAÇÕES
               </h3>
               <ul className="space-y-2 text-primaryDark/80">
@@ -107,22 +107,22 @@ export default function Footer({
             </div> */}
 
               {/* <div>
-              <h3 className="text-primaryLight font-semibold">TRACK RECORD</h3>
+              <h3 className="font-semibold text-primaryLight">TRACK RECORD</h3>
             </div> */}
             </div>
 
             {/* COLUNA 3 - ÁREAS DE ATUAÇÃO */}
             <div className="">
-              <h3 className="text-primaryLight font-semibold mb-4">
+              <h3 className="mb-4 font-semibold text-primaryLight">
                 ÁREAS DE ATUAÇÃO
               </h3>
-              <ul className="space-y-2 text-sm text-primaryDark/80 flex flex-col">
+              <ul className="flex flex-col space-y-2 text-sm text-primaryDark/80">
                 {featuresInfos.map((item, index) => (
                   <a
                     key={index}
                     href={item.rota}
                     rel="noopener noreferrer"
-                    className="hover:text-primaryLight duration-300 transition-all cursor-pointer"
+                    className="transition-all duration-300 cursor-pointer hover:text-primaryLight"
                   >
                     {item.title}
                   </a>
@@ -132,6 +132,7 @@ export default function Footer({
 
             {/* COLUNA 4 - CONTATO */}
             <div className="flex flex-col justify-between text-sm">
+              <h3 className="mb-4 font-semibold text-primaryLight">CONTATO</h3>
               <div className="space-y-6">
                 <div className="flex flex-col space-y-6">
                   {phone && (
