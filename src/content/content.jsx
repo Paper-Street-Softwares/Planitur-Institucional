@@ -415,15 +415,19 @@ const content = {
               de forma personalizada, considerando os objetivos e a realidade de
               cada iniciativa.
               <br />
-              <div className="mt-10">
+              <div className="flex flex-col w-full gap-4 mt-10 sm:flex-row sm:w-auto">
                 <a
-                  href="https://wa.me/5551982251864?text=Ol%C3%A1%21%20Vim%20atrav%C3%A9s%20do%20site%20da%20Planitur%20e%20gostaria%20de%20atendimento.%20Pode%20me%20ajudar%3F"
-                  target="_blank"
-                  className=""
+                  className="bg-[#E85D22] hover:bg-[#d1521d] transition-colors text-white px-8 py-4 font-semibold text-sm tracking-wide rounded-sm w-fit"
+                  href="/experience"
                 >
-                  <button className="bg-[#E85D22] hover:bg-[#d1521d] transition-colors text-white px-8 py-4 font-semibold text-sm tracking-wide rounded-sm self-start">
-                    INICIAR CONVERSA
-                  </button>
+                  CONHEÇA NOSSAS EXPERIÊNCIAS
+                </a>
+
+                <a
+                  className="px-8 py-4 text-sm font-semibold tracking-wide text-[#d1521d] hover:text-white transition-colors border border-[#d1521d] rounded-sm w-fit hover:bg-[#d1521d]"
+                  href="/contato"
+                >
+                  ENTRE EM CONTATO CONOSCO
                 </a>
               </div>
             </div>
@@ -460,6 +464,21 @@ const content = {
               nos territórios. Também atuamos na facilitação e mediação de
               processos participativos, promovendo diálogo, troca de
               experiências e construção coletiva do conhecimento.
+              <div className="flex flex-col w-full gap-4 mt-10 sm:flex-row sm:w-auto">
+                <a
+                  className="bg-[#E85D22] hover:bg-[#d1521d] transition-colors text-white px-8 py-4 font-semibold text-sm tracking-wide rounded-sm w-fit"
+                  href="/experience"
+                >
+                  CONHEÇA NOSSAS EXPERIÊNCIAS
+                </a>
+
+                <a
+                  className="px-8 py-4 text-sm font-semibold tracking-wide text-[#d1521d] hover:text-white transition-colors border border-[#d1521d] rounded-sm w-fit hover:bg-[#d1521d]"
+                  href="/contato"
+                >
+                  ENTRE EM CONTATO CONOSCO
+                </a>
+              </div>
             </div>
           ),
           rota: "/features/formativoeeducacional",
@@ -501,8 +520,21 @@ const content = {
               em conhecimento acessível, aplicado e útil para fortalecer
               projetos, orientar estratégias e apoiar o desenvolvimento dos
               territórios.
-              <br />
-              <br />
+              <div className="flex flex-col w-full gap-4 mt-10 sm:flex-row sm:w-auto">
+                <a
+                  className="bg-[#E85D22] hover:bg-[#d1521d] transition-colors text-white px-8 py-4 font-semibold text-sm tracking-wide rounded-sm w-fit"
+                  href="/experience"
+                >
+                  CONHEÇA NOSSAS EXPERIÊNCIAS
+                </a>
+
+                <a
+                  className="px-8 py-4 text-sm font-semibold tracking-wide text-[#d1521d] hover:text-white transition-colors border border-[#d1521d] rounded-sm w-fit hover:bg-[#d1521d]"
+                  href="/contato"
+                >
+                  ENTRE EM CONTATO CONOSCO
+                </a>
+              </div>
             </div>
           ),
           rota: "/features/pesquisaeproducao",

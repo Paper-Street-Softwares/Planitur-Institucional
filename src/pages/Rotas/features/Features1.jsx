@@ -18,13 +18,13 @@ function Features1({ colorMode }) {
           <img
             src={content.texts.features.cards.card1.imgFeatures1}
             alt="Cityscape"
-            className="w-full h-full object-cover object-center"
+            className="object-cover object-center w-full h-full"
           />
           {/* <div className="absolute inset-0 bg-[#0f2a3a]/40 mix-blend-multiply" />
           <div className="absolute inset-0 bg-gradient-to-t from-[#0f2a3a] via-transparent to-transparent" /> */}
         </div>
 
-        <MotionDivDownToUp className="z-10 w-full flex justify-center absolute bottom-6">
+        <MotionDivDownToUp className="absolute z-10 flex justify-center w-full bottom-6">
           <div>
             <ScrollMouse />
           </div>
