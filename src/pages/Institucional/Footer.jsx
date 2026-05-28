@@ -111,10 +111,10 @@ export default function Footer({
             </div> */}
             </div>
 
-            {/* COLUNA 3 - ÁREAS DE ATUAÇÃO */}
+            {/* COLUNA 3 - Eixo de Atuação */}
             <div className="">
               <h3 className="mb-4 font-semibold text-primaryLight">
-                ÁREAS DE ATUAÇÃO
+                Eixo de Atuação
               </h3>
               <ul className="flex flex-col space-y-2 text-sm text-primaryDark/80">
                 {featuresInfos.map((item, index) => (

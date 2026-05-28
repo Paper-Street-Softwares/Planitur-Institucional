@@ -460,7 +460,7 @@ function Home({ colorMode }) {
                   Tarcísio Cunha
                 </h3>
                 <p className="mb-4 text-sm font-medium text-gray-500">
-                  Sócio e Líder de Projetos
+                  Líder de Projetos
                 </p>
                 <p className="mb-4 text-sm leading-relaxed text-gray-600">
                   Doutorando em Políticas Públicas e especialista em áreas

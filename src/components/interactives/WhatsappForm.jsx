@@ -55,7 +55,7 @@ const WhatsappForm = () => {
   // Cidade/Estado: ${location}
   // Telefone: ${phone}
   // E-mail: ${email}
-  // Área de atuação: ${area}
+  // Eixo de Atuação: ${area}
 
   // Experiência:
   // ${experience}
@@ -112,7 +112,7 @@ const WhatsappForm = () => {
         "service_A_Definir",
         "template_A_Definir",
         templateParams,
-        "8bJXn-A_Definir",
+        "8bJXn-A_Definir"
       )
       .then(
         () => {
@@ -132,7 +132,7 @@ const WhatsappForm = () => {
         (error) => {
           alert("Erro ao enviar email: " + error.text);
           setIsSubmitting(false);
-        },
+        }
       );
   };
 
@@ -204,7 +204,7 @@ const WhatsappForm = () => {
                   if (value.length > 6) {
                     value = `(${value.substring(0, 2)}) ${value.substring(
                       2,
-                      7,
+                      7
                     )}-${value.substring(7)}`;
                   } else if (value.length > 2) {
                     value = `(${value.substring(0, 2)}) ${value.substring(2)}`;
@@ -247,7 +247,7 @@ const WhatsappForm = () => {
           {/* Área */}
           <div className="mb-6">
             <label className="block font-medium mb-1 text-gray-400">
-              Área de atuação:
+              Eixo de Atuação:
             </label>
             <div className="flex text-primaryLight">
               <div className="flex items-center justify-center w-12 px-1 bg-primaryLight/15 rounded-md">

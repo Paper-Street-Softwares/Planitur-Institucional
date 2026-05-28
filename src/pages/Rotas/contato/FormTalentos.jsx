@@ -52,10 +52,10 @@ function TalentForm({ colorMode }) {
       (error) => {
         console.error("Erro ao enviar:", error.text);
         alert(
-          "Ocorreu um erro ao enviar. Verifique se o arquivo ultrapassa 50kb (limite do EmailJS gratuito).",
+          "Ocorreu um erro ao enviar. Verifique se o arquivo ultrapassa 50kb (limite do EmailJS gratuito)."
         );
         setIsSending(false);
-      },
+      }
     );
   }
 
@@ -138,7 +138,7 @@ function TalentForm({ colorMode }) {
               <input
                 name="area"
                 className="border p-2 rounded-md w-full"
-                placeholder="Área de atuação"
+                placeholder="Eixo de Atuação"
                 value={form.area}
                 onChange={handleChange}
                 required

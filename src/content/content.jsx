@@ -385,42 +385,35 @@ const content = {
               <MessageSquare width={18} />
             </>
           ),
-          minitag: <>Área de Atuação</>,
-          title: <>Técnico-Consultivo</>,
+          minitag: <>Eixo de Atuação</>,
+          title: <>Técnico-Consultivo e Planejamento</>,
           subtitle: <>Estrutura ações e soluções</>,
           imgFeatures1: imgFeatures1,
           description: (
             <div>
-              Apresentam soluções estratégicas que apoiam a tomada de decisão,
-              estruturam iniciativas e fortalecem territórios de forma
-              consistente e sustentável. Mais do que entregar diagnósticos, esse
-              eixo atua como um guia para organizações e gestores que precisam
-              enxergar com clareza onde estão, quais caminhos podem seguir e
-              como avançar com segurança em cenários cada vez mais complexos.
+              A atuação no eixo Técnico-Consultivo e Planejamento da PLANITUR
+              reúne soluções voltadas à estruturação, qualificação e
+              desenvolvimento do turismo em diferentes territórios e contextos.
+              Atuamos junto a municípios, organizações, propriedades,
+              comunidades e iniciativas que desejam organizar o turismo de forma
+              estratégica, fortalecer a gestão, planejar experiências,
+              estruturar projetos ou desenvolver ações alinhadas às
+              potencialidades e realidades locais.
               <br />
               <br />
-              Os produtos gerados incluem diagnósticos técnicos aprofundados,
-              estudos analíticos, estruturação de políticas públicas e
-              planejamento estratégico e territorial. Cada entrega é pensada
-              para transformar informações em direcionamento prático, ajudando
-              instituições a saírem da incerteza e partirem para ações
-              organizadas, eficientes e com maior potencial de impacto real.
+              Nesse eixo, desenvolvemos diagnósticos, planejamentos turísticos e
+              territoriais, estruturação de trilhas, projetos de uso público,
+              políticas públicas, modelos de governança, planos de viabilidade e
+              estratégias para captação de recursos. Nossa atuação integra
+              conhecimento técnico, diálogo com os atores locais e planejamento
+              aplicado, buscando transformar desafios em soluções viáveis e
+              sustentáveis.
               <br />
               <br />
-              Essas soluções buscam compreender profundamente os contextos
-              locais, indo além da superfície. Ao identificar desafios, gargalos
-              e também potencialidades muitas vezes invisíveis, criam uma base
-              sólida para decisões mais inteligentes. Isso permite que gestores
-              deixem de agir no improviso e passem a atuar com estratégia,
-              priorização e visão de longo prazo.
-              <br />
-              <br />A partir de metodologias consolidadas e análises orientadas
-              por dados, contribuem diretamente para o aprimoramento da gestão e
-              da tomada de decisão. O resultado é a organização mais clara de
-              iniciativas, o alinhamento institucional e a construção de
-              caminhos viáveis para o desenvolvimento econômico, social e
-              institucional dos territórios — com consistência, eficiência e
-              propósito.
+              Sabemos que cada território possui desafios, potencialidades e
+              necessidades próprias. Por isso, nossas soluções são desenvolvidas
+              de forma personalizada, considerando os objetivos e a realidade de
+              cada iniciativa.
             </div>
           ),
           rota: "/features/tecnicoconsultivo",
@@ -467,7 +460,7 @@ const content = {
             </>
           ),
           minitag: <>Eixo de Atuação</>,
-          title: <>Pesquisa e Produção de Conhecimento</>,
+          title: <>Pesquisa Aplicada e Produção de Conhecimento</>,
           subtitle: <>Produz inteligência e base técnica para decisões</>,
           imgFeatures3: imgFeatures3,
           description: (
