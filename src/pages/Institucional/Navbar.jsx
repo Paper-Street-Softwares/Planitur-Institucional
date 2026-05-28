@@ -36,7 +36,7 @@ function Navbar() {
           root: null,
           rootMargin: "-40% 0px -55% 0px",
           threshold: 0,
-        },
+        }
       );
 
       observer.observe(section);
@@ -121,7 +121,7 @@ function Navbar() {
           </div>
 
           {/* DESKTOP MENU */}
-          <div className="hidden uppercase desktop1:flex items-center gap-5 text-sm tracking-wide font-mainFont font-medium">
+          <div className="items-center hidden gap-5 text-sm font-medium tracking-wide uppercase desktop1:flex font-mainFont">
             <Link to="/" className={linkClass("home")}>
               INÍCIO
               {underline("home")}
@@ -141,7 +141,7 @@ function Navbar() {
               </button>
 
               <div
-                className={`absolute top-full left-0 mt-4 bg-neutral-50 uppercase shadow-xl py-3 transition-all duration-300 ${
+                className={`absolute top-full left-0 mt-4 bg-neutral-50 w-[200px] uppercase shadow-xl py-3 transition-all duration-300 ${
                   openDropdown === "escritorio"
                     ? "opacity-100 visible"
                     : "opacity-0 invisible"
@@ -172,7 +172,7 @@ function Navbar() {
                 <div className="relative">
                   <button
                     type="button"
-                    className="block px-4 py-2 hover:text-primaryLight w-full text-left"
+                    className="block w-full px-4 py-2 text-left hover:text-primaryLight"
                     onClick={(e) => {
                       e.stopPropagation();
                       setAreasOpen(!areasOpen);
@@ -198,7 +198,7 @@ function Navbar() {
                       <Link
                         key={index}
                         to={item.rota}
-                        className="block px-4 py-2 hover:text-primaryLight"
+                        className="block px-4 py-2 uppercase hover:text-primaryLight"
                         onClick={() => setAreasOpen(false)}
                       >
                         {item.title}
@@ -239,7 +239,7 @@ function Navbar() {
           </div>
 
           {/* MOBILE BUTTON */}
-          <section className="desktop1:hidden flex gap-4">
+          <section className="flex gap-4 desktop1:hidden">
             <button
               onClick={() => setMobileOpen(!mobileOpen)}
               className="text-primaryLight"
@@ -262,7 +262,7 @@ function Navbar() {
         <Link
           to="/"
           onClick={() => setMobileOpen(false)}
-          className="uppercase block"
+          className="block uppercase"
         >
           INÍCIO
         </Link>
@@ -274,7 +274,7 @@ function Navbar() {
               setMobileOfficeOpen(!mobileOfficeOpen);
               setMobileAreasOpen(false);
             }}
-            className="uppercase w-full flex items-center justify-between"
+            className="flex items-center justify-between w-full uppercase"
           >
             <span>A planitur</span>
 
@@ -287,7 +287,7 @@ function Navbar() {
           </button>
 
           {mobileOfficeOpen && (
-            <div className="uppercase mt-2 ml-4 flex flex-col gap-2 ">
+            <div className="flex flex-col gap-2 mt-2 ml-4 uppercase ">
               <Link to="/about#top" onClick={() => setMobileOpen(false)}>
                 Sobre a Empresa
               </Link>
@@ -306,7 +306,7 @@ function Navbar() {
                   onClick={() => {
                     setMobileAreasOpen(!mobileAreasOpen);
                   }}
-                  className="uppercase w-full flex items-center justify-between"
+                  className="flex items-center justify-between w-full uppercase"
                 >
                   <span>NOSSA ATUAÇÃO</span>
 
@@ -328,7 +328,7 @@ function Navbar() {
                       key={index}
                       to={item.rota}
                       onClick={() => setMobileOpen(false)}
-                      className="uppercase py-2  flex items-center gap-2"
+                      className="flex items-center gap-2 py-2 uppercase"
                     >
                       <span>{item.icon}</span> {item.title}
                     </Link>
@@ -344,14 +344,14 @@ function Navbar() {
         <div>
           {" "}
           <Link to="/services" className={linkClass("services")}>
-            Nossos Serviços
+            NOSSOS SERVIÇOS
           </Link>
         </div>
 
         <div>
           {" "}
           <Link to="/experience" className={linkClass("experience")}>
-            Experiências e Resultados
+            EXPERIÊNCIAS E RESULTADOS
           </Link>
         </div>
 
