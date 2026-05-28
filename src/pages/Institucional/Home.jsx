@@ -230,11 +230,11 @@ function Home({ colorMode }) {
         <SectionWrapper>
           <div className="grid items-center w-full grid-cols-1 gap-8 lg:grid-cols-12">
             {/* Imagem Principal Esquerda */}
-            <div className="h-full lg:col-span-5">
+            <div className="hidden h-full lg:col-span-5 lg:flex">
               <img
                 src={imgPostit}
                 alt="Sobre a Planitur"
-                className="w-full h-[400px] lg:h-full object-cover rounded-lg"
+                className="w-full h-[400px] lg:h-full object-cover rounded-lg "
               />
             </div>
 
@@ -265,6 +265,11 @@ function Home({ colorMode }) {
 
             {/* Imagens Secundárias Direita */}
             <div className="flex flex-col h-full gap-4 lg:col-span-3">
+              <img
+                src={imgPostit}
+                alt="Detalhe 1"
+                className="object-cover w-full rounded-lg h-72 lg:hidden"
+              />
               <img
                 src={imgIlha}
                 alt="Detalhe 1"

@@ -17,7 +17,7 @@ function Features2({ colorMode }) {
           <img
             src={content.texts.features.cards.card2.imgFeatures2}
             alt="Cityscape"
-            className="object-cover object-top w-full h-full"
+            className="object-cover object-right w-full h-full desktop2:object-top"
           />
           {/* <div className="absolute inset-0 bg-[#0f2a3a]/40 mix-blend-multiply" />
           <div className="absolute inset-0 bg-gradient-to-t from-[#0f2a3a] via-transparent to-transparent" /> */}
