@@ -56,7 +56,8 @@ function Home({ colorMode }) {
 
               <a
                 className="px-8 py-4 text-sm font-semibold tracking-wide text-white transition-colors border border-white rounded-sm w-fit hover:bg-white/10"
-                href="/contato"
+                href="https://wa.me/5551982251864?text=Ol%C3%A1%21%20Vim%20atrav%C3%A9s%20do%20site%20da%20Planitur%20e%20gostaria%20de%20atendimento.%20Pode%20me%20ajudar%3F"
+                target="_blank"
               >
                 INICIAR CONVERSA
               </a>
@@ -499,7 +500,10 @@ function Home({ colorMode }) {
                 negócios, territórios e organizações no desenvolvimento do
                 turismo.
               </p>
-              <a href="/contato">
+              <a
+                href="https://wa.me/5551982251864?text=Ol%C3%A1%21%20Vim%20atrav%C3%A9s%20do%20site%20da%20Planitur%20e%20gostaria%20de%20atendimento.%20Pode%20me%20ajudar%3F"
+                target="_blank"
+              >
                 {" "}
                 <button className="bg-[#E85D22] hover:bg-[#d1521d] transition-colors text-white px-8 py-4 font-semibold text-sm tracking-wide rounded-sm self-start">
                   INICIAR CONVERSA
