@@ -73,7 +73,7 @@ function Home({ colorMode }) {
             {/* Coluna Esquerda: Texto */}
             <div className="flex flex-col items-start lg:col-span-4">
               <span className="text-[#C24127] font-bold text-sm tracking-wider uppercase mb-4">
-                2. Impacto e territórios
+                Impacto e territórios
               </span>
               <h2 className="text-[#0A3D24] text-3xl lg:text-4xl font-bold leading-tight mb-6">
                 Atuação que fortalece territórios e iniciativas
@@ -241,7 +241,7 @@ function Home({ colorMode }) {
             {/* Conteúdo Central */}
             <div className="flex flex-col items-start px-0 lg:col-span-4 lg:px-4">
               <span className="text-[#C24127] font-bold text-sm tracking-wider uppercase mb-4">
-                3. Sobre a Planitur
+                Sobre a Planitur
               </span>
               <h2 className="text-[#0A3D24] text-3xl font-bold leading-tight mb-6">
                 Planejamento estratégico para destinos e territórios
@@ -297,7 +297,7 @@ function Home({ colorMode }) {
         <SectionWrapper>
           <div className="flex flex-col items-center w-full mb-12 text-center">
             <span className="text-[#C24127] font-bold text-sm tracking-wider uppercase mb-4">
-              4. Nossos eixos de atuação
+              Nossos eixos de atuação
             </span>
             <h2 className="text-[#0A3D24] text-3xl lg:text-4xl font-bold mb-4">
               Transformamos territórios em oportunidades
@@ -410,7 +410,7 @@ function Home({ colorMode }) {
         <SectionWrapper>
           <div className="flex flex-col items-center w-full mb-12 text-center">
             <span className="text-[#C24127] font-bold text-sm tracking-wider uppercase mb-4">
-              5. Sócios
+              Sócios
             </span>
             <h2 className="text-[#0A3D24] text-3xl font-bold mb-4">
               Especialistas em planejamento turístico
