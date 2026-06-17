@@ -1143,7 +1143,7 @@ const content = {
       phoneTerciario: `https://wa.me/+55${infos.phoneTerciario.ddd}${infos.phoneTerciario.firstPart}${infos.phoneTerciario.secondPart}?text=${infos.whatsappDefaultMessage}`,
       facebook: `https://www.facebook.com/${infos.facebookProfile}`,
       x: `https://x.com/${infos.x}`,
-      linkedin: `https://www.linkedin.com/company/${infos.linkeDinProfile}`,
+      linkedin: `https://www.linkedin.com/company/planitur`,
       tiktok: `https://www.tiktok.com/@${infos.tiktokProfile}/`,
       youtube: `https://www.youtube.com/@${infos.youtubeProfile}/`,
     },

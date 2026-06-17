@@ -7,7 +7,7 @@ function RoutesFeatures({ colorMode }) {
     <>
       <Navbar />
       <Outlet />
-      <Footer phone={true} phone2={true} sociais={false} expedient={true} />
+      <Footer phone={true} phone2={true} sociais={true} expedient={true} />
     </>
   );
 }

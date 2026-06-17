@@ -108,10 +108,10 @@ export const infos = {
     </div>
   ),
   obs: <span className="italic">A_Definir </span>,
-  instagramProfile: "", // Sem o @
+  instagramProfile: "planiturconsultoria", // Sem o @
   instagramProfileSecundario: "",
   facebookProfile: "",
-  linkeDinProfile: "",
+  linkeDinProfile: "planitur",
   x: "",
   tiktokProfile: "",
   youtubeProfile: "",
@@ -145,7 +145,7 @@ const content = {
       miniTag: <>A_Definir</>,
       FirstPart: <span>A_Definir </span>,
       Destaque: (
-        <span className="destaque relative italic font-light">A_Definir</span>
+        <span className="relative italic font-light destaque">A_Definir</span>
       ),
       SecondPart: <span>A_Definir</span>,
       subtitle: <p>A_Definir</p>,

@@ -11,7 +11,7 @@ function RouteContato({ colorMode }) {
       <Footer
         phone={true}
         phone2={true}
-        sociais={false}
+        sociais={true}
         expedient={true}
         className={`bg-white`}
       />

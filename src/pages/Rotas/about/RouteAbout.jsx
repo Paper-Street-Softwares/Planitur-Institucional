@@ -10,7 +10,7 @@ function RouteAbout({ colorMode }) {
       <Navbar />
       <ConteudoAbout colorMode={colorMode} />
       {/* <SocialMediaTemplate /> */}
-      <Footer phone={true} phone2={true} sociais={false} expedient={true} />
+      <Footer phone={true} phone2={true} sociais={true} expedient={true} />
     </div>
   );
 }

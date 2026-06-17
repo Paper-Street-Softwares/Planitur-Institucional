@@ -39,7 +39,7 @@ export default function Index() {
           {/* <Mapa colorMode={colorMode} /> */}
           {/* <FormNovoTemplate colorMode={colorMode} /> */}
         </main>
-        <Footer phone={true} phone2={true} sociais={false} expedient={true} />
+        <Footer phone={true} phone2={true} sociais={true} expedient={true} />
       </ColorModeProvider>
     </>
   );
