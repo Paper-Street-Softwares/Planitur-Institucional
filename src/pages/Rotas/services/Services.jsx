@@ -20,11 +20,11 @@ function Services({ colorMode }) {
           <img
             src={content.texts.services.img}
             alt="Cityscape"
-            className="w-full h-full object-cover object-center"
+            className="object-cover object-center w-full h-full"
           />
         </div>
 
-        <MotionDivDownToUp className="z-10 w-full flex justify-center absolute bottom-6">
+        <MotionDivDownToUp className="absolute z-10 flex justify-center w-full bottom-6">
           <div>
             <ScrollMouse />
           </div>
@@ -74,14 +74,19 @@ function Services({ colorMode }) {
         </MotionDivDownToUp>
 
         <MotionDivDownToUp>
-          <div className="text-center max-w-[900px] mx-auto mt-0">
+          <div className="text-center max-w-[900px] mx-auto mt-0 mb-20">
             <h2 className="text-3xl font-semibold text-[#1C4B3C] mb-6 pt-24">
               {content.texts.services.bottomTitle}
             </h2>
-
-            <p className="text-[#5E7A70] leading-relaxed mb-24">
+            <p className="text-[#5E7A70] leading-relaxed mb-10">
               {content.texts.services.bottomText}
             </p>
+            <a
+              className="bg-[#E85D22] hover:bg-[#d1521d] transition-colors text-white px-8 py-4 font-semibold text-sm tracking-wide rounded-sm w-fit"
+              href="/contato"
+            >
+              ENTRAR EM CONTATO
+            </a>
           </div>
         </MotionDivDownToUp>
       </SectionArea>
