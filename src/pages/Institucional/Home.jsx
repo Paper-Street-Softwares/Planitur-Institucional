@@ -494,7 +494,7 @@ function Home({ colorMode }) {
             {/* Bloco Verde Escuro */}
             <div className="bg-[#0A3D24] text-white p-10 lg:p-14 xl:w-[30%] flex flex-col justify-center">
               <span className="text-[#E85D22] font-bold text-sm tracking-wider uppercase mb-4">
-                6. Contato
+                Contato
               </span>
               <h2 className="mb-6 text-3xl font-bold leading-tight">
                 Vamos construir soluções para o seu território?
