@@ -4,10 +4,17 @@ import SectionArea from "../../../components/sectionElements/SectionArea";
 import SectionWrapper from "../../../components/sectionElements/SectionWrapper";
 import SectionHeaderNovo from "../../../components/sectionElements/SectionHeaderNovo";
 
+const areaOptions = [
+  "Técnico-Consultivo e Planejamento",
+  "Formativo e Educacional",
+  "Pesquisa Aplicada e Produção de Conhecimento",
+];
+
 function TalentForm({ colorMode }) {
   const formRef = useRef();
   const [isSending, setIsSending] = useState(false);
   const [sent, setSent] = useState(false);
+  const [areaChecked, setAreaChecked] = useState(areaOptions.map(() => false));
 
   // Estado inicial isolado para facilitar o reset
   const initialState = {
@@ -33,18 +40,39 @@ function TalentForm({ colorMode }) {
     }));
   }
 
+  function toggleArea(i) {
+    setAreaChecked((current) => {
+      const updated = current.map((v, idx) => (idx === i ? !v : v));
+
+      const selectedAreas = areaOptions
+        .filter((_, idx) => updated[idx])
+        .join(", ");
+
+      setForm((f) => ({ ...f, area: selectedAreas }));
+
+      return updated;
+    });
+  }
+
   function handleSubmit(e) {
     e.preventDefault();
+
+    if (!form.area) {
+      alert("Selecione pelo menos um eixo de atuação.");
+      return;
+    }
+
     setIsSending(true);
 
-    const SERVICE_ID = "service_y6ls2ga";
-    const TEMPLATE_ID = "template_mw9885e";
+    const SERVICE_ID = "service_8q02srz";
+    const TEMPLATE_ID = "template_qbvjlns";
     const PUBLIC_KEY = "tQ1DPO5JD-O6jvetX";
 
     emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, formRef.current, PUBLIC_KEY).then(
       () => {
         alert("Cadastro enviado com sucesso!"); // Alert de sucesso
         setForm(initialState); // Reseta o estado do formulário
+        setAreaChecked(areaOptions.map(() => false));
         formRef.current.reset(); // Reseta o formulário HTML (limpa o input de arquivo)
         setSent(true);
         setIsSending(false);
@@ -81,12 +109,12 @@ function TalentForm({ colorMode }) {
         />
         <div className="w-full max-w-[500px] bg-white border rounded-md p-4">
           {sent ? (
-            <div className="bg-green-100 p-6 rounded-md text-center">
+            <div className="p-6 text-center bg-green-100 rounded-md">
               <p className="font-semibold text-green-800">
                 Enviado com sucesso!
               </p>
               <button
-                className="mt-3 underline text-green-700"
+                className="mt-3 text-green-700 underline"
                 onClick={() => setSent(false)}
               >
                 Enviar outro cadastro
@@ -100,18 +128,18 @@ function TalentForm({ colorMode }) {
             >
               <input
                 name="nome"
-                placeholder="Nome completo"
-                className="border p-2 rounded-md w-full"
+                placeholder="Nome Completo"
+                className="w-full p-2 border rounded-md"
                 value={form.nome}
                 onChange={handleChange}
                 required
               />
 
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
                 <input
                   name="cidade"
                   placeholder="Cidade / Estado"
-                  className="border p-2 rounded-md"
+                  className="p-2 border rounded-md"
                   value={form.cidade}
                   onChange={handleChange}
                   required
@@ -119,7 +147,7 @@ function TalentForm({ colorMode }) {
                 <input
                   name="telefone"
                   placeholder="Telefone"
-                  className="border p-2 rounded-md"
+                  className="p-2 border rounded-md"
                   value={form.telefone}
                   onChange={handleChange}
                   required
@@ -130,23 +158,36 @@ function TalentForm({ colorMode }) {
                 name="email"
                 type="email"
                 placeholder="Email"
-                className="border p-2 rounded-md w-full"
+                className="w-full p-2 border rounded-md"
                 value={form.email}
                 onChange={handleChange}
                 required
               />
-              <input
-                name="area"
-                className="border p-2 rounded-md w-full"
-                placeholder="Eixo de Atuação"
-                value={form.area}
-                onChange={handleChange}
-                required
-              />
+
+              <div>
+                <p className="mb-2 text-sm font-medium">Eixo de atuação</p>
+
+                <div className="grid grid-cols-1 gap-2 sm:grid-cols-2">
+                  {areaOptions.map((opt, i) => (
+                    <label key={opt} className="flex items-center gap-2">
+                      <input
+                        type="checkbox"
+                        checked={areaChecked[i]}
+                        onChange={() => toggleArea(i)}
+                        className="appearance-none min-w-[20px] min-h-[20px] border border-black/20 rounded-[5px] checked:bg-orange-500 checked:border-orange-500"
+                      />
+                      <span className="text-sm text-black/50">{opt}</span>
+                    </label>
+                  ))}
+                </div>
+
+                <input type="hidden" name="area" value={form.area} />
+              </div>
+
               <textarea
                 name="resumo"
                 placeholder="Resumo..."
-                className="border p-2 rounded-md w-full"
+                className="w-full p-2 border rounded-md"
                 rows={4}
                 value={form.resumo}
                 onChange={handleChange}
@@ -168,7 +209,7 @@ function TalentForm({ colorMode }) {
                 />
                 <label
                   htmlFor="fileInput"
-                  className="cursor-pointer border p-2 rounded-md text-center bg-gray-100 hover:bg-gray-200 w-fit"
+                  className="p-2 text-center bg-gray-100 border rounded-md cursor-pointer hover:bg-gray-200 w-fit"
                 >
                   Escolher arquivo
                 </label>
@@ -183,7 +224,7 @@ function TalentForm({ colorMode }) {
                 <button
                   type="submit"
                   disabled={isSending}
-                  className="border-2 border-orange-500 font-semibold uppercase text-sm py-3 px-8 text-orange-500 hover:bg-orange-500 hover:text-white transition-all"
+                  className="px-8 py-3 text-sm font-semibold text-orange-500 uppercase transition-all border-2 border-orange-500 hover:bg-orange-500 hover:text-white"
                 >
                   {isSending ? "Enviando..." : "Enviar cadastro"}
                 </button>

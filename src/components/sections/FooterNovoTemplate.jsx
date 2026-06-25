@@ -78,9 +78,7 @@ function FooterNovoTemplate({
         <footer className={`${textOpacity}`}>
           <div className="container mx-auto">
             <div
-              className={`grid sm:grid-cols-2 lg:grid-cols-3 ${grid} items-start gap-12 tablet2:gap-2 desktop1:gap-12 mb-8 w-full ${
-                showGlobalButtonsLps ? "hidden" : "flex"
-              }`}
+              className={`grid sm:grid-cols-2 lg:grid-cols-3 ${grid} items-start gap-12 tablet2:gap-2 desktop1:gap-12 mb-8 w-full ${showGlobalButtonsLps ? "hidden" : "flex"}`}
             >
               {/* Logo e infos */}
               <div className="space-y-6">
@@ -137,14 +135,14 @@ function FooterNovoTemplate({
               </div>
 
               {/* Links rápidos */}
-              <div className="flex flex-col justify-center gap-8 sm:items-center tablet2:justify-center ">
+              <div className="flex flex-col justify-center sm:items-center gap-8 tablet2:justify-center ">
                 <div className="w-fit ">
                   <h1
                     className={`font-bold font-secondFont text-lg mb-6 ${text}`}
                   >
                     Links Rápidos
                   </h1>
-                  <ul className="space-y-4 font-light font-secondFont">
+                  <ul className="space-y-4 font-secondFont font-light">
                     {labels.map((item, index) => {
                       const id = ids[index];
 
@@ -180,7 +178,7 @@ function FooterNovoTemplate({
               </div>
 
               {/* Contato */}
-              <div className="flex flex-col justify-start gap-6 tablet2:justify-start">
+              <div className="justify-start tablet2:justify-start flex flex-col gap-6">
                 <div className="w-fit">
                   <h1
                     className={`font-bold font-secondFont text-lg mb-6 ${text}`}
@@ -191,7 +189,7 @@ function FooterNovoTemplate({
                     {adress && (
                       <li className="flex items-start gap-3">
                         <MapPin className={`w-5 h-5 shrink-0 ${iconColor}`} />
-                        <span className="font-light font-secondFont">
+                        <span className="font-secondFont font-light">
                           {content.texts.infos.adress}
                         </span>
                       </li>
@@ -199,7 +197,7 @@ function FooterNovoTemplate({
                     {phone && (
                       <li className="flex items-center gap-3">
                         <Phone className={`w-5 h-5 shrink-0 ${iconColor}`} />
-                        <span className="font-light font-secondFont">
+                        <span className="font-secondFont font-light">
                           {content.texts.infos.phone}
                         </span>
                       </li>
@@ -207,7 +205,7 @@ function FooterNovoTemplate({
                     {phoneSecond && (
                       <li className="flex items-center gap-3">
                         <Phone className={`w-5 h-5 shrink-0 ${iconColor}`} />
-                        <span className="font-light font-secondFont">
+                        <span className="font-secondFont font-light">
                           {content.texts.infos.phoneSecundario}
                         </span>
                       </li>
@@ -215,7 +213,7 @@ function FooterNovoTemplate({
                     {email && (
                       <li className="flex items-center gap-3">
                         <Mail className={`w-5 h-5 shrink-0 ${iconColor}`} />
-                        <span className="font-light font-secondFont text-paragraph2 tablet2:text-paragraph3 desktop1:text-paragraph3">
+                        <span className="font-secondFont font-light text-paragraph2 tablet2:text-paragraph3 desktop1:text-paragraph3">
                           {content.texts.infos.email}
                         </span>
                       </li>
@@ -223,7 +221,7 @@ function FooterNovoTemplate({
                     {emailSecond && (
                       <li className="flex items-center gap-3">
                         <Mail className={`w-5 h-5 shrink-0 ${iconColor}`} />
-                        <span className="font-light font-secondFont text-paragraph3 tablet2:text-paragraph3 desktop1:text-paragraph3">
+                        <span className="font-secondFont font-light text-paragraph3 tablet2:text-paragraph3 desktop1:text-paragraph3">
                           {content.texts.infos.emailSecundario}
                         </span>
                       </li>
@@ -234,7 +232,7 @@ function FooterNovoTemplate({
 
               {/* Mapa */}
               {/* {mapa && (
-                <div className="h-64 overflow-hidden rounded-xl">
+                <div className="h-64 rounded-xl overflow-hidden">
                   <iframe
                     src={content.texts.maps.embedsrc}
                     width="100%"
@@ -243,7 +241,7 @@ function FooterNovoTemplate({
                     allowFullScreen
                     loading="lazy"
                     referrerPolicy="no-referrer-when-downgrade"
-                    className="transition-all duration-500 grayscale hover:grayscale-0"
+                    className="grayscale hover:grayscale-0 transition-all duration-500"
                   ></iframe>
                 </div>
               )} */}
@@ -259,9 +257,7 @@ function FooterNovoTemplate({
 
             {/* Footer Bottom */}
             <div
-              className={`text-center font-secondFont text-sm ${textOpacity} ${
-                showGlobalButtonsLps ? "pt-6" : ""
-              }`}
+              className={`text-center font-secondFont text-sm ${textOpacity} ${showGlobalButtonsLps ? "pt-6" : ""}`}
             >
               <p>&copy; {content.texts.footer.copyrightLine}</p>
               <br />
